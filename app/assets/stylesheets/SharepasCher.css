@@ -32,3 +32,134 @@ span.inter
 	color : #BBC5CD;
 }
 
+.hero
+{
+	background-image: url('jmb.jpg');
+	background-size: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	height: 830px;
+	background-repeat: no-repeat;
+}
+
+.titre
+{
+	font-size: 2em;
+	text-align: center;
+}
+
+.h
+{
+	font-weight: 600;
+	font-size: 2.5em;
+	text-align: center;
+	color: black;
+}
+
+.butt
+{
+	width: 200px;
+	height: 50px;
+	border: none;
+	border-radius: 50px;
+	color: white;
+	font-size: 18px;
+}
+
+.one
+{
+	background-color: #BC211F;
+}
+
+.two
+{
+	background-color: #648B57;
+}
+
+.boutons
+{
+	width: 200px;
+	height: 150px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	position: relative;
+	left: 180px;
+}
+
+.repas
+{
+	position: relative;
+	top: 40px;
+}
+
+.fleche
+{
+	width: 40px;
+	height: 40px;
+	margin: auto;
+	animation: fleche 1s ease-out alternate infinite;
+
+}
+
+.nav
+{
+	width: 100%;
+	height: 200px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+.pageHome
+{
+	position: relative;
+	top: 50px;
+	height: 700px;
+	display: flex;
+	justify-content: space-around;
+
+}
+
+.carte
+{
+	height: 600px;
+	width: 600px;
+	border: 1px solid grey;
+	border-radius: 0px 0px 0px 20px;
+	flex-wrap: wrap;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.desc
+{
+	font-size: 1.3em;
+	text-align: center;
+}
+
+.t
+{
+	text-align: center;
+	font-weight: 700;
+	font-size: 2.5em;
+}
+
+@keyframes fleche
+{
+	from
+	{
+		position: relative;
+		top: 0px;
+	}
+	to
+	{
+		position: relative;
+		top: 10px;
+	}
+}
