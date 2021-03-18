@@ -8586,3 +8586,102 @@ puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
 puma (3.12.6) lib/puma/server.rb:476:in `process_client'
 puma (3.12.6) lib/puma/server.rb:334:in `block in run'
 puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCity Create (6.6ms)[0m  [1m[32mINSERT INTO "cities" ("city_name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["city_name", "Paris"], ["created_at", "2021-03-18 11:06:07.185820"], ["updated_at", "2021-03-18 11:06:07.185820"]]
+  [1m[35m (5.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCity Load (3.1ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Create (5.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "first_name", "last_name", "city_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "coucou@gmail.com"], ["first_name", "Jean-Do"], ["last_name", "Gradur"], ["city_id", 1], ["created_at", "2021-03-18 11:06:29.432281"], ["updated_at", "2021-03-18 11:06:29.432281"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCity Load (1.0ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO "users" ("email", "first_name", "last_name", "city_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "coucou@gmail.com"], ["first_name", "Jean-Do"], ["last_name", "Gradur"], ["city_id", 1], ["created_at", "2021-03-18 11:08:11.446890"], ["updated_at", "2021-03-18 11:08:11.446890"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCity Load (0.5ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("email", "first_name", "last_name", "city_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "cou@yopmail.com"], ["first_name", "Jean"], ["last_name", "G"], ["city_id", 1], ["created_at", "2021-03-18 11:16:25.625177"], ["updated_at", "2021-03-18 11:16:25.625177"]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCity Load (0.3ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "first_name", "last_name", "city_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "cou@yopmail.com"], ["first_name", "Jean"], ["last_name", "G"], ["city_id", 1], ["created_at", "2021-03-18 11:17:14.771734"], ["updated_at", "2021-03-18 11:17:14.771734"]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCity Load (0.4ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "first_name", "last_name", "city_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "cou@yopmail.com"], ["first_name", "Jean"], ["last_name", "G"], ["city_id", 1], ["created_at", "2021-03-18 11:17:51.118716"], ["updated_at", "2021-03-18 11:17:51.118716"]]
+  Rendering user_mailer/welcome.html.erb within layouts/mailer
+  Rendered user_mailer/welcome.html.erb within layouts/mailer (1.3ms)
+  Rendering user_mailer/welcome.text.erb within layouts/mailer
+  Rendered user_mailer/welcome.text.erb within layouts/mailer (0.4ms)
+UserMailer#welcome: processed outbound mail in 541.1ms
+Sent mail to cou@yopmail.com (61.0ms)
+Date: Thu, 18 Mar 2021 12:17:52 +0100
+From: sellig@gmail.com
+To: cou@yopmail.com
+Message-ID: <605336e019461_66d12f30997f5@macbook-pro-de-jeanne.home.mail>
+Subject: Coucou
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_605336e017403_66d12f30996ee";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_605336e017403_66d12f30996ee
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: base64
+
+U2FsdXQgSmVhbiBldCBiaWVudmVudWUgc3VyIFNoYXJlIFBhcyBDaGVyICEN
+Cj09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09
+PT09PT09PT09PT09PT0NCiANClR1IHQnZXMgaW5zY3JpdCBlbiB1dGlsaXNh
+bnQgbCdlLW1haWwgc3VpdmFudCA6IGNvdUB5b3BtYWlsLmNvbS4NCiANClBv
+dXIgYWNjw6lkZXIgw6AgdG9uIGVzcGFjZSBjbGllbnQsIGNvbm5lY3RlLXRv
+aSB2aWEgOiBzaGFyZXBhc2NoZXIuaGVyb2t1YXBwLmNvbS4NCiANCsOAIHRy
+w6hzIHZpdGUgIQ0K
+
+----==_mimepart_605336e017403_66d12f30996ee
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>=0D
+<html>=0D
+  <head>=0D
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf=
+-8" />=0D
+    <style>=0D
+      /* Email styles need to be inline */=0D
+    </style>=0D
+  </head>=0D
+=0D
+  <body>=0D
+    <!DOCTYPE html>=0D
+<html>=0D
+  <head>=0D
+    <meta content=3D'text/html; charset=3DUTF-8' http-equiv=3D'Content-Ty=
+pe' />=0D
+  </head>=0D
+  <body>=0D
+    <h1>Salut Jean et bienvenue sur Share Pas Cher !</h1>=0D
+    <p>=0D
+      Tu t'es inscrit en utilisant l'e-mail suivant : cou@yopmail.com.=0D=
+
+    </p>=0D
+    <p>=0D
+      Pour acc=C3=A9der =C3=A0 ton espace client, connecte-toi via : shar=
+epascher.herokuapp.com.=0D
+    </p>=0D
+    <p> =C3=80 tr=C3=A8s vite !</p>=0D
+  </body>=0D
+</html>=0D
+  </body>=0D
+</html>=0D
+
+----==_mimepart_605336e017403_66d12f30996ee--
+
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
