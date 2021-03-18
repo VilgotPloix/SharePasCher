@@ -4,6 +4,7 @@ class Event < ApplicationRecord
   has_many :filters
   has_many :users, through: :appointments
   has_many :tags, through: :filters
+  belongs_to :host, class_name: "User"
 
   validates :title, presence: true, length: {minimum:2, maximum:50}
   validates :description, presence: true, length: {minimum:10, maximum:500}
