@@ -172,3 +172,72 @@ span.inter
 		top: 10px;
 	}
 }
+
+.indexEvents
+{
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.flexEvents
+{
+	width: 90%;
+	height: 70vh;
+	display: flex;
+	justify-content: space-around;
+	align-items: flex-start;
+	flex-wrap: wrap;
+	position: relative;
+	top: 50px;
+}
+
+.events
+{
+	min-width: 250px;
+	min-height: 300px;
+	border: 1px solid black;
+	text-align: center;
+	padding: 10px;
+	margin: 5px;
+}
+
+.dismen
+{
+	width: 100px;
+	height: 30px;
+	border: none;
+	background-color: #6B9AC4;
+	border-radius: 50px;
+	color: white;
+	margin: auto;
+	cursor: pointer;
+}
+
+.regarde
+{
+	text-align: center;
+	font-size: 3em;
+	color: black;
+	font-weight: 600;
+}
+
+.showEvents
+{
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#card
+{
+	border: 1px solid black;
+	width: 50%;
+	height: 50vh;
+
+}
