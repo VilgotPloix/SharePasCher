@@ -16,7 +16,7 @@ end
 end
 
 20.times do |user|
-  User.create(email: (Faker::Superhero.power + "@blabla.com"), first_name: Faker::Superhero.prefix, last_name: Faker::Superhero.suffix, birth_day: Faker::Date.birthday(min_age:18, max_age:100), gender: "unknown", city_id: rand(1..5), is_host: false)
+  User.create(email: (Faker::Superhero.power + "@blabla.com"), first_name: Faker::Superhero.prefix, last_name: Faker::Superhero.suffix, birth_day: Faker::Date.birthday(min_age:18, max_age:100), gender: "unknown", is_host: false)
 end
 
 30.times do |event|
