@@ -85,8 +85,9 @@ span.inter
 	flex-direction: column;
 	justify-content: space-around;
 	align-items: center;
-	position: relative;
-	left: 180px;
+	margin: auto;
+	/*position: relative;
+	left: 180px;*/
 }
 
 .repas
