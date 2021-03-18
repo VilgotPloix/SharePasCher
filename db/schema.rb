@@ -36,9 +36,13 @@ ActiveRecord::Schema.define(version: 2021_03_17_123911) do
     t.datetime "date"
     t.integer "guests_number"
     t.bigint "city_id"
+    t.bigint "user_id"
+    t.bigint "host_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["city_id"], name: "index_events_on_city_id"
+    t.index ["host_id"], name: "index_events_on_host_id"
+    t.index ["user_id"], name: "index_events_on_user_id"
   end
 
   create_table "filters", force: :cascade do |t|
@@ -63,10 +67,12 @@ ActiveRecord::Schema.define(version: 2021_03_17_123911) do
     t.datetime "birth_day"
     t.integer "age"
     t.string "gender"
+    t.boolean "is_host"
     t.bigint "city_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["city_id"], name: "index_users_on_city_id"
   end
 
+  add_foreign_key "events", "users", column: "host_id"
 end

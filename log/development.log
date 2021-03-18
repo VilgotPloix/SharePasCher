@@ -117,7 +117,6 @@ Migrating to CreateFilters (20210317123911)
   ↳ bin/rails:9
   [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ bin/rails:9
-<<<<<<< HEAD
 Started GET "/" for ::1 at 2021-03-17 19:05:47 +0100
   [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ /home/gustave/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
@@ -967,7 +966,6 @@ Processing by StaticController#index as HTML
 Completed 200 OK in 59ms (Views: 57.1ms | ActiveRecord: 0.0ms)
 
 
-=======
   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
   [1m[35m (2.8ms)[0m  [1m[31mROLLBACK[0m
   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
@@ -8392,6 +8390,1848 @@ Migrating to CreateFilters (20210317123911)
   [1m[35m (114.4ms)[0m  [1m[35mDROP DATABASE IF EXISTS "SharePasCher_development"[0m
   ↳ bin/rails:9
   [1m[35m (116.8ms)[0m  [1m[35mDROP DATABASE IF EXISTS "SharePasCher_test"[0m
+  ↳ bin/rails:9
+
+
+  [1m[35m (1.5ms)[0m  [1m[35mDROP DATABASE IF EXISTS "SharePasCher_development"[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "SharePasCher_test"[0m
+  ↳ bin/rails:9
+  [1m[35m (756.8ms)[0m  [1m[35mCREATE DATABASE "SharePasCher_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (696.6ms)[0m  [1m[35mCREATE DATABASE "SharePasCher_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (26.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (9.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7857703137504431400)[0m
+  ↳ bin/rails:9
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateUsers (20210317123552)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (16.9ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying, "first_name" character varying, "last_name" character varying, "birth_day" timestamp, "age" integer, "gender" character varying, "city_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20210317123552_create_users.rb:3
+  [1m[35m (4.3ms)[0m  [1m[35mCREATE  INDEX  "index_users_on_city_id" ON "users"  ("city_id")[0m
+  ↳ db/migrate/20210317123552_create_users.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (10.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210317123552"]]
+  ↳ bin/rails:9
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateEvents (20210317123718)
+  [1m[35m (1.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (10.4ms)[0m  [1m[35mCREATE TABLE "events" ("id" bigserial primary key, "title" character varying, "description" text, "date" timestamp, "guests_number" integer, "city_id" bigint, "user_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20210317123718_create_events.rb:3
+  [1m[35m (2.9ms)[0m  [1m[35mCREATE  INDEX  "index_events_on_city_id" ON "events"  ("city_id")[0m
+  ↳ db/migrate/20210317123718_create_events.rb:3
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE  INDEX  "index_events_on_user_id" ON "events"  ("user_id")[0m
+  ↳ db/migrate/20210317123718_create_events.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210317123718"]]
+  ↳ bin/rails:9
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateTags (20210317123746)
+  [1m[35m (1.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (9.4ms)[0m  [1m[35mCREATE TABLE "tags" ("id" bigserial primary key, "tag_name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20210317123746_create_tags.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210317123746"]]
+  ↳ bin/rails:9
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateCities (20210317123852)
+  [1m[35m (5.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (10.5ms)[0m  [1m[35mCREATE TABLE "cities" ("id" bigserial primary key, "city_name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20210317123852_create_cities.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210317123852"]]
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateAppointments (20210317123902)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (4.7ms)[0m  [1m[35mCREATE TABLE "appointments" ("id" bigserial primary key, "user_id" bigint, "event_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20210317123902_create_appointments.rb:3
+  [1m[35m (3.5ms)[0m  [1m[35mCREATE  INDEX  "index_appointments_on_user_id" ON "appointments"  ("user_id")[0m
+  ↳ db/migrate/20210317123902_create_appointments.rb:3
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE  INDEX  "index_appointments_on_event_id" ON "appointments"  ("event_id")[0m
+  ↳ db/migrate/20210317123902_create_appointments.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210317123902"]]
+  ↳ bin/rails:9
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateFilters (20210317123911)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (5.5ms)[0m  [1m[35mCREATE TABLE "filters" ("id" bigserial primary key, "event_id" bigint, "tag_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20210317123911_create_filters.rb:3
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE  INDEX  "index_filters_on_event_id" ON "filters"  ("event_id")[0m
+  ↳ db/migrate/20210317123911_create_filters.rb:3
+  [1m[35m (3.4ms)[0m  [1m[35mCREATE  INDEX  "index_filters_on_tag_id" ON "filters"  ("tag_id")[0m
+  ↳ db/migrate/20210317123911_create_filters.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210317123911"]]
+  ↳ bin/rails:9
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (1.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-03-17 22:39:21.935132"], ["updated_at", "2021-03-17 22:39:21.935132"]]
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(7857703137504431400)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCity Create (1.3ms)[0m  [1m[32mINSERT INTO "cities" ("city_name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["city_name", "Rienlande"], ["created_at", "2021-03-17 22:42:48.819989"], ["updated_at", "2021-03-17 22:42:48.819989"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCity Load (1.1ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Create (2.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "first_name", "last_name", "city_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "rindine"], ["first_name", "dllefkeo"], ["last_name", "deijfeijfe"], ["city_id", 1], ["created_at", "2021-03-17 22:43:11.584225"], ["updated_at", "2021-03-17 22:43:11.584225"]]
+  [1m[35m (2.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCity Load (0.3ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCity Load (0.4ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCity Create (0.8ms)[0m  [1m[32mINSERT INTO "cities" ("city_name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["city_name", "Rienlande"], ["created_at", "2021-03-17 22:52:42.652363"], ["updated_at", "2021-03-17 22:52:42.652363"]]
+  [1m[35m (7.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCity Load (0.5ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("email", "first_name", "last_name", "city_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "rindine"], ["first_name", "dllefkeo"], ["last_name", "deijfeijfe"], ["city_id", 1], ["created_at", "2021-03-17 22:52:54.469770"], ["updated_at", "2021-03-17 22:52:54.469770"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (121.9ms)[0m  [1m[35mDROP DATABASE IF EXISTS "SharePasCher_development"[0m
+  ↳ bin/rails:9
+  [1m[35m (116.9ms)[0m  [1m[35mDROP DATABASE IF EXISTS "SharePasCher_test"[0m
+  ↳ bin/rails:9
+  [1m[35m (5.4ms)[0m  [1m[35mDROP DATABASE IF EXISTS "SharePasCher_development"[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mDROP DATABASE IF EXISTS "SharePasCher_test"[0m
+  ↳ bin/rails:9
+  [1m[35m (893.9ms)[0m  [1m[35mCREATE DATABASE "SharePasCher_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (547.4ms)[0m  [1m[35mCREATE DATABASE "SharePasCher_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (29.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (10.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7857703137504431400)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateUsers (20210317123552)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (13.4ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying, "first_name" character varying, "last_name" character varying, "birth_day" timestamp, "age" integer, "gender" character varying, "city_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20210317123552_create_users.rb:3
+  [1m[35m (4.4ms)[0m  [1m[35mCREATE  INDEX  "index_users_on_city_id" ON "users"  ("city_id")[0m
+  ↳ db/migrate/20210317123552_create_users.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (3.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210317123552"]]
+  ↳ bin/rails:9
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateEvents (20210317123718)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (10.5ms)[0m  [1m[35mCREATE TABLE "events" ("id" bigserial primary key, "title" character varying, "description" text, "date" timestamp, "guests_number" integer, "city_id" bigint, "user_id" bigint, "host_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_d56a268962"
+FOREIGN KEY ("host_id")
+  REFERENCES "users" ("id")
+)[0m
+  ↳ db/migrate/20210317123718_create_events.rb:3
+  [1m[35m (2.9ms)[0m  [1m[35mCREATE  INDEX  "index_events_on_city_id" ON "events"  ("city_id")[0m
+  ↳ db/migrate/20210317123718_create_events.rb:3
+  [1m[35m (2.9ms)[0m  [1m[35mCREATE  INDEX  "index_events_on_user_id" ON "events"  ("user_id")[0m
+  ↳ db/migrate/20210317123718_create_events.rb:3
+  [1m[35m (3.1ms)[0m  [1m[35mCREATE  INDEX  "index_events_on_host_id" ON "events"  ("host_id")[0m
+  ↳ db/migrate/20210317123718_create_events.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210317123718"]]
+  ↳ bin/rails:9
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateTags (20210317123746)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (8.4ms)[0m  [1m[35mCREATE TABLE "tags" ("id" bigserial primary key, "tag_name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20210317123746_create_tags.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210317123746"]]
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateCities (20210317123852)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (8.5ms)[0m  [1m[35mCREATE TABLE "cities" ("id" bigserial primary key, "city_name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20210317123852_create_cities.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210317123852"]]
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateAppointments (20210317123902)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (4.7ms)[0m  [1m[35mCREATE TABLE "appointments" ("id" bigserial primary key, "user_id" bigint, "event_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20210317123902_create_appointments.rb:3
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE  INDEX  "index_appointments_on_user_id" ON "appointments"  ("user_id")[0m
+  ↳ db/migrate/20210317123902_create_appointments.rb:3
+  [1m[35m (3.1ms)[0m  [1m[35mCREATE  INDEX  "index_appointments_on_event_id" ON "appointments"  ("event_id")[0m
+  ↳ db/migrate/20210317123902_create_appointments.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210317123902"]]
+  ↳ bin/rails:9
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateFilters (20210317123911)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (4.6ms)[0m  [1m[35mCREATE TABLE "filters" ("id" bigserial primary key, "event_id" bigint, "tag_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20210317123911_create_filters.rb:3
+  [1m[35m (2.6ms)[0m  [1m[35mCREATE  INDEX  "index_filters_on_event_id" ON "filters"  ("event_id")[0m
+  ↳ db/migrate/20210317123911_create_filters.rb:3
+  [1m[35m (3.1ms)[0m  [1m[35mCREATE  INDEX  "index_filters_on_tag_id" ON "filters"  ("tag_id")[0m
+  ↳ db/migrate/20210317123911_create_filters.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210317123911"]]
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (2.0ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-03-18 10:28:04.641728"], ["updated_at", "2021-03-18 10:28:04.641728"]]
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(7857703137504431400)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCity Create (1.3ms)[0m  [1m[32mINSERT INTO "cities" ("city_name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["city_name", "Mexico"], ["created_at", "2021-03-18 10:30:22.304665"], ["updated_at", "2021-03-18 10:30:22.304665"]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCity Load (0.9ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Create (1.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "first_name", "last_name", "city_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "esfjgrj"], ["first_name", "michel"], ["last_name", "miguiel"], ["city_id", 1], ["created_at", "2021-03-18 10:31:24.668039"], ["updated_at", "2021-03-18 10:31:24.668039"]]
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCity Load (0.3ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mEvent Create (24.3ms)[0m  [1m[32mINSERT INTO "events" ("title", "description", "date", "guests_number", "city_id", "host_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "eijfijfef"], ["description", "fiejfefefefgegfijei"], ["date", "2021-03-19 00:00:00"], ["guests_number", 5], ["city_id", 1], ["host_id", 1], ["created_at", "2021-03-18 10:33:33.519253"], ["updated_at", "2021-03-18 10:33:33.519253"]]
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mEvent Load (2.1ms)[0m  [1m[34mSELECT  "events".* FROM "events" INNER JOIN "appointments" ON "events"."id" = "appointments"."event_id" WHERE "appointments"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 11]]
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 11]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mEvent Load (1.5ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."host_id" = $1 LIMIT $2[0m  [["host_id", 1], ["LIMIT", 11]]
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT  "events".* FROM "events" ORDER BY "events"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mEvent Load (0.7ms)[0m  [1m[34mSELECT  "events".* FROM "events" ORDER BY "events"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCity Load (0.9ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mEvent Create (1.0ms)[0m  [1m[32mINSERT INTO "events" ("title", "description", "date", "guests_number", "city_id", "host_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "eijfijfef"], ["description", "fiejfefefeefsefdfefgegfijei"], ["date", "2021-03-19 00:00:00"], ["guests_number", 5], ["city_id", 1], ["host_id", 1], ["created_at", "2021-03-18 10:36:07.334124"], ["updated_at", "2021-03-18 10:36:07.334124"]]
+  [1m[35m (9.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."host_id" = $1 LIMIT $2[0m  [["host_id", 1], ["LIMIT", 11]]
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (117.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS "SharePasCher_development"[0m
+  ↳ bin/rails:9
+  [1m[35m (121.9ms)[0m  [1m[35mDROP DATABASE IF EXISTS "SharePasCher_test"[0m
+  ↳ bin/rails:9
+  [1m[35m (658.3ms)[0m  [1m[35mCREATE DATABASE "SharePasCher_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (583.9ms)[0m  [1m[35mCREATE DATABASE "SharePasCher_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (67.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (9.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7857703137504431400)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateUsers (20210317123552)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (12.0ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying, "first_name" character varying, "last_name" character varying, "birth_day" timestamp, "age" integer, "gender" character varying, "is_host" boolean, "city_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20210317123552_create_users.rb:3
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE  INDEX  "index_users_on_city_id" ON "users"  ("city_id")[0m
+  ↳ db/migrate/20210317123552_create_users.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (1.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210317123552"]]
+  ↳ bin/rails:9
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateEvents (20210317123718)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (10.5ms)[0m  [1m[35mCREATE TABLE "events" ("id" bigserial primary key, "title" character varying, "description" text, "date" timestamp, "guests_number" integer, "city_id" bigint, "user_id" bigint, "host_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_d56a268962"
+FOREIGN KEY ("host_id")
+  REFERENCES "users" ("id")
+)[0m
+  ↳ db/migrate/20210317123718_create_events.rb:3
+  [1m[35m (3.0ms)[0m  [1m[35mCREATE  INDEX  "index_events_on_city_id" ON "events"  ("city_id")[0m
+  ↳ db/migrate/20210317123718_create_events.rb:3
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE  INDEX  "index_events_on_user_id" ON "events"  ("user_id")[0m
+  ↳ db/migrate/20210317123718_create_events.rb:3
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE  INDEX  "index_events_on_host_id" ON "events"  ("host_id")[0m
+  ↳ db/migrate/20210317123718_create_events.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210317123718"]]
+  ↳ bin/rails:9
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateTags (20210317123746)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (9.5ms)[0m  [1m[35mCREATE TABLE "tags" ("id" bigserial primary key, "tag_name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20210317123746_create_tags.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210317123746"]]
+  ↳ bin/rails:9
+  [1m[35m (3.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateCities (20210317123852)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (8.1ms)[0m  [1m[35mCREATE TABLE "cities" ("id" bigserial primary key, "city_name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20210317123852_create_cities.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210317123852"]]
+  ↳ bin/rails:9
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateAppointments (20210317123902)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (5.8ms)[0m  [1m[35mCREATE TABLE "appointments" ("id" bigserial primary key, "user_id" bigint, "event_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20210317123902_create_appointments.rb:3
+  [1m[35m (3.1ms)[0m  [1m[35mCREATE  INDEX  "index_appointments_on_user_id" ON "appointments"  ("user_id")[0m
+  ↳ db/migrate/20210317123902_create_appointments.rb:3
+  [1m[35m (3.0ms)[0m  [1m[35mCREATE  INDEX  "index_appointments_on_event_id" ON "appointments"  ("event_id")[0m
+  ↳ db/migrate/20210317123902_create_appointments.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210317123902"]]
+  ↳ bin/rails:9
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateFilters (20210317123911)
+  [1m[35m (1.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (5.3ms)[0m  [1m[35mCREATE TABLE "filters" ("id" bigserial primary key, "event_id" bigint, "tag_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20210317123911_create_filters.rb:3
+  [1m[35m (2.6ms)[0m  [1m[35mCREATE  INDEX  "index_filters_on_event_id" ON "filters"  ("event_id")[0m
+  ↳ db/migrate/20210317123911_create_filters.rb:3
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE  INDEX  "index_filters_on_tag_id" ON "filters"  ("tag_id")[0m
+  ↳ db/migrate/20210317123911_create_filters.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210317123911"]]
+  ↳ bin/rails:9
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (0.7ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-03-18 10:42:31.273616"], ["updated_at", "2021-03-18 10:42:31.273616"]]
+  ↳ bin/rails:9
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(7857703137504431400)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mCity Create (0.9ms)[0m  [1m[32mINSERT INTO "cities" ("city_name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["city_name", "Cyllage City"], ["created_at", "2021-03-18 10:42:31.565032"], ["updated_at", "2021-03-18 10:42:31.565032"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (6.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mCity Create (0.3ms)[0m  [1m[32mINSERT INTO "cities" ("city_name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["city_name", "Mahogany Town"], ["created_at", "2021-03-18 10:42:31.580693"], ["updated_at", "2021-03-18 10:42:31.580693"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mCity Create (0.3ms)[0m  [1m[32mINSERT INTO "cities" ("city_name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["city_name", "Three Island"], ["created_at", "2021-03-18 10:42:31.586362"], ["updated_at", "2021-03-18 10:42:31.586362"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mCity Create (0.3ms)[0m  [1m[32mINSERT INTO "cities" ("city_name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["city_name", "Mossdeep City"], ["created_at", "2021-03-18 10:42:31.590243"], ["updated_at", "2021-03-18 10:42:31.590243"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mCity Create (0.4ms)[0m  [1m[32mINSERT INTO "cities" ("city_name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["city_name", "Nacrene City"], ["created_at", "2021-03-18 10:42:31.593089"], ["updated_at", "2021-03-18 10:42:31.593089"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:15
+  [1m[36mTag Create (1.0ms)[0m  [1m[32mINSERT INTO "tags" ("tag_name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["tag_name", "Bar"], ["created_at", "2021-03-18 10:42:31.629399"], ["updated_at", "2021-03-18 10:42:31.629399"]]
+  ↳ db/seeds.rb:15
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:15
+  [1m[36mTag Create (0.4ms)[0m  [1m[32mINSERT INTO "tags" ("tag_name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["tag_name", "Burgers"], ["created_at", "2021-03-18 10:42:31.639772"], ["updated_at", "2021-03-18 10:42:31.639772"]]
+  ↳ db/seeds.rb:15
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:15
+  [1m[36mTag Create (0.3ms)[0m  [1m[32mINSERT INTO "tags" ("tag_name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["tag_name", "Ethiopean"], ["created_at", "2021-03-18 10:42:31.642585"], ["updated_at", "2021-03-18 10:42:31.642585"]]
+  ↳ db/seeds.rb:15
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:15
+  [1m[36mTag Create (0.3ms)[0m  [1m[32mINSERT INTO "tags" ("tag_name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["tag_name", "Ice Cream"], ["created_at", "2021-03-18 10:42:31.644950"], ["updated_at", "2021-03-18 10:42:31.644950"]]
+  ↳ db/seeds.rb:15
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:15
+  [1m[36mTag Create (0.3ms)[0m  [1m[32mINSERT INTO "tags" ("tag_name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["tag_name", "Indian"], ["created_at", "2021-03-18 10:42:31.647138"], ["updated_at", "2021-03-18 10:42:31.647138"]]
+  ↳ db/seeds.rb:15
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mCity Load (0.3ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:19
+  [1m[36mUser Create (1.0ms)[0m  [1m[32mINSERT INTO "users" ("email", "first_name", "last_name", "birth_day", "gender", "is_host", "city_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["email", "Cross-Dimensional Awareness@blabla.com"], ["first_name", "Doctor"], ["last_name", "I"], ["birth_day", "1969-10-17 00:00:00"], ["gender", "unknown"], ["is_host", false], ["city_id", 4], ["created_at", "2021-03-18 10:42:31.673381"], ["updated_at", "2021-03-18 10:42:31.673381"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mCity Load (0.2ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:19
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "first_name", "last_name", "birth_day", "gender", "is_host", "city_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["email", "Electrical Transport@blabla.com"], ["first_name", "Mr"], ["last_name", "Machine"], ["birth_day", "1972-01-29 00:00:00"], ["gender", "unknown"], ["is_host", false], ["city_id", 2], ["created_at", "2021-03-18 10:42:31.677497"], ["updated_at", "2021-03-18 10:42:31.677497"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mCity Load (0.3ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:19
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "first_name", "last_name", "birth_day", "gender", "is_host", "city_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["email", "Enhanced Sight@blabla.com"], ["first_name", "Cyborg"], ["last_name", "Boy"], ["birth_day", "1932-03-17 00:00:00"], ["gender", "unknown"], ["is_host", false], ["city_id", 1], ["created_at", "2021-03-18 10:42:31.681313"], ["updated_at", "2021-03-18 10:42:31.681313"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mCity Load (0.2ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:19
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "first_name", "last_name", "birth_day", "gender", "is_host", "city_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["email", "Self-Sustenance@blabla.com"], ["first_name", "Red"], ["last_name", "Boy"], ["birth_day", "1998-02-16 00:00:00"], ["gender", "unknown"], ["is_host", false], ["city_id", 1], ["created_at", "2021-03-18 10:42:31.684410"], ["updated_at", "2021-03-18 10:42:31.684410"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mCity Load (0.2ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:19
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "first_name", "last_name", "birth_day", "gender", "is_host", "city_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["email", "Stealth@blabla.com"], ["first_name", "Supah"], ["last_name", "Girl"], ["birth_day", "1962-12-23 00:00:00"], ["gender", "unknown"], ["is_host", false], ["city_id", 2], ["created_at", "2021-03-18 10:42:31.687395"], ["updated_at", "2021-03-18 10:42:31.687395"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mCity Load (0.3ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:19
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "first_name", "last_name", "birth_day", "gender", "is_host", "city_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["email", "Levitation@blabla.com"], ["first_name", "General"], ["last_name", "Woman"], ["birth_day", "1924-05-22 00:00:00"], ["gender", "unknown"], ["is_host", false], ["city_id", 4], ["created_at", "2021-03-18 10:42:31.691182"], ["updated_at", "2021-03-18 10:42:31.691182"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mCity Load (0.2ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:19
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "first_name", "last_name", "birth_day", "gender", "is_host", "city_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["email", "Astral Trap@blabla.com"], ["first_name", "Illustrious"], ["last_name", "Woman"], ["birth_day", "1942-08-22 00:00:00"], ["gender", "unknown"], ["is_host", false], ["city_id", 1], ["created_at", "2021-03-18 10:42:31.694193"], ["updated_at", "2021-03-18 10:42:31.694193"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mCity Load (0.2ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:19
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "first_name", "last_name", "birth_day", "gender", "is_host", "city_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["email", "Fire Resistance@blabla.com"], ["first_name", "Cyborg"], ["last_name", "I"], ["birth_day", "1951-06-27 00:00:00"], ["gender", "unknown"], ["is_host", false], ["city_id", 1], ["created_at", "2021-03-18 10:42:31.697447"], ["updated_at", "2021-03-18 10:42:31.697447"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mCity Load (0.2ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:19
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "first_name", "last_name", "birth_day", "gender", "is_host", "city_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["email", "Chronokinesis@blabla.com"], ["first_name", "The"], ["last_name", "Claw"], ["birth_day", "1931-02-16 00:00:00"], ["gender", "unknown"], ["is_host", false], ["city_id", 1], ["created_at", "2021-03-18 10:42:31.700718"], ["updated_at", "2021-03-18 10:42:31.700718"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mCity Load (0.2ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:19
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "first_name", "last_name", "birth_day", "gender", "is_host", "city_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["email", "Vision - Cryo@blabla.com"], ["first_name", "Supah"], ["last_name", "Boy"], ["birth_day", "1982-08-25 00:00:00"], ["gender", "unknown"], ["is_host", false], ["city_id", 3], ["created_at", "2021-03-18 10:42:31.703872"], ["updated_at", "2021-03-18 10:42:31.703872"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mCity Load (0.2ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:19
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "first_name", "last_name", "birth_day", "gender", "is_host", "city_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["email", "Death Touch@blabla.com"], ["first_name", "Magnificent"], ["last_name", "Skull"], ["birth_day", "1946-10-14 00:00:00"], ["gender", "unknown"], ["is_host", false], ["city_id", 3], ["created_at", "2021-03-18 10:42:31.707066"], ["updated_at", "2021-03-18 10:42:31.707066"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mCity Load (0.2ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:19
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "first_name", "last_name", "birth_day", "gender", "is_host", "city_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["email", "Electrical Transport@blabla.com"], ["first_name", "The"], ["last_name", "Fist"], ["birth_day", "1979-07-10 00:00:00"], ["gender", "unknown"], ["is_host", false], ["city_id", 3], ["created_at", "2021-03-18 10:42:31.710393"], ["updated_at", "2021-03-18 10:42:31.710393"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mCity Load (0.2ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:19
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "first_name", "last_name", "birth_day", "gender", "is_host", "city_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["email", "Super Breath@blabla.com"], ["first_name", "Magnificent"], ["last_name", "Brain"], ["birth_day", "1958-03-27 00:00:00"], ["gender", "unknown"], ["is_host", false], ["city_id", 3], ["created_at", "2021-03-18 10:42:31.713828"], ["updated_at", "2021-03-18 10:42:31.713828"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mCity Load (0.2ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:19
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "first_name", "last_name", "birth_day", "gender", "is_host", "city_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["email", "Biokinesis@blabla.com"], ["first_name", "Ultra"], ["last_name", "Man"], ["birth_day", "1971-02-03 00:00:00"], ["gender", "unknown"], ["is_host", false], ["city_id", 3], ["created_at", "2021-03-18 10:42:31.716908"], ["updated_at", "2021-03-18 10:42:31.716908"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mCity Load (0.3ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:19
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "first_name", "last_name", "birth_day", "gender", "is_host", "city_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["email", "Energy Absorption@blabla.com"], ["first_name", "Supah"], ["last_name", "of Hearts"], ["birth_day", "1961-09-14 00:00:00"], ["gender", "unknown"], ["is_host", false], ["city_id", 4], ["created_at", "2021-03-18 10:42:31.720453"], ["updated_at", "2021-03-18 10:42:31.720453"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mCity Load (0.2ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:19
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "first_name", "last_name", "birth_day", "gender", "is_host", "city_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["email", "Enhanced Touch@blabla.com"], ["first_name", "General"], ["last_name", "Claw"], ["birth_day", "1978-03-23 00:00:00"], ["gender", "unknown"], ["is_host", false], ["city_id", 4], ["created_at", "2021-03-18 10:42:31.724277"], ["updated_at", "2021-03-18 10:42:31.724277"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mCity Load (0.2ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:19
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "first_name", "last_name", "birth_day", "gender", "is_host", "city_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["email", "Vision - Night@blabla.com"], ["first_name", "General"], ["last_name", "of Hearts"], ["birth_day", "1991-05-19 00:00:00"], ["gender", "unknown"], ["is_host", false], ["city_id", 2], ["created_at", "2021-03-18 10:42:31.727380"], ["updated_at", "2021-03-18 10:42:31.727380"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mCity Load (0.2ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ db/seeds.rb:19
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "first_name", "last_name", "birth_day", "gender", "is_host", "city_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["email", "Intangibility@blabla.com"], ["first_name", "Captain"], ["last_name", "Eyes"], ["birth_day", "1973-04-23 00:00:00"], ["gender", "unknown"], ["is_host", false], ["city_id", 5], ["created_at", "2021-03-18 10:42:31.731276"], ["updated_at", "2021-03-18 10:42:31.731276"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mCity Load (0.2ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:19
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "first_name", "last_name", "birth_day", "gender", "is_host", "city_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["email", "Banish@blabla.com"], ["first_name", "Supah"], ["last_name", "Man"], ["birth_day", "1970-01-20 00:00:00"], ["gender", "unknown"], ["is_host", false], ["city_id", 1], ["created_at", "2021-03-18 10:42:31.734432"], ["updated_at", "2021-03-18 10:42:31.734432"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mCity Load (0.2ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:19
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "first_name", "last_name", "birth_day", "gender", "is_host", "city_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["email", "Regeneration@blabla.com"], ["first_name", "Mr"], ["last_name", "Knight"], ["birth_day", "1935-09-09 00:00:00"], ["gender", "unknown"], ["is_host", false], ["city_id", 2], ["created_at", "2021-03-18 10:42:31.737835"], ["updated_at", "2021-03-18 10:42:31.737835"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:23
+  [1m[36mCity Load (0.2ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[36mEvent Create (1.9ms)[0m  [1m[32mINSERT INTO "events" ("title", "description", "date", "guests_number", "city_id", "host_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "Salmon Nigiri"], ["description", "Three egg omelet with Roquefort cheese, chives, and ham. With a side of roasted potatoes, and your choice of toast or croissant."], ["date", "2021-04-11 00:00:00"], ["guests_number", 3], ["city_id", 3], ["host_id", 16], ["created_at", "2021-03-18 10:42:31.758509"], ["updated_at", "2021-03-18 10:42:31.758509"]]
+  ↳ db/seeds.rb:23
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:23
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:23
+  [1m[36mCity Load (0.2ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[36mEvent Create (0.4ms)[0m  [1m[32mINSERT INTO "events" ("title", "description", "date", "guests_number", "city_id", "host_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "Risotto with Seafood"], ["description", "Granny Smith apples mixed with brown sugar and butter filling, in a flaky all-butter crust, with ice cream."], ["date", "2021-04-13 00:00:00"], ["guests_number", 2], ["city_id", 1], ["host_id", 1], ["created_at", "2021-03-18 10:42:31.764771"], ["updated_at", "2021-03-18 10:42:31.764771"]]
+  ↳ db/seeds.rb:23
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:23
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:23
+  [1m[36mCity Load (0.2ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[36mEvent Create (0.4ms)[0m  [1m[32mINSERT INTO "events" ("title", "description", "date", "guests_number", "city_id", "host_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "Chicken Wings"], ["description", "Fresh parsley, Italian sausage, shallots, garlic, sun-dried tomatoes and mozzarella cheese in an all-butter crust. With a side of mixed fruits."], ["date", "2021-05-08 00:00:00"], ["guests_number", 3], ["city_id", 5], ["host_id", 6], ["created_at", "2021-03-18 10:42:31.769364"], ["updated_at", "2021-03-18 10:42:31.769364"]]
+  ↳ db/seeds.rb:23
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:23
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:23
+  [1m[36mCity Load (0.2ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[36mEvent Create (0.3ms)[0m  [1m[32mINSERT INTO "events" ("title", "description", "date", "guests_number", "city_id", "host_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "Stinky Tofu"], ["description", "28-day aged 300g USDA Certified Prime Ribeye, rosemary-thyme garlic butter, with choice of two sides."], ["date", "2021-04-21 00:00:00"], ["guests_number", 6], ["city_id", 2], ["host_id", 9], ["created_at", "2021-03-18 10:42:31.773762"], ["updated_at", "2021-03-18 10:42:31.773762"]]
+  ↳ db/seeds.rb:23
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:23
+  [1m[36mCity Load (0.2ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[36mEvent Create (0.3ms)[0m  [1m[32mINSERT INTO "events" ("title", "description", "date", "guests_number", "city_id", "host_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "Pasta and Beans"], ["description", "Two butter croissants of your choice (plain, almond or cheese). With a side of herb butter or house-made hazelnut spread."], ["date", "2021-03-27 00:00:00"], ["guests_number", 5], ["city_id", 2], ["host_id", 12], ["created_at", "2021-03-18 10:42:31.777818"], ["updated_at", "2021-03-18 10:42:31.777818"]]
+  ↳ db/seeds.rb:23
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:23
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:23
+  [1m[36mCity Load (0.2ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[36mEvent Create (0.5ms)[0m  [1m[32mINSERT INTO "events" ("title", "description", "date", "guests_number", "city_id", "host_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "Ricotta Stuffed Ravioli"], ["description", "28-day aged 300g USDA Certified Prime Ribeye, rosemary-thyme garlic butter, with choice of two sides."], ["date", "2021-04-18 00:00:00"], ["guests_number", 6], ["city_id", 1], ["host_id", 19], ["created_at", "2021-03-18 10:42:31.783051"], ["updated_at", "2021-03-18 10:42:31.783051"]]
+  ↳ db/seeds.rb:23
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:23
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:23
+  [1m[36mCity Load (0.2ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[36mEvent Create (0.3ms)[0m  [1m[32mINSERT INTO "events" ("title", "description", "date", "guests_number", "city_id", "host_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "Sushi"], ["description", "Three egg omelet with Roquefort cheese, chives, and ham. With a side of roasted potatoes, and your choice of toast or croissant."], ["date", "2021-04-05 00:00:00"], ["guests_number", 6], ["city_id", 3], ["host_id", 4], ["created_at", "2021-03-18 10:42:31.787936"], ["updated_at", "2021-03-18 10:42:31.787936"]]
+  ↳ db/seeds.rb:23
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:23
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:23
+  [1m[36mCity Load (0.2ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[36mEvent Create (0.3ms)[0m  [1m[32mINSERT INTO "events" ("title", "description", "date", "guests_number", "city_id", "host_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "Ricotta Stuffed Ravioli"], ["description", "Three egg omelet with Roquefort cheese, chives, and ham. With a side of roasted potatoes, and your choice of toast or croissant."], ["date", "2021-03-31 00:00:00"], ["guests_number", 1], ["city_id", 4], ["host_id", 5], ["created_at", "2021-03-18 10:42:31.792307"], ["updated_at", "2021-03-18 10:42:31.792307"]]
+  ↳ db/seeds.rb:23
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:23
+  [1m[36mCity Load (0.1ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[36mEvent Create (0.5ms)[0m  [1m[32mINSERT INTO "events" ("title", "description", "date", "guests_number", "city_id", "host_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "Sushi"], ["description", "Granny Smith apples mixed with brown sugar and butter filling, in a flaky all-butter crust, with ice cream."], ["date", "2021-04-08 00:00:00"], ["guests_number", 3], ["city_id", 1], ["host_id", 19], ["created_at", "2021-03-18 10:42:31.796106"], ["updated_at", "2021-03-18 10:42:31.796106"]]
+  ↳ db/seeds.rb:23
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:23
+  [1m[36mCity Load (0.2ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[36mEvent Create (0.3ms)[0m  [1m[32mINSERT INTO "events" ("title", "description", "date", "guests_number", "city_id", "host_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "Lasagne"], ["description", "Granny Smith apples mixed with brown sugar and butter filling, in a flaky all-butter crust, with ice cream."], ["date", "2021-06-09 00:00:00"], ["guests_number", 3], ["city_id", 3], ["host_id", 13], ["created_at", "2021-03-18 10:42:31.800744"], ["updated_at", "2021-03-18 10:42:31.800744"]]
+  ↳ db/seeds.rb:23
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:23
+  [1m[36mCity Load (0.1ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[36mEvent Create (0.2ms)[0m  [1m[32mINSERT INTO "events" ("title", "description", "date", "guests_number", "city_id", "host_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "Chicken Parm"], ["description", "Three egg omelet with Roquefort cheese, chives, and ham. With a side of roasted potatoes, and your choice of toast or croissant."], ["date", "2021-04-28 00:00:00"], ["guests_number", 1], ["city_id", 2], ["host_id", 7], ["created_at", "2021-03-18 10:42:31.804439"], ["updated_at", "2021-03-18 10:42:31.804439"]]
+  ↳ db/seeds.rb:23
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:23
+  [1m[36mCity Load (0.1ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[36mEvent Create (0.2ms)[0m  [1m[32mINSERT INTO "events" ("title", "description", "date", "guests_number", "city_id", "host_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "Tiramisù"], ["description", "Three egg omelet with Roquefort cheese, chives, and ham. With a side of roasted potatoes, and your choice of toast or croissant."], ["date", "2021-04-23 00:00:00"], ["guests_number", 4], ["city_id", 4], ["host_id", 2], ["created_at", "2021-03-18 10:42:31.808382"], ["updated_at", "2021-03-18 10:42:31.808382"]]
+  ↳ db/seeds.rb:23
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:23
+  [1m[36mCity Load (0.1ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[36mEvent Create (0.3ms)[0m  [1m[32mINSERT INTO "events" ("title", "description", "date", "guests_number", "city_id", "host_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "California Maki"], ["description", "Breaded fried chicken with waffles, and a side of maple syrup."], ["date", "2021-04-06 00:00:00"], ["guests_number", 1], ["city_id", 3], ["host_id", 12], ["created_at", "2021-03-18 10:42:31.813580"], ["updated_at", "2021-03-18 10:42:31.813580"]]
+  ↳ db/seeds.rb:23
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:23
+  [1m[36mCity Load (0.1ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[36mEvent Create (0.3ms)[0m  [1m[32mINSERT INTO "events" ("title", "description", "date", "guests_number", "city_id", "host_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "Pasta and Beans"], ["description", "Breaded fried chicken with waffles, and a side of maple syrup."], ["date", "2021-05-11 00:00:00"], ["guests_number", 6], ["city_id", 4], ["host_id", 8], ["created_at", "2021-03-18 10:42:31.817577"], ["updated_at", "2021-03-18 10:42:31.817577"]]
+  ↳ db/seeds.rb:23
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:23
+  [1m[36mCity Load (0.1ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[36mEvent Create (0.3ms)[0m  [1m[32mINSERT INTO "events" ("title", "description", "date", "guests_number", "city_id", "host_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "Sushi"], ["description", "Breaded fried chicken with waffles. Served with maple syrup."], ["date", "2021-05-11 00:00:00"], ["guests_number", 4], ["city_id", 4], ["host_id", 8], ["created_at", "2021-03-18 10:42:31.821762"], ["updated_at", "2021-03-18 10:42:31.821762"]]
+  ↳ db/seeds.rb:23
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:23
+  [1m[36mCity Load (0.1ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[36mEvent Create (0.3ms)[0m  [1m[32mINSERT INTO "events" ("title", "description", "date", "guests_number", "city_id", "host_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "Pasta with Tomato and Basil"], ["description", "Creamy mascarpone cheese and custard layered between espresso and rum soaked house-made ladyfingers, topped with Valrhona cocoa powder."], ["date", "2021-06-13 00:00:00"], ["guests_number", 5], ["city_id", 1], ["host_id", 15], ["created_at", "2021-03-18 10:42:31.825721"], ["updated_at", "2021-03-18 10:42:31.825721"]]
+  ↳ db/seeds.rb:23
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:23
+  [1m[36mCity Load (0.1ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[36mEvent Create (0.3ms)[0m  [1m[32mINSERT INTO "events" ("title", "description", "date", "guests_number", "city_id", "host_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "Tiramisù"], ["description", "Breaded fried chicken with waffles, and a side of maple syrup."], ["date", "2021-05-22 00:00:00"], ["guests_number", 1], ["city_id", 4], ["host_id", 2], ["created_at", "2021-03-18 10:42:31.830532"], ["updated_at", "2021-03-18 10:42:31.830532"]]
+  ↳ db/seeds.rb:23
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:23
+  [1m[36mCity Load (0.2ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[36mEvent Create (0.3ms)[0m  [1m[32mINSERT INTO "events" ("title", "description", "date", "guests_number", "city_id", "host_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "French Toast"], ["description", "Fresh Norwegian salmon, lightly brushed with our herbed Dijon mustard sauce, with choice of two sides."], ["date", "2021-06-04 00:00:00"], ["guests_number", 6], ["city_id", 2], ["host_id", 4], ["created_at", "2021-03-18 10:42:31.834611"], ["updated_at", "2021-03-18 10:42:31.834611"]]
+  ↳ db/seeds.rb:23
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:23
+  [1m[36mCity Load (0.1ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[36mEvent Create (0.2ms)[0m  [1m[32mINSERT INTO "events" ("title", "description", "date", "guests_number", "city_id", "host_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "Sushi"], ["description", "Breaded fried chicken with waffles, and a side of maple syrup."], ["date", "2021-06-05 00:00:00"], ["guests_number", 2], ["city_id", 5], ["host_id", 11], ["created_at", "2021-03-18 10:42:31.838514"], ["updated_at", "2021-03-18 10:42:31.838514"]]
+  ↳ db/seeds.rb:23
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:23
+  [1m[36mCity Load (0.1ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[36mEvent Create (0.3ms)[0m  [1m[32mINSERT INTO "events" ("title", "description", "date", "guests_number", "city_id", "host_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "Stinky Tofu"], ["description", "Three egg whites with spinach, mushrooms, caramelized onions, tomatoes and low-fat feta cheese. With herbed quinoa, and your choice of rye or whole-grain toast."], ["date", "2021-05-02 00:00:00"], ["guests_number", 6], ["city_id", 1], ["host_id", 13], ["created_at", "2021-03-18 10:42:31.842427"], ["updated_at", "2021-03-18 10:42:31.842427"]]
+  ↳ db/seeds.rb:23
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:23
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:23
+  [1m[36mCity Load (0.2ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[36mEvent Create (0.3ms)[0m  [1m[32mINSERT INTO "events" ("title", "description", "date", "guests_number", "city_id", "host_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "Lasagne"], ["description", "Two buttermilk waffles, topped with whipped cream and maple syrup, a side of two eggs served any style, and your choice of smoked bacon or smoked ham."], ["date", "2021-04-02 00:00:00"], ["guests_number", 2], ["city_id", 1], ["host_id", 15], ["created_at", "2021-03-18 10:42:31.847808"], ["updated_at", "2021-03-18 10:42:31.847808"]]
+  ↳ db/seeds.rb:23
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:23
+  [1m[36mCity Load (0.2ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[36mEvent Create (0.3ms)[0m  [1m[32mINSERT INTO "events" ("title", "description", "date", "guests_number", "city_id", "host_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "California Maki"], ["description", "Two buttermilk waffles, topped with whipped cream and maple syrup, a side of two eggs served any style, and your choice of smoked bacon or smoked ham."], ["date", "2021-05-22 00:00:00"], ["guests_number", 4], ["city_id", 4], ["host_id", 8], ["created_at", "2021-03-18 10:42:31.852139"], ["updated_at", "2021-03-18 10:42:31.852139"]]
+  ↳ db/seeds.rb:23
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:23
+  [1m[36mCity Load (0.1ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[36mEvent Create (0.2ms)[0m  [1m[32mINSERT INTO "events" ("title", "description", "date", "guests_number", "city_id", "host_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "Tuna Sashimi"], ["description", "Thick slices of French toast bread, brown sugar, half-and-half and vanilla, topped with powdered sugar. With two eggs served any style, and your choice of smoked bacon or smoked ham."], ["date", "2021-03-21 00:00:00"], ["guests_number", 3], ["city_id", 5], ["host_id", 18], ["created_at", "2021-03-18 10:42:31.855958"], ["updated_at", "2021-03-18 10:42:31.855958"]]
+  ↳ db/seeds.rb:23
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:23
+  [1m[36mCity Load (0.4ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[36mEvent Create (0.5ms)[0m  [1m[32mINSERT INTO "events" ("title", "description", "date", "guests_number", "city_id", "host_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "Peking Duck"], ["description", "Breaded fried chicken with waffles. Served with maple syrup."], ["date", "2021-05-20 00:00:00"], ["guests_number", 5], ["city_id", 3], ["host_id", 1], ["created_at", "2021-03-18 10:42:31.860991"], ["updated_at", "2021-03-18 10:42:31.860991"]]
+  ↳ db/seeds.rb:23
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:23
+  [1m[36mCity Load (0.2ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[36mEvent Create (0.3ms)[0m  [1m[32mINSERT INTO "events" ("title", "description", "date", "guests_number", "city_id", "host_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "Seafood Paella"], ["description", "28-day aged 300g USDA Certified Prime Ribeye, rosemary-thyme garlic butter, with choice of two sides."], ["date", "2021-04-06 00:00:00"], ["guests_number", 4], ["city_id", 1], ["host_id", 19], ["created_at", "2021-03-18 10:42:31.865940"], ["updated_at", "2021-03-18 10:42:31.865940"]]
+  ↳ db/seeds.rb:23
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:23
+  [1m[36mCity Load (0.1ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[36mEvent Create (0.3ms)[0m  [1m[32mINSERT INTO "events" ("title", "description", "date", "guests_number", "city_id", "host_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "Poke"], ["description", "Three eggs with cilantro, tomatoes, onions, avocados and melted Emmental cheese. With a side of roasted potatoes, and your choice of toast or croissant."], ["date", "2021-05-13 00:00:00"], ["guests_number", 1], ["city_id", 5], ["host_id", 14], ["created_at", "2021-03-18 10:42:31.870264"], ["updated_at", "2021-03-18 10:42:31.870264"]]
+  ↳ db/seeds.rb:23
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:23
+  [1m[36mCity Load (0.1ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[36mEvent Create (0.3ms)[0m  [1m[32mINSERT INTO "events" ("title", "description", "date", "guests_number", "city_id", "host_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "Sushi"], ["description", "Smoked salmon, poached eggs, diced red onions and Hollandaise sauce on an English muffin. With a side of roasted potatoes."], ["date", "2021-04-28 00:00:00"], ["guests_number", 1], ["city_id", 2], ["host_id", 4], ["created_at", "2021-03-18 10:42:31.874640"], ["updated_at", "2021-03-18 10:42:31.874640"]]
+  ↳ db/seeds.rb:23
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:23
+  [1m[36mCity Load (0.1ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[36mEvent Create (0.4ms)[0m  [1m[32mINSERT INTO "events" ("title", "description", "date", "guests_number", "city_id", "host_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "Chicken Milanese"], ["description", "Three egg omelet with Roquefort cheese, chives, and ham. With a side of roasted potatoes, and your choice of toast or croissant."], ["date", "2021-06-18 00:00:00"], ["guests_number", 5], ["city_id", 5], ["host_id", 16], ["created_at", "2021-03-18 10:42:31.878874"], ["updated_at", "2021-03-18 10:42:31.878874"]]
+  ↳ db/seeds.rb:23
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:23
+  [1m[36mCity Load (0.2ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[36mEvent Create (0.3ms)[0m  [1m[32mINSERT INTO "events" ("title", "description", "date", "guests_number", "city_id", "host_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "Pho"], ["description", "Two butter croissants of your choice (plain, almond or cheese). With a side of herb butter or house-made hazelnut spread."], ["date", "2021-04-27 00:00:00"], ["guests_number", 1], ["city_id", 5], ["host_id", 10], ["created_at", "2021-03-18 10:42:31.883499"], ["updated_at", "2021-03-18 10:42:31.883499"]]
+  ↳ db/seeds.rb:23
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:23
+  [1m[36mCity Load (0.1ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[36mEvent Create (0.2ms)[0m  [1m[32mINSERT INTO "events" ("title", "description", "date", "guests_number", "city_id", "host_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "Tacos"], ["description", "Three egg omelet with Roquefort cheese, chives, and ham. With a side of roasted potatoes, and your choice of toast or croissant."], ["date", "2021-05-05 00:00:00"], ["guests_number", 6], ["city_id", 1], ["host_id", 7], ["created_at", "2021-03-18 10:42:31.887419"], ["updated_at", "2021-03-18 10:42:31.887419"]]
+  ↳ db/seeds.rb:23
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:23
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mTag Load (0.4ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mFilter Create (1.2ms)[0m  [1m[32mINSERT INTO "filters" ("event_id", "tag_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["event_id", 8], ["tag_id", 3], ["created_at", "2021-03-18 10:42:31.915063"], ["updated_at", "2021-03-18 10:42:31.915063"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mFilter Create (0.2ms)[0m  [1m[32mINSERT INTO "filters" ("event_id", "tag_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["event_id", 6], ["tag_id", 5], ["created_at", "2021-03-18 10:42:31.920119"], ["updated_at", "2021-03-18 10:42:31.920119"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mFilter Create (0.2ms)[0m  [1m[32mINSERT INTO "filters" ("event_id", "tag_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["event_id", 12], ["tag_id", 1], ["created_at", "2021-03-18 10:42:31.923919"], ["updated_at", "2021-03-18 10:42:31.923919"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mFilter Create (0.2ms)[0m  [1m[32mINSERT INTO "filters" ("event_id", "tag_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["event_id", 19], ["tag_id", 1], ["created_at", "2021-03-18 10:42:31.927411"], ["updated_at", "2021-03-18 10:42:31.927411"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mFilter Create (0.2ms)[0m  [1m[32mINSERT INTO "filters" ("event_id", "tag_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["event_id", 5], ["tag_id", 2], ["created_at", "2021-03-18 10:42:31.931771"], ["updated_at", "2021-03-18 10:42:31.931771"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mFilter Create (0.2ms)[0m  [1m[32mINSERT INTO "filters" ("event_id", "tag_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["event_id", 15], ["tag_id", 2], ["created_at", "2021-03-18 10:42:31.935297"], ["updated_at", "2021-03-18 10:42:31.935297"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mFilter Create (0.3ms)[0m  [1m[32mINSERT INTO "filters" ("event_id", "tag_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["event_id", 5], ["tag_id", 5], ["created_at", "2021-03-18 10:42:31.939016"], ["updated_at", "2021-03-18 10:42:31.939016"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mFilter Create (0.2ms)[0m  [1m[32mINSERT INTO "filters" ("event_id", "tag_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["event_id", 4], ["tag_id", 1], ["created_at", "2021-03-18 10:42:31.942573"], ["updated_at", "2021-03-18 10:42:31.942573"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mFilter Create (0.3ms)[0m  [1m[32mINSERT INTO "filters" ("event_id", "tag_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["event_id", 8], ["tag_id", 3], ["created_at", "2021-03-18 10:42:31.946000"], ["updated_at", "2021-03-18 10:42:31.946000"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mFilter Create (0.3ms)[0m  [1m[32mINSERT INTO "filters" ("event_id", "tag_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["event_id", 10], ["tag_id", 5], ["created_at", "2021-03-18 10:42:31.950031"], ["updated_at", "2021-03-18 10:42:31.950031"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mFilter Create (0.4ms)[0m  [1m[32mINSERT INTO "filters" ("event_id", "tag_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["event_id", 6], ["tag_id", 1], ["created_at", "2021-03-18 10:42:31.954655"], ["updated_at", "2021-03-18 10:42:31.954655"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mFilter Create (0.3ms)[0m  [1m[32mINSERT INTO "filters" ("event_id", "tag_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["event_id", 28], ["tag_id", 5], ["created_at", "2021-03-18 10:42:31.959741"], ["updated_at", "2021-03-18 10:42:31.959741"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mFilter Create (0.2ms)[0m  [1m[32mINSERT INTO "filters" ("event_id", "tag_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["event_id", 14], ["tag_id", 3], ["created_at", "2021-03-18 10:42:31.963561"], ["updated_at", "2021-03-18 10:42:31.963561"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mFilter Create (0.2ms)[0m  [1m[32mINSERT INTO "filters" ("event_id", "tag_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["event_id", 21], ["tag_id", 4], ["created_at", "2021-03-18 10:42:31.967020"], ["updated_at", "2021-03-18 10:42:31.967020"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mFilter Create (0.3ms)[0m  [1m[32mINSERT INTO "filters" ("event_id", "tag_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["event_id", 1], ["tag_id", 5], ["created_at", "2021-03-18 10:42:31.971956"], ["updated_at", "2021-03-18 10:42:31.971956"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mFilter Create (0.3ms)[0m  [1m[32mINSERT INTO "filters" ("event_id", "tag_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["event_id", 18], ["tag_id", 4], ["created_at", "2021-03-18 10:42:31.976051"], ["updated_at", "2021-03-18 10:42:31.976051"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mFilter Create (0.3ms)[0m  [1m[32mINSERT INTO "filters" ("event_id", "tag_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["event_id", 22], ["tag_id", 2], ["created_at", "2021-03-18 10:42:31.979892"], ["updated_at", "2021-03-18 10:42:31.979892"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mFilter Create (0.3ms)[0m  [1m[32mINSERT INTO "filters" ("event_id", "tag_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["event_id", 11], ["tag_id", 5], ["created_at", "2021-03-18 10:42:31.983569"], ["updated_at", "2021-03-18 10:42:31.983569"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mFilter Create (0.2ms)[0m  [1m[32mINSERT INTO "filters" ("event_id", "tag_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["event_id", 11], ["tag_id", 1], ["created_at", "2021-03-18 10:42:31.987511"], ["updated_at", "2021-03-18 10:42:31.987511"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mFilter Create (0.2ms)[0m  [1m[32mINSERT INTO "filters" ("event_id", "tag_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["event_id", 14], ["tag_id", 3], ["created_at", "2021-03-18 10:42:31.991293"], ["updated_at", "2021-03-18 10:42:31.991293"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mFilter Create (0.2ms)[0m  [1m[32mINSERT INTO "filters" ("event_id", "tag_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["event_id", 19], ["tag_id", 5], ["created_at", "2021-03-18 10:42:31.994629"], ["updated_at", "2021-03-18 10:42:31.994629"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mFilter Create (0.2ms)[0m  [1m[32mINSERT INTO "filters" ("event_id", "tag_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["event_id", 5], ["tag_id", 2], ["created_at", "2021-03-18 10:42:31.998658"], ["updated_at", "2021-03-18 10:42:31.998658"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mFilter Create (0.2ms)[0m  [1m[32mINSERT INTO "filters" ("event_id", "tag_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["event_id", 20], ["tag_id", 1], ["created_at", "2021-03-18 10:42:32.002327"], ["updated_at", "2021-03-18 10:42:32.002327"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mFilter Create (0.3ms)[0m  [1m[32mINSERT INTO "filters" ("event_id", "tag_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["event_id", 29], ["tag_id", 5], ["created_at", "2021-03-18 10:42:32.005623"], ["updated_at", "2021-03-18 10:42:32.005623"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mFilter Create (0.2ms)[0m  [1m[32mINSERT INTO "filters" ("event_id", "tag_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["event_id", 25], ["tag_id", 1], ["created_at", "2021-03-18 10:42:32.009209"], ["updated_at", "2021-03-18 10:42:32.009209"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mFilter Create (0.2ms)[0m  [1m[32mINSERT INTO "filters" ("event_id", "tag_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["event_id", 19], ["tag_id", 4], ["created_at", "2021-03-18 10:42:32.013345"], ["updated_at", "2021-03-18 10:42:32.013345"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mFilter Create (0.2ms)[0m  [1m[32mINSERT INTO "filters" ("event_id", "tag_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["event_id", 5], ["tag_id", 1], ["created_at", "2021-03-18 10:42:32.017113"], ["updated_at", "2021-03-18 10:42:32.017113"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mFilter Create (0.2ms)[0m  [1m[32mINSERT INTO "filters" ("event_id", "tag_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["event_id", 10], ["tag_id", 4], ["created_at", "2021-03-18 10:42:32.021001"], ["updated_at", "2021-03-18 10:42:32.021001"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mFilter Create (0.3ms)[0m  [1m[32mINSERT INTO "filters" ("event_id", "tag_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["event_id", 4], ["tag_id", 3], ["created_at", "2021-03-18 10:42:32.024323"], ["updated_at", "2021-03-18 10:42:32.024323"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mFilter Create (0.2ms)[0m  [1m[32mINSERT INTO "filters" ("event_id", "tag_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["event_id", 13], ["tag_id", 4], ["created_at", "2021-03-18 10:42:32.027901"], ["updated_at", "2021-03-18 10:42:32.027901"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mFilter Create (0.3ms)[0m  [1m[32mINSERT INTO "filters" ("event_id", "tag_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["event_id", 7], ["tag_id", 4], ["created_at", "2021-03-18 10:42:32.033292"], ["updated_at", "2021-03-18 10:42:32.033292"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mFilter Create (0.2ms)[0m  [1m[32mINSERT INTO "filters" ("event_id", "tag_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["event_id", 29], ["tag_id", 5], ["created_at", "2021-03-18 10:42:32.037206"], ["updated_at", "2021-03-18 10:42:32.037206"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mFilter Create (0.3ms)[0m  [1m[32mINSERT INTO "filters" ("event_id", "tag_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["event_id", 26], ["tag_id", 4], ["created_at", "2021-03-18 10:42:32.041558"], ["updated_at", "2021-03-18 10:42:32.041558"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mFilter Create (0.5ms)[0m  [1m[32mINSERT INTO "filters" ("event_id", "tag_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["event_id", 10], ["tag_id", 2], ["created_at", "2021-03-18 10:42:32.045287"], ["updated_at", "2021-03-18 10:42:32.045287"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mFilter Create (0.3ms)[0m  [1m[32mINSERT INTO "filters" ("event_id", "tag_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["event_id", 21], ["tag_id", 2], ["created_at", "2021-03-18 10:42:32.051662"], ["updated_at", "2021-03-18 10:42:32.051662"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mFilter Create (0.3ms)[0m  [1m[32mINSERT INTO "filters" ("event_id", "tag_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["event_id", 23], ["tag_id", 3], ["created_at", "2021-03-18 10:42:32.056894"], ["updated_at", "2021-03-18 10:42:32.056894"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mFilter Create (0.3ms)[0m  [1m[32mINSERT INTO "filters" ("event_id", "tag_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["event_id", 8], ["tag_id", 3], ["created_at", "2021-03-18 10:42:32.063092"], ["updated_at", "2021-03-18 10:42:32.063092"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mFilter Create (0.3ms)[0m  [1m[32mINSERT INTO "filters" ("event_id", "tag_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["event_id", 15], ["tag_id", 1], ["created_at", "2021-03-18 10:42:32.068072"], ["updated_at", "2021-03-18 10:42:32.068072"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mFilter Create (0.2ms)[0m  [1m[32mINSERT INTO "filters" ("event_id", "tag_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["event_id", 14], ["tag_id", 2], ["created_at", "2021-03-18 10:42:32.072558"], ["updated_at", "2021-03-18 10:42:32.072558"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mFilter Create (0.3ms)[0m  [1m[32mINSERT INTO "filters" ("event_id", "tag_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["event_id", 22], ["tag_id", 3], ["created_at", "2021-03-18 10:42:32.077150"], ["updated_at", "2021-03-18 10:42:32.077150"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mTag Load (0.4ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mFilter Create (0.3ms)[0m  [1m[32mINSERT INTO "filters" ("event_id", "tag_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["event_id", 23], ["tag_id", 4], ["created_at", "2021-03-18 10:42:32.083545"], ["updated_at", "2021-03-18 10:42:32.083545"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mFilter Create (0.3ms)[0m  [1m[32mINSERT INTO "filters" ("event_id", "tag_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["event_id", 8], ["tag_id", 4], ["created_at", "2021-03-18 10:42:32.088271"], ["updated_at", "2021-03-18 10:42:32.088271"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mFilter Create (1.5ms)[0m  [1m[32mINSERT INTO "filters" ("event_id", "tag_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["event_id", 9], ["tag_id", 5], ["created_at", "2021-03-18 10:42:32.093355"], ["updated_at", "2021-03-18 10:42:32.093355"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mFilter Create (0.3ms)[0m  [1m[32mINSERT INTO "filters" ("event_id", "tag_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["event_id", 14], ["tag_id", 3], ["created_at", "2021-03-18 10:42:32.099882"], ["updated_at", "2021-03-18 10:42:32.099882"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mFilter Create (0.3ms)[0m  [1m[32mINSERT INTO "filters" ("event_id", "tag_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["event_id", 11], ["tag_id", 4], ["created_at", "2021-03-18 10:42:32.104367"], ["updated_at", "2021-03-18 10:42:32.104367"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mFilter Create (0.3ms)[0m  [1m[32mINSERT INTO "filters" ("event_id", "tag_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["event_id", 28], ["tag_id", 4], ["created_at", "2021-03-18 10:42:32.110174"], ["updated_at", "2021-03-18 10:42:32.110174"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mFilter Create (0.2ms)[0m  [1m[32mINSERT INTO "filters" ("event_id", "tag_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["event_id", 26], ["tag_id", 4], ["created_at", "2021-03-18 10:42:32.114933"], ["updated_at", "2021-03-18 10:42:32.114933"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mFilter Create (0.3ms)[0m  [1m[32mINSERT INTO "filters" ("event_id", "tag_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["event_id", 15], ["tag_id", 4], ["created_at", "2021-03-18 10:42:32.119587"], ["updated_at", "2021-03-18 10:42:32.119587"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mFilter Create (0.3ms)[0m  [1m[32mINSERT INTO "filters" ("event_id", "tag_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["event_id", 18], ["tag_id", 4], ["created_at", "2021-03-18 10:42:32.124595"], ["updated_at", "2021-03-18 10:42:32.124595"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mFilter Create (0.3ms)[0m  [1m[32mINSERT INTO "filters" ("event_id", "tag_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["event_id", 16], ["tag_id", 4], ["created_at", "2021-03-18 10:42:32.129870"], ["updated_at", "2021-03-18 10:42:32.129870"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mFilter Create (0.2ms)[0m  [1m[32mINSERT INTO "filters" ("event_id", "tag_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["event_id", 16], ["tag_id", 3], ["created_at", "2021-03-18 10:42:32.134029"], ["updated_at", "2021-03-18 10:42:32.134029"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mFilter Create (0.3ms)[0m  [1m[32mINSERT INTO "filters" ("event_id", "tag_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["event_id", 5], ["tag_id", 1], ["created_at", "2021-03-18 10:42:32.138195"], ["updated_at", "2021-03-18 10:42:32.138195"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mFilter Create (0.4ms)[0m  [1m[32mINSERT INTO "filters" ("event_id", "tag_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["event_id", 12], ["tag_id", 2], ["created_at", "2021-03-18 10:42:32.143157"], ["updated_at", "2021-03-18 10:42:32.143157"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mFilter Create (0.3ms)[0m  [1m[32mINSERT INTO "filters" ("event_id", "tag_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["event_id", 10], ["tag_id", 3], ["created_at", "2021-03-18 10:42:32.148186"], ["updated_at", "2021-03-18 10:42:32.148186"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mFilter Create (0.2ms)[0m  [1m[32mINSERT INTO "filters" ("event_id", "tag_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["event_id", 3], ["tag_id", 2], ["created_at", "2021-03-18 10:42:32.152596"], ["updated_at", "2021-03-18 10:42:32.152596"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mFilter Create (0.3ms)[0m  [1m[32mINSERT INTO "filters" ("event_id", "tag_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["event_id", 18], ["tag_id", 3], ["created_at", "2021-03-18 10:42:32.157893"], ["updated_at", "2021-03-18 10:42:32.157893"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mFilter Create (0.3ms)[0m  [1m[32mINSERT INTO "filters" ("event_id", "tag_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["event_id", 1], ["tag_id", 4], ["created_at", "2021-03-18 10:42:32.162742"], ["updated_at", "2021-03-18 10:42:32.162742"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mFilter Create (0.3ms)[0m  [1m[32mINSERT INTO "filters" ("event_id", "tag_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["event_id", 28], ["tag_id", 3], ["created_at", "2021-03-18 10:42:32.167593"], ["updated_at", "2021-03-18 10:42:32.167593"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mFilter Create (0.2ms)[0m  [1m[32mINSERT INTO "filters" ("event_id", "tag_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["event_id", 24], ["tag_id", 5], ["created_at", "2021-03-18 10:42:32.172355"], ["updated_at", "2021-03-18 10:42:32.172355"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mFilter Create (0.3ms)[0m  [1m[32mINSERT INTO "filters" ("event_id", "tag_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["event_id", 12], ["tag_id", 3], ["created_at", "2021-03-18 10:42:32.176538"], ["updated_at", "2021-03-18 10:42:32.176538"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:31
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ db/seeds.rb:31
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ db/seeds.rb:31
+  [1m[36mAppointment Create (1.5ms)[0m  [1m[32mINSERT INTO "appointments" ("user_id", "event_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 10], ["event_id", 24], ["created_at", "2021-03-18 10:42:32.194916"], ["updated_at", "2021-03-18 10:42:32.194916"]]
+  ↳ db/seeds.rb:31
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:31
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:31
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ db/seeds.rb:31
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ db/seeds.rb:31
+  [1m[36mAppointment Create (0.2ms)[0m  [1m[32mINSERT INTO "appointments" ("user_id", "event_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 20], ["event_id", 28], ["created_at", "2021-03-18 10:42:32.200212"], ["updated_at", "2021-03-18 10:42:32.200212"]]
+  ↳ db/seeds.rb:31
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:31
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:31
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ db/seeds.rb:31
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ db/seeds.rb:31
+  [1m[36mAppointment Create (0.2ms)[0m  [1m[32mINSERT INTO "appointments" ("user_id", "event_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 8], ["event_id", 20], ["created_at", "2021-03-18 10:42:32.203999"], ["updated_at", "2021-03-18 10:42:32.203999"]]
+  ↳ db/seeds.rb:31
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:31
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:31
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ db/seeds.rb:31
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ db/seeds.rb:31
+  [1m[36mAppointment Create (0.2ms)[0m  [1m[32mINSERT INTO "appointments" ("user_id", "event_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 19], ["event_id", 19], ["created_at", "2021-03-18 10:42:32.207688"], ["updated_at", "2021-03-18 10:42:32.207688"]]
+  ↳ db/seeds.rb:31
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:31
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:31
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ db/seeds.rb:31
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ db/seeds.rb:31
+  [1m[36mAppointment Create (0.2ms)[0m  [1m[32mINSERT INTO "appointments" ("user_id", "event_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 16], ["event_id", 29], ["created_at", "2021-03-18 10:42:32.211371"], ["updated_at", "2021-03-18 10:42:32.211371"]]
+  ↳ db/seeds.rb:31
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:31
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:31
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ db/seeds.rb:31
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ db/seeds.rb:31
+  [1m[36mAppointment Create (0.2ms)[0m  [1m[32mINSERT INTO "appointments" ("user_id", "event_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 11], ["event_id", 23], ["created_at", "2021-03-18 10:42:32.215263"], ["updated_at", "2021-03-18 10:42:32.215263"]]
+  ↳ db/seeds.rb:31
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:31
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:31
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:31
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ db/seeds.rb:31
+  [1m[36mAppointment Create (0.4ms)[0m  [1m[32mINSERT INTO "appointments" ("user_id", "event_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 3], ["event_id", 12], ["created_at", "2021-03-18 10:42:32.219332"], ["updated_at", "2021-03-18 10:42:32.219332"]]
+  ↳ db/seeds.rb:31
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:31
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:31
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:31
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ db/seeds.rb:31
+  [1m[36mAppointment Create (0.2ms)[0m  [1m[32mINSERT INTO "appointments" ("user_id", "event_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 3], ["event_id", 18], ["created_at", "2021-03-18 10:42:32.223597"], ["updated_at", "2021-03-18 10:42:32.223597"]]
+  ↳ db/seeds.rb:31
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:31
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:31
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ db/seeds.rb:31
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:31
+  [1m[36mAppointment Create (0.2ms)[0m  [1m[32mINSERT INTO "appointments" ("user_id", "event_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 14], ["event_id", 4], ["created_at", "2021-03-18 10:42:32.227228"], ["updated_at", "2021-03-18 10:42:32.227228"]]
+  ↳ db/seeds.rb:31
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:31
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:31
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ db/seeds.rb:31
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ db/seeds.rb:31
+  [1m[36mAppointment Create (0.2ms)[0m  [1m[32mINSERT INTO "appointments" ("user_id", "event_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 8], ["event_id", 20], ["created_at", "2021-03-18 10:42:32.231256"], ["updated_at", "2021-03-18 10:42:32.231256"]]
+  ↳ db/seeds.rb:31
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:31
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:31
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:31
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ db/seeds.rb:31
+  [1m[36mAppointment Create (0.2ms)[0m  [1m[32mINSERT INTO "appointments" ("user_id", "event_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["event_id", 18], ["created_at", "2021-03-18 10:42:32.235631"], ["updated_at", "2021-03-18 10:42:32.235631"]]
+  ↳ db/seeds.rb:31
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:31
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:31
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ db/seeds.rb:31
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ db/seeds.rb:31
+  [1m[36mAppointment Create (0.2ms)[0m  [1m[32mINSERT INTO "appointments" ("user_id", "event_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 11], ["event_id", 26], ["created_at", "2021-03-18 10:42:32.239642"], ["updated_at", "2021-03-18 10:42:32.239642"]]
+  ↳ db/seeds.rb:31
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:31
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:31
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ db/seeds.rb:31
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ db/seeds.rb:31
+  [1m[36mAppointment Create (0.2ms)[0m  [1m[32mINSERT INTO "appointments" ("user_id", "event_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 17], ["event_id", 6], ["created_at", "2021-03-18 10:42:32.243601"], ["updated_at", "2021-03-18 10:42:32.243601"]]
+  ↳ db/seeds.rb:31
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:31
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:31
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ db/seeds.rb:31
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ db/seeds.rb:31
+  [1m[36mAppointment Create (0.3ms)[0m  [1m[32mINSERT INTO "appointments" ("user_id", "event_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 5], ["event_id", 9], ["created_at", "2021-03-18 10:42:32.247634"], ["updated_at", "2021-03-18 10:42:32.247634"]]
+  ↳ db/seeds.rb:31
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:31
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:31
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ db/seeds.rb:31
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ db/seeds.rb:31
+  [1m[36mAppointment Create (0.2ms)[0m  [1m[32mINSERT INTO "appointments" ("user_id", "event_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 18], ["event_id", 11], ["created_at", "2021-03-18 10:42:32.251805"], ["updated_at", "2021-03-18 10:42:32.251805"]]
+  ↳ db/seeds.rb:31
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:31
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:31
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ db/seeds.rb:31
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ db/seeds.rb:31
+  [1m[36mAppointment Create (0.2ms)[0m  [1m[32mINSERT INTO "appointments" ("user_id", "event_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 9], ["event_id", 23], ["created_at", "2021-03-18 10:42:32.255486"], ["updated_at", "2021-03-18 10:42:32.255486"]]
+  ↳ db/seeds.rb:31
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:31
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:31
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ db/seeds.rb:31
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ db/seeds.rb:31
+  [1m[36mAppointment Create (0.2ms)[0m  [1m[32mINSERT INTO "appointments" ("user_id", "event_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 13], ["event_id", 17], ["created_at", "2021-03-18 10:42:32.259137"], ["updated_at", "2021-03-18 10:42:32.259137"]]
+  ↳ db/seeds.rb:31
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:31
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:31
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ db/seeds.rb:31
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ db/seeds.rb:31
+  [1m[36mAppointment Create (0.2ms)[0m  [1m[32mINSERT INTO "appointments" ("user_id", "event_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 13], ["event_id", 22], ["created_at", "2021-03-18 10:42:32.263277"], ["updated_at", "2021-03-18 10:42:32.263277"]]
+  ↳ db/seeds.rb:31
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:31
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:31
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ db/seeds.rb:31
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ db/seeds.rb:31
+  [1m[36mAppointment Create (0.2ms)[0m  [1m[32mINSERT INTO "appointments" ("user_id", "event_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 19], ["event_id", 17], ["created_at", "2021-03-18 10:42:32.267296"], ["updated_at", "2021-03-18 10:42:32.267296"]]
+  ↳ db/seeds.rb:31
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:31
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:31
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ db/seeds.rb:31
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ db/seeds.rb:31
+  [1m[36mAppointment Create (0.2ms)[0m  [1m[32mINSERT INTO "appointments" ("user_id", "event_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 10], ["event_id", 29], ["created_at", "2021-03-18 10:42:32.271231"], ["updated_at", "2021-03-18 10:42:32.271231"]]
+  ↳ db/seeds.rb:31
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:31
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:31
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ db/seeds.rb:31
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ db/seeds.rb:31
+  [1m[36mAppointment Create (0.2ms)[0m  [1m[32mINSERT INTO "appointments" ("user_id", "event_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 12], ["event_id", 21], ["created_at", "2021-03-18 10:42:32.274925"], ["updated_at", "2021-03-18 10:42:32.274925"]]
+  ↳ db/seeds.rb:31
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:31
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:31
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:31
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:31
+  [1m[36mAppointment Create (1.0ms)[0m  [1m[32mINSERT INTO "appointments" ("user_id", "event_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 1], ["event_id", 4], ["created_at", "2021-03-18 10:42:32.278581"], ["updated_at", "2021-03-18 10:42:32.278581"]]
+  ↳ db/seeds.rb:31
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:31
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:31
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ db/seeds.rb:31
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ db/seeds.rb:31
+  [1m[36mAppointment Create (0.2ms)[0m  [1m[32mINSERT INTO "appointments" ("user_id", "event_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 5], ["event_id", 8], ["created_at", "2021-03-18 10:42:32.283785"], ["updated_at", "2021-03-18 10:42:32.283785"]]
+  ↳ db/seeds.rb:31
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:31
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:31
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ db/seeds.rb:31
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:31
+  [1m[36mAppointment Create (0.2ms)[0m  [1m[32mINSERT INTO "appointments" ("user_id", "event_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 19], ["event_id", 2], ["created_at", "2021-03-18 10:42:32.287617"], ["updated_at", "2021-03-18 10:42:32.287617"]]
+  ↳ db/seeds.rb:31
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:31
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:31
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:31
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ db/seeds.rb:31
+  [1m[36mAppointment Create (0.2ms)[0m  [1m[32mINSERT INTO "appointments" ("user_id", "event_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 4], ["event_id", 12], ["created_at", "2021-03-18 10:42:32.291346"], ["updated_at", "2021-03-18 10:42:32.291346"]]
+  ↳ db/seeds.rb:31
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:31
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:31
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ db/seeds.rb:31
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ db/seeds.rb:31
+  [1m[36mAppointment Create (0.3ms)[0m  [1m[32mINSERT INTO "appointments" ("user_id", "event_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 5], ["event_id", 29], ["created_at", "2021-03-18 10:42:32.295142"], ["updated_at", "2021-03-18 10:42:32.295142"]]
+  ↳ db/seeds.rb:31
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:31
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:31
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ db/seeds.rb:31
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ db/seeds.rb:31
+  [1m[36mAppointment Create (0.2ms)[0m  [1m[32mINSERT INTO "appointments" ("user_id", "event_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 5], ["event_id", 17], ["created_at", "2021-03-18 10:42:32.299867"], ["updated_at", "2021-03-18 10:42:32.299867"]]
+  ↳ db/seeds.rb:31
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:31
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:31
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ db/seeds.rb:31
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ db/seeds.rb:31
+  [1m[36mAppointment Create (0.2ms)[0m  [1m[32mINSERT INTO "appointments" ("user_id", "event_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 13], ["event_id", 6], ["created_at", "2021-03-18 10:42:32.303780"], ["updated_at", "2021-03-18 10:42:32.303780"]]
+  ↳ db/seeds.rb:31
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:31
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:31
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ db/seeds.rb:31
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ db/seeds.rb:31
+  [1m[36mAppointment Create (0.2ms)[0m  [1m[32mINSERT INTO "appointments" ("user_id", "event_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 16], ["event_id", 6], ["created_at", "2021-03-18 10:42:32.307496"], ["updated_at", "2021-03-18 10:42:32.307496"]]
+  ↳ db/seeds.rb:31
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:31
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:31
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:31
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ db/seeds.rb:31
+  [1m[36mAppointment Create (0.2ms)[0m  [1m[32mINSERT INTO "appointments" ("user_id", "event_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 3], ["event_id", 9], ["created_at", "2021-03-18 10:42:32.311830"], ["updated_at", "2021-03-18 10:42:32.311830"]]
+  ↳ db/seeds.rb:31
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:31
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.9ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."host_id" = $1 LIMIT $2[0m  [["host_id", 6], ["LIMIT", 11]]
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."host_id" = $1 LIMIT $2[0m  [["host_id", 5], ["LIMIT", 11]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."host_id" = $1 LIMIT $2[0m  [["host_id", 9], ["LIMIT", 11]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."host_id" = $1 LIMIT $2[0m  [["host_id", 1], ["LIMIT", 11]]
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (124.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "SharePasCher_development"[0m
+  ↳ bin/rails:9
+  [1m[35m (141.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS "SharePasCher_test"[0m
   ↳ bin/rails:9
 
 Started GET "/" for ::1 at 2021-03-18 10:45:39 +0100
