@@ -16,11 +16,11 @@ end
 end
 
 20.times do |user|
-  User.create(email: (Faker::Superhero.power + "@blabla.com"), first_name: Faker::Superhero.prefix, last_name: Faker::Superhero.suffix, birth_day: Faker::Date.birthday(min_age:18, max_age:100), gender: "unknown", city_id: rand(1..5), is_host: false)
+  User.create(email: (Faker::Superhero.power + "@blabla.com"),password: Faker::Superhero.power, first_name: Faker::Superhero.prefix, last_name: Faker::Superhero.suffix, birth_day: Faker::Date.birthday(min_age:18, max_age:100), gender: "unknown", is_host: false)
 end
 
 30.times do |event|
-  Event.create(title: Faker::Food.dish, description: Faker::Food.description, date: Faker::Date.forward(days: 100), guests_number: rand(1..6), city_id: rand(1..5), host_id: rand(1..20))
+  Event.create(title: Faker::Food.dish, description: Faker::Food.description, date: Faker::Date.forward(days: 100), guests_number: rand(1..6), city_id: rand(1..5), host_id: rand(1..User.count))
 end
 
 60.times do |filter|
@@ -28,5 +28,5 @@ end
 end
 
 30.times do |appointment|
-  Appointment.create(user_id: rand(1..20), event_id: rand(1..30))
+  Appointment.create(user_id: rand(1..User.count), event_id: rand(1..30))
 end
