@@ -1,7 +1,16 @@
+*
+{
+	margin:0px;
+	padding: 0px;
+
+}
+
 footer{
 position:absolute;
 bottom:0px;
 width:100%;
+margin-bottom: 0;
+background-color: black;
 padding-top:50px;
 height:50px;
 }
