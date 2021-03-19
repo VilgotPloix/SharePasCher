@@ -11,6 +11,12 @@ class EventsController < ApplicationController
   end
 
   def create
+    @event = Event.create!(title: params[:title], description: params[:description], date: params[:date])
+    @event.save
+  end
+
+  def new
+    
   end
 
   def destroy
