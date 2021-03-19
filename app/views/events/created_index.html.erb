@@ -1,1 +1,104 @@
-<h1> Bonjouuur</h1>
+<!DOCTYPE html>
+<html>
+    <head>
+         <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> -->
+
+    <link rel="stylesheet" href="Event_page.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+
+        <title>Hôte</title>
+    </head> 
+
+<body>
+<section class="hero is-info is-halfheight">
+  <div class="hero-body">
+    <div class="">
+      <p class="title">
+     Bienvenue sur ton compte <%= @user.first_name %> !
+      </p>
+      <p class="subtitle">
+      Voici la liste de tous les evenements que tu as crée :
+      </p>
+    </div>
+  </div>
+</section>
+
+
+
+<br /><br />
+<div class="events_created">
+<div class="card">
+  <div class="card-image">
+    <figure class="image">
+      <img src="" alt="Placeholder image">
+    </figure>
+  </div>
+  <div class="card-content">
+    <div class="media">
+      <div class="media-left">
+        <figure class="image">
+          <img src="" alt="Placeholder image">
+        </figure>
+      </div>
+      <div class="media-content">
+        <p class="title is-4">Valeria Raquelita</p>
+        <p class="subtitle is-6">@vRaquelita</p>
+      </div>
+    </div>
+
+    <div class="content">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      Phasellus nec iaculis mauris.
+      <br>
+      <time datetime="2016-1-1">11:09 PM - 19 Juil 2021</time>
+    </div>
+  </div>
+    <footer class="card-footer">
+    <a href="#" class="card-footer-item">Valider définitivement</a>
+    <a href="#" class="card-footer-item">Editer</a> <%= link_to "éditer le potin", edit_gossip_path(@gossip) %>
+    <a href="#" class="card-footer-item">Supprimer</a> <%= link_to "supprimer le potin", gossip_path(@gossip.id) %>
+  </footer>
+</div>
+<br /><br />
+<div class="card">
+  <div class="card-image">
+    <figure class="image">
+      <img src="" alt="Placeholder image">
+    </figure>
+  </div>
+  <div class="card-content">
+    <div class="media">
+      <div class="media-left">
+        <figure class="image">
+          <img src="" alt="Placeholder image">
+        </figure>
+      </div>
+      <div class="media-content">
+        <p class="title is-4">Juan Lopez</p>
+        <p class="subtitle is-6">@jLopez</p>
+      </div>
+    </div>
+
+    <div class="content">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      Phasellus nec iaculis mauris.
+      <br>
+      <time datetime="2016-1-1">11:09 PM - 1 Nov 2021</time>
+    </div>
+  </div>
+    <footer class="card-footer">
+    <a href="#" class="card-footer-item">Valider définitivement</a>
+    <a href="#" class="card-footer-item">Editer</a>
+    <%= link_to "éditer le potin", edit_gossip_path(@gossip) %>
+    <a href="#" class="card-footer-item">Supprimer</a>
+    <%= link_to "supprimer le potin", gossip_path(@gossip.id) %>
+  </footer>
+</div>
+</div>
+<br /><br />
+
+</body>
+</html>
