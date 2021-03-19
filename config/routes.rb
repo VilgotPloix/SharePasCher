@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
-  resources :events, only: [:index, :show, :edit, :create, :destroy]
   devise_for :users
 	root 'static#index'
+  resources :events do
+    collection do
+      get 'created_index'
+    end
+  end
 end
