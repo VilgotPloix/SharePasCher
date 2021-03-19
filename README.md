@@ -11,7 +11,8 @@ Here some informations you may want to know :
 
 ## What is it about ?
 
-It's a web site where you can create/participate to a diner organised from our web site in the city you are living/traveling.
+It's a web site where you can create/participate to a diner organised from our web site in the city you are living/traveling. The aim is to meet people and share culture (recipies, discussions...) around a good glass of wine ! 
+Subscribe and you'll meet amazing people !
 
 
 ## Here are the features :
