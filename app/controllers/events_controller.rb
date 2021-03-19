@@ -15,4 +15,8 @@ class EventsController < ApplicationController
 
   def destroy
   end
+
+  def created_index
+  end
+
 end
