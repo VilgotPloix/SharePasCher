@@ -1,4 +1,6 @@
-<% nb_place = (6 - @event.guests_number) %>
+<!-- modifier cette méthode, le guest number correspond au nombre max de personnes -->
+<% nb_place = (6 - @event.guests_number) %> 
+<!-- celle ci ^^^^^^^^^^^^ -->
 
 <div class="showEvents">
 	<div id="card"> 
@@ -8,7 +10,7 @@
 		<p id="subtitle">Et c'est à <%= @event.city.city_name %> !</p>
 	<% if nb_place > 0 %>
 		<p id="subtitle">Il reste <%= nb_place %> place(s) disponible(s) !</p>
-		<%= button_to "Je veux venir !", appointment_path , action:'create', method: :post, params: {event_id: @event.id}, class:"jeveux" %>
+		<%= button_to "Je veux venir !", '/appointment' , method: :post, params: {event_id: @event.id}, class:"jeveux" %>
 	<% else %>
 		<p id="subtitle">Ce repas est complet !</p>
 	<% end %>
