@@ -8,9 +8,22 @@
 		<p id="subtitle">Et c'est à <%= @event.city.city_name %> !</p>
 	<% if nb_place > 0 %>
 		<p id="subtitle">Il reste <%= nb_place %> place(s) disponible(s) !</p>
-		<%= button_to "Je veux venir !", '/appointment', action:'create', method: :post, params: {event_id: @event.id}, class:"jeveux" %>
+		<%= button_to "Je veux venir !", appointment_path , action:'create', method: :post, params: {event_id: @event.id}, class:"jeveux" %>
 	<% else %>
 		<p id="subtitle">Ce repas est complet !</p>
 	<% end %>
 	</div>
+	<% if current_user.id == @event.host.user_id %>
+		<div>
+			<h1>Voici les gens qui veulent rejoindre ton Event !</h1>
+			<%= @event.users.each do |user| %>
+				<p><%= user.first_name%> <%=user.last_name%></p>
+				<p><%= user.gender%> <%=user.age%></p>
+				<% if @event.current_guests < @event.guests_number%>
+					<button>Accepter</button>
+				<%end%>
+				<button>Supprimer !</button>	
+			<%end%>	
+		</div>
+	<%end%>	
 </div>

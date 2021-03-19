@@ -20,7 +20,7 @@ end
 end
 
 30.times do |event|
-  Event.create(title: Faker::Food.dish, description: Faker::Food.description, date: Faker::Date.forward(days: 100), guests_number: rand(1..6), city_id: rand(1..5), host_id: rand(1..User.count))
+  Event.create(title: Faker::Food.dish, description: Faker::Food.description, date: Faker::Date.forward(days: 100), guests_number: rand(1..6), city_id: rand(1..5), host_id: rand(1..User.count), current_guests: 0)
 end
 
 60.times do |filter|

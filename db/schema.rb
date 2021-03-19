@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 2021_03_18_160657) do
   create_table "appointments", force: :cascade do |t|
     t.bigint "user_id"
     t.bigint "event_id"
+    t.boolean "is_accepted", default: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["event_id"], name: "index_appointments_on_event_id"
@@ -35,6 +36,7 @@ ActiveRecord::Schema.define(version: 2021_03_18_160657) do
     t.text "description"
     t.datetime "date"
     t.integer "guests_number"
+    t.integer "current_guests"
     t.bigint "city_id"
     t.bigint "user_id"
     t.bigint "host_id"

@@ -7,7 +7,7 @@ class AppointmentController < ApplicationController
   end
 
   def create
-    Appointment.create(user_id: current_user.id, event_id: params[:event_id])
+    Appointment.create(user_id: current_user.id, event_id: params[:event_id], is_accepted: false)
     redirect_to events_path
   end
 
