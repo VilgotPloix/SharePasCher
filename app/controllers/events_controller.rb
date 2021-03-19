@@ -28,4 +28,8 @@ class EventsController < ApplicationController
       params.require(:event).permit(:title, :description, :city, :date, :guest_number)
     end
 
+  def created_index
+  end
+
+
 end
