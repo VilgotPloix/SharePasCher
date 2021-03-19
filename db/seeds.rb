@@ -7,9 +7,12 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-5.times do |city|
-  City.create(city_name: Faker::Games::Pokemon.location)
-end
+City.create(city_name: "Paris")
+City.create(city_name: "Lyon")
+City.create(city_name: "Marseille")
+City.create(city_name: "Guingamp")
+City.create(city_name: "Lille")
+City.create(city_name: "Toulouse")
 
 5.times do |tag|
   Tag.create(tag_name: Faker::Restaurant.type)
