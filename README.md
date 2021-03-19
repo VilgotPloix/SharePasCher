@@ -1,6 +1,6 @@
 ## 🔆 Hi everyone !
 
-# Welcome in our app GATINOS - The E.Shop of cats' pictures.
+# Welcome in our app Share pas Cher !
 
 Here some informations you may want to know :
 
@@ -39,7 +39,7 @@ Or, if you want to run this on http://localhost:3000 :
 Don't download zip the project, you won't have the git repository.
 you have to git clone the url adress just given in the green button "Code".
 - open your terminal and write : git clone https...url of our git repository without anything else
-- write `cd Boutique_Gatinos` to go on the repository
+- write `cd Sharepascher` to go on the repository
 - write `bundle install`
 - write `rails db:create` to create the database
 - write `rails db:migrate` to run the routes & migrations
