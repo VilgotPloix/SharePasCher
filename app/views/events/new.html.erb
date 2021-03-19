@@ -1,0 +1,35 @@
+<div id="pageNewEvent">
+
+	<p class="title">Créer un nouvel évènement</p>
+	<br>
+
+		<div>
+			<%= form_for url_for(url: '/events', action: 'create') do |f| %>
+			<div class="field formulaire">f
+			<%= f.label :title, class:"label" %>
+			<%= f.text_field :title, class:"input", autocomplete:"title", placeholder:"Ajoute le titre de ton evenement !" %>
+			</div>
+
+			<div class="field formulaire">
+				<%= f.label :description, class:"label" %>
+				<%= f.text_area :description, class:"input", autocomplete:"description", placeholder:"Ajoute une petite description !" %>
+			</div>
+
+			<div class="field formulaire">
+				<%= f.label :date, class:"label" %>
+				<%= f.date_field :date, class:"input", autocomplete:"date", placeholder:"Quand est ce que ce sera ?" %>
+			</div>
+
+			<div class="field select formulaire">
+			<%= f.label :city, class:"label" %>
+			<%= f.select :city, options_for_select([['choisissez la ville la plus proche de chez vous',""],"Paris","Lyon","Marseille","Guingamp", "Lille", "Toulouse"]), class:"select" %>
+			</div>
+
+			<br>
+			<div class="sub">
+   				 <%= f.submit "Sign up" %>
+  			</div>
+			<% end %>
+
+	</div>
+</div>
