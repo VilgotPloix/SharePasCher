@@ -1,6 +1,6 @@
 ## 🔆 Hi everyone !
 
-# Welcome in our app Share pas Cher !
+# Welcome in our web site Share pas Cher !
 
 Here some informations you may want to know :
 
