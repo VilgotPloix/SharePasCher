@@ -241,3 +241,29 @@ span.inter
 	height: 50vh;
 
 }
+
+#title
+{
+	font-size: 3em;
+	font-weight: 600;
+	color:black;
+}
+
+#subtitle 
+{
+	font-size: 2.5em;
+	font-weight: 400;
+	color: black;
+}
+
+.jeveux
+{
+	width: 130px;
+	height: 50px;
+	border: none;
+	background-color: #99d98c;
+	border-radius: 50px;
+	font-size: 1.1em;
+	color: black;
+	font-weight: 400;
+}

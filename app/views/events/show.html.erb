@@ -1,5 +1,16 @@
+<% nb_place = (6 - @event.guests_number) %>
+
 <div class="showEvents">
 	<div id="card"> 
-		<p class="title"><%= @event.title %></p>
+		<p id="title"><%= @event.title %></p>
+		<p id="subtitle"><%= @event.description %></p>
+		<p id="subtitle"> C'est le <%= @event.date %></p>
+		<p id="subtitle">Et c'est à <%= @event.city.city_name %> !</p>
+	<% if nb_place > 0 %>
+		<p id="subtitle">Il reste <%= nb_place %> place(s) disponible(s) !</p>
+		<%= button_to "Je veux venir !", new_appointment_path, method: :get, class:"jeveux" %>
+	<% else %>
+		<p id="subtitle">Ce repas est complet !</p>
+	<% end %>
 	</div>
 </div>
