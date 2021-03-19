@@ -29,6 +29,31 @@
 
 
 <br /><br />
+
+
+	<div class="flexEvents">
+	<% @user.created_events.each do |event| %>
+		<% nb_place = (6 - event.guests_number) %>
+		<div class="events">
+			<div id="box">
+					<p class="title"><%= event.title %></p>
+					<p>par <%= event.host.first_name %></p>
+					<p class="subtitle"><%= event.description%></p>
+				<% if nb_place > 0 %>
+					<p>nombre de places restantes : <%= nb_place %></p>
+					<p>c'est à <%= event.city.city_name %> !</p>
+				<% else %>
+					<p>ce repas est déjà complet !</p>
+				<%end%>
+			</div>
+			
+			<%= button_to "Dis m'en plus !", event_path(event.id), method: :get, class:"dismen" %>
+		</div>
+	<%end%>
+</div>
+
+
+<%# 
 <div class="events_created">
 <div class="card">
   <div class="card-image">
@@ -59,8 +84,8 @@
     <footer class="card-footer">
     <a href="#" class="card-footer-item">Valider définitivement</a>
     <a href="#" class="card-footer-item">Editer</a> <%= link_to "éditer le potin", edit_gossip_path(@gossip) %>
-    <a href="#" class="card-footer-item">Supprimer</a> <%= link_to "supprimer le potin", gossip_path(@gossip.id) %>
-  </footer>
+    <%# <a href="#" class="card-footer-item">Supprimer</a> <%= link_to "supprimer le potin", gossip_path(@gossip.id) %>
+  <%# </footer>
 </div>
 <br /><br />
 <div class="card">
@@ -93,12 +118,12 @@
     <a href="#" class="card-footer-item">Valider définitivement</a>
     <a href="#" class="card-footer-item">Editer</a>
     <%= link_to "éditer le potin", edit_gossip_path(@gossip) %>
-    <a href="#" class="card-footer-item">Supprimer</a>
+    <%# <a href="#" class="card-footer-item">Supprimer</a>
     <%= link_to "supprimer le potin", gossip_path(@gossip.id) %>
-  </footer>
+  <%# </footer>
 </div>
 </div>
 <br /><br />
 
 </body>
-</html>
+</html> %>

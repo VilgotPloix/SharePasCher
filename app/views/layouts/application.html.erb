@@ -15,9 +15,8 @@
 
 <nav class="navbar" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
-    <% if user_signed_in? %>
-      <a class="navbar-item" href="https://bulma.io">
-      <img src="keur.jpg" width="112" height="28"></a>
+    
+      <a class="navbar-item" <%= link_to "SPC", root_path %></a>
 
       <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
       <span aria-hidden="true"></span>
@@ -25,12 +24,16 @@
       <span aria-hidden="true"></span>
       </a>  
   </div>
-
+    <% if user_signed_in? %>
     <div id="navbarBasicExample" class="navbar-menu">
       <div class="navbar-start">
       <a class="navbar-item" <%= link_to "Se déconnecter", destroy_user_session_path, method: :delete %></a>
-      <a class="navbar-item" <%= link_to "Devenir hôte", new_event_path %></a>
-
+      <% if current_user.is_host?%>
+        <a class="navbar-item" <%= link_to "Liste de tes events", created_index_events_path %></a>
+        <a class="navbar-item" <%= link_to "Crée un nouvel event ", new_event_path %></a>
+      <%else%>
+        <a class="navbar-item" <%= link_to "Devenir hôte", new_event_path %></a>
+      <%end%>
     <% else %>
 
         <a class="navbar-item">

@@ -31,13 +31,16 @@ class EventsController < ApplicationController
   def destroy
   end
 
+  
+  def created_index
+    @user = current_user
+  end
+
   private
     def event_params
       params.require(:event).permit(:title, :description, :city, :date, :guest_number)
     end
 
-  def created_index
-  end
 
 
 end
