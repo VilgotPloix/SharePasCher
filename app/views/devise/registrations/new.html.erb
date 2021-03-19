@@ -21,6 +21,30 @@
     <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
   </div>
 
+  <div class="field">
+    <%= f.label :first_name %><br />
+    <%= f.text_field :first_name, autofocus: true, autocomplete: "Your first name" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :last_name %><br />
+    <%= f.text_field :last_name, autofocus: true, autocomplete: "Your last name" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :age %><br />
+    <%= f.number_field :age,in: 18..100, step: 1, autofocus: true, autocomplete: "Your age" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :gender %><br />
+    <%= f.select :gender, ["Male", "Female", "Other"] %><br />
+  </div>
+
+  <div class="field">
+    <%= f.hidden_field :is_host, value: false %><br />
+  </div>
+
   <div class="actions">
     <%= f.submit "Sign up" %>
   </div>

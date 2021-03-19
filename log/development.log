@@ -25121,6 +25121,7 @@ epascher.herokuapp.com.=0D
   [1m[35m (0.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "SharePasCher_test"[0m
   ↳ bin/rails:9
 >>>>>>> 9c83d1c3c3fe3fbecc77969c2d7e564a0c65f2b1
+<<<<<<< HEAD
   [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ bin/rails:9
   [1m[35m (0.7ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
@@ -25220,6 +25221,9 @@ epascher.herokuapp.com.=0D
   [1m[35m (5031.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS "SharePasCher_development"[0m
   ↳ bin/rails:9
 Started GET "/" for ::1 at 2021-03-19 11:38:21 +0100
+=======
+Started GET "/" for ::1 at 2021-03-19 11:29:51 +0100
+>>>>>>> develop
   
 PG::ConnectionBad (could not connect to server: No such file or directory
 	Is the server running locally and accepting
@@ -25274,6 +25278,7 @@ puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
 puma (3.12.6) lib/puma/server.rb:476:in `process_client'
 puma (3.12.6) lib/puma/server.rb:334:in `block in run'
 puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+<<<<<<< HEAD
 Started GET "/" for ::1 at 2021-03-19 11:39:42 +0100
   [1m[35m (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ /home/gustave/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
@@ -25284,6 +25289,18 @@ Completed 200 OK in 1369ms (Views: 1363.0ms | ActiveRecord: 0.0ms)
 
 
 Started GET "/application.css" for ::1 at 2021-03-19 11:39:43 +0100
+=======
+Started GET "/" for ::1 at 2021-03-19 11:31:00 +0100
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/manuq/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+Processing by StaticController#index as HTML
+  Rendering static/index.html.erb within layouts/application
+  Rendered static/index.html.erb within layouts/application (598.0ms)
+Completed 200 OK in 689ms (Views: 686.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/application.css" for ::1 at 2021-03-19 11:31:01 +0100
+>>>>>>> develop
   
 ActionController::RoutingError (No route matches [GET] "/application.css"):
   
@@ -25314,7 +25331,11 @@ puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
 puma (3.12.6) lib/puma/server.rb:476:in `process_client'
 puma (3.12.6) lib/puma/server.rb:334:in `block in run'
 puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+<<<<<<< HEAD
 Started GET "/keur.jpg" for 127.0.0.1 at 2021-03-19 11:39:44 +0100
+=======
+Started GET "/keur.jpg" for ::1 at 2021-03-19 11:31:02 +0100
+>>>>>>> develop
   
 ActionController::RoutingError (No route matches [GET] "/keur.jpg"):
   
@@ -25345,6 +25366,7 @@ puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
 puma (3.12.6) lib/puma/server.rb:476:in `process_client'
 puma (3.12.6) lib/puma/server.rb:334:in `block in run'
 puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+<<<<<<< HEAD
 Started GET "/users/sign_in" for ::1 at 2021-03-19 11:40:16 +0100
 Processing by Devise::SessionsController#new as HTML
   Rendering devise/sessions/new.html.erb within layouts/application
@@ -25387,6 +25409,22 @@ activesupport (5.2.4.5) lib/active_support/callbacks.rb:98:in `run_callbacks'
 actionpack (5.2.4.5) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
 actionpack (5.2.4.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
 actionpack (5.2.4.5) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+=======
+Started GET "/" for ::1 at 2021-03-19 11:43:02 +0100
+  [1m[35m (3.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/manuq/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+Processing by StaticController#index as HTML
+  Rendering static/index.html.erb within layouts/application
+  Rendered static/index.html.erb within layouts/application (326.0ms)
+Completed 200 OK in 408ms (Views: 398.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/application.css" for ::1 at 2021-03-19 11:43:03 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/application.css"):
+  
+actionpack (5.2.4.5) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+>>>>>>> develop
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
 web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
@@ -25413,6 +25451,7 @@ puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
 puma (3.12.6) lib/puma/server.rb:476:in `process_client'
 puma (3.12.6) lib/puma/server.rb:334:in `block in run'
 puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+<<<<<<< HEAD
 Started GET "/users/keur.jpg" for ::1 at 2021-03-19 11:40:20 +0100
   
 ActionController::RoutingError (uninitialized constant UsersController):
@@ -25447,6 +25486,13 @@ activesupport (5.2.4.5) lib/active_support/callbacks.rb:98:in `run_callbacks'
 actionpack (5.2.4.5) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
 actionpack (5.2.4.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
 actionpack (5.2.4.5) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+=======
+Started GET "/keur.jpg" for ::1 at 2021-03-19 11:43:03 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/keur.jpg"):
+  
+actionpack (5.2.4.5) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+>>>>>>> develop
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
 web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
@@ -25473,6 +25519,7 @@ puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
 puma (3.12.6) lib/puma/server.rb:476:in `process_client'
 puma (3.12.6) lib/puma/server.rb:334:in `block in run'
 puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+<<<<<<< HEAD
 Started GET "/events" for ::1 at 2021-03-19 11:40:33 +0100
 Processing by EventsController#index as HTML
   Rendering events/index.html.erb within layouts/application
@@ -25511,6 +25558,25 @@ Completed 200 OK in 336ms (Views: 237.4ms | ActiveRecord: 42.1ms)
 
 
 Started GET "/application.css" for ::1 at 2021-03-19 11:40:33 +0100
+=======
+Started GET "/users/sign_up" for ::1 at 2021-03-19 11:43:14 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  [1m[36mUser Load (4.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ /home/manuq/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 451ms (ActiveRecord: 37.4ms)
+
+
+Started GET "/" for ::1 at 2021-03-19 11:43:15 +0100
+Processing by StaticController#index as HTML
+  Rendering static/index.html.erb within layouts/application
+  Rendered static/index.html.erb within layouts/application (12.3ms)
+Completed 200 OK in 55ms (Views: 50.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/application.css" for ::1 at 2021-03-19 11:43:15 +0100
+>>>>>>> develop
   
 ActionController::RoutingError (No route matches [GET] "/application.css"):
   
@@ -25541,7 +25607,11 @@ puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
 puma (3.12.6) lib/puma/server.rb:476:in `process_client'
 puma (3.12.6) lib/puma/server.rb:334:in `block in run'
 puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+<<<<<<< HEAD
 Started GET "/keur.jpg" for ::1 at 2021-03-19 11:40:33 +0100
+=======
+Started GET "/keur.jpg" for ::1 at 2021-03-19 11:43:15 +0100
+>>>>>>> develop
   
 ActionController::RoutingError (No route matches [GET] "/keur.jpg"):
   
@@ -25572,6 +25642,7 @@ puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
 puma (3.12.6) lib/puma/server.rb:476:in `process_client'
 puma (3.12.6) lib/puma/server.rb:334:in `block in run'
 puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+<<<<<<< HEAD
 Started GET "/events/3" for ::1 at 2021-03-19 11:40:35 +0100
 Processing by EventsController#show as HTML
   Parameters: {"id"=>"3"}
@@ -26250,6 +26321,8 @@ Completed 200 OK in 121ms (Views: 111.5ms | ActiveRecord: 5.7ms)
 
 
 Started GET "/application.css" for ::1 at 2021-03-19 11:57:58 +0100
+=======
+Started GET "/application.css" for ::1 at 2021-03-19 11:43:15 +0100
   
 ActionController::RoutingError (No route matches [GET] "/application.css"):
   
@@ -26280,7 +26353,7 @@ puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
 puma (3.12.6) lib/puma/server.rb:476:in `process_client'
 puma (3.12.6) lib/puma/server.rb:334:in `block in run'
 puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
-Started GET "/keur.jpg" for ::1 at 2021-03-19 11:57:58 +0100
+Started GET "/keur.jpg" for ::1 at 2021-03-19 11:43:16 +0100
   
 ActionController::RoutingError (No route matches [GET] "/keur.jpg"):
   
@@ -26311,6 +26384,159 @@ puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
 puma (3.12.6) lib/puma/server.rb:476:in `process_client'
 puma (3.12.6) lib/puma/server.rb:334:in `block in run'
 puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/users/sign_out" for ::1 at 2021-03-19 11:43:36 +0100
+  
+ActionController::RoutingError (uninitialized constant UsersController):
+  
+activesupport (5.2.4.5) lib/active_support/inflector/methods.rb:283:in `const_get'
+activesupport (5.2.4.5) lib/active_support/inflector/methods.rb:283:in `block in constantize'
+activesupport (5.2.4.5) lib/active_support/inflector/methods.rb:281:in `each'
+activesupport (5.2.4.5) lib/active_support/inflector/methods.rb:281:in `inject'
+activesupport (5.2.4.5) lib/active_support/inflector/methods.rb:281:in `constantize'
+actionpack (5.2.4.5) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (5.2.4.5) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (5.2.4.5) lib/action_dispatch/routing/route_set.rb:46:in `controller'
+actionpack (5.2.4.5) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.2.4.5) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.4.5) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.4.5) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.4.5) lib/action_dispatch/routing/route_set.rb:840:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.4.5) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.4.5) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.5) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.5) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.5) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.5) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.5) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.5) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/users/sign_up" for ::1 at 2021-03-19 11:43:55 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ /home/manuq/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 235ms (ActiveRecord: 7.0ms)
+
+
+Started GET "/" for ::1 at 2021-03-19 11:43:56 +0100
+Processing by StaticController#index as HTML
+  Rendering static/index.html.erb within layouts/application
+  Rendered static/index.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 64ms (Views: 61.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-03-19 11:44:59 +0100
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/manuq/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+Processing by StaticController#index as HTML
+  Rendering static/index.html.erb within layouts/application
+  Rendered static/index.html.erb within layouts/application (293.3ms)
+Completed 200 OK in 385ms (Views: 377.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/application.css" for ::1 at 2021-03-19 11:45:00 +0100
+>>>>>>> develop
+  
+ActionController::RoutingError (No route matches [GET] "/application.css"):
+  
+actionpack (5.2.4.5) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.5) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.5) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.5) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.5) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.5) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.5) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+<<<<<<< HEAD
+Started GET "/keur.jpg" for ::1 at 2021-03-19 11:57:58 +0100
+=======
+Started GET "/keur.jpg" for ::1 at 2021-03-19 11:45:00 +0100
+>>>>>>> develop
+  
+ActionController::RoutingError (No route matches [GET] "/keur.jpg"):
+  
+actionpack (5.2.4.5) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.5) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.5) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.5) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.5) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.5) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.5) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+<<<<<<< HEAD
 Started GET "/events/6" for ::1 at 2021-03-19 11:58:01 +0100
 Processing by EventsController#show as HTML
   Parameters: {"id"=>"6"}
@@ -26348,6 +26574,26 @@ ActiveRecord::RecordNotFound (Couldn't find Event with 'id'=keur):
   
 app/controllers/events_controller.rb:7:in `show'
 Started GET "/application.css" for ::1 at 2021-03-19 11:58:04 +0100
+=======
+Started GET "/users/sign_up" for ::1 at 2021-03-19 11:45:07 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  [1m[36mUser Load (3.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ /home/manuq/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 290ms (ActiveRecord: 16.9ms)
+
+
+Started GET "/" for ::1 at 2021-03-19 11:45:08 +0100
+Processing by StaticController#index as HTML
+  Rendering static/index.html.erb within layouts/application
+  Rendered static/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 51ms (Views: 49.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/application.css" for ::1 at 2021-03-19 11:45:08 +0100
+Started GET "/keur.jpg" for ::1 at 2021-03-19 11:45:08 +0100
+>>>>>>> develop
   
 ActionController::RoutingError (No route matches [GET] "/application.css"):
   
@@ -26378,6 +26624,7 @@ puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
 puma (3.12.6) lib/puma/server.rb:476:in `process_client'
 puma (3.12.6) lib/puma/server.rb:334:in `block in run'
 puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+<<<<<<< HEAD
 Started GET "/events" for ::1 at 2021-03-19 11:59:24 +0100
 Processing by EventsController#index as HTML
   Rendering events/index.html.erb within layouts/application
@@ -26418,6 +26665,10 @@ Completed 200 OK in 114ms (Views: 104.2ms | ActiveRecord: 4.8ms)
 Started GET "/application.css" for ::1 at 2021-03-19 11:59:24 +0100
   
 ActionController::RoutingError (No route matches [GET] "/application.css"):
+=======
+  
+ActionController::RoutingError (No route matches [GET] "/keur.jpg"):
+>>>>>>> develop
   
 actionpack (5.2.4.5) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
@@ -26446,9 +26697,15 @@ puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
 puma (3.12.6) lib/puma/server.rb:476:in `process_client'
 puma (3.12.6) lib/puma/server.rb:334:in `block in run'
 puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+<<<<<<< HEAD
 Started GET "/keur.jpg" for ::1 at 2021-03-19 11:59:24 +0100
   
 ActionController::RoutingError (No route matches [GET] "/keur.jpg"):
+=======
+Started GET "/users/sign_out" for ::1 at 2021-03-19 11:45:46 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/sign_out"):
+>>>>>>> develop
   
 actionpack (5.2.4.5) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
@@ -26477,6 +26734,7 @@ puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
 puma (3.12.6) lib/puma/server.rb:476:in `process_client'
 puma (3.12.6) lib/puma/server.rb:334:in `block in run'
 puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+<<<<<<< HEAD
 Started GET "/events/6" for ::1 at 2021-03-19 11:59:26 +0100
 Processing by EventsController#show as HTML
   Parameters: {"id"=>"6"}
@@ -26557,6 +26815,25 @@ Completed 200 OK in 35ms (Views: 32.5ms | ActiveRecord: 0.0ms)
 
 
 Started GET "/application.css" for ::1 at 2021-03-19 12:27:26 +0100
+=======
+Started GET "/users/sign_in" for ::1 at 2021-03-19 11:46:04 +0100
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ /home/manuq/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 5ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/" for ::1 at 2021-03-19 11:46:04 +0100
+Processing by StaticController#index as HTML
+  Rendering static/index.html.erb within layouts/application
+  Rendered static/index.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 45ms (Views: 42.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/application.css" for ::1 at 2021-03-19 11:46:04 +0100
+>>>>>>> develop
   
 ActionController::RoutingError (No route matches [GET] "/application.css"):
   
@@ -26587,7 +26864,11 @@ puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
 puma (3.12.6) lib/puma/server.rb:476:in `process_client'
 puma (3.12.6) lib/puma/server.rb:334:in `block in run'
 puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+<<<<<<< HEAD
 Started GET "/keur.jpg" for ::1 at 2021-03-19 12:27:26 +0100
+=======
+Started GET "/keur.jpg" for ::1 at 2021-03-19 11:46:04 +0100
+>>>>>>> develop
   
 ActionController::RoutingError (No route matches [GET] "/keur.jpg"):
   
@@ -26618,6 +26899,7 @@ puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
 puma (3.12.6) lib/puma/server.rb:476:in `process_client'
 puma (3.12.6) lib/puma/server.rb:334:in `block in run'
 puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+<<<<<<< HEAD
 Started GET "/events" for ::1 at 2021-03-19 12:27:35 +0100
 Processing by EventsController#index as HTML
   Rendering events/index.html.erb within layouts/application
@@ -26656,6 +26938,150 @@ Completed 200 OK in 58ms (Views: 48.7ms | ActiveRecord: 5.0ms)
 
 
 Started GET "/application.css" for ::1 at 2021-03-19 12:27:36 +0100
+=======
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (122.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "SharePasCher_development"[0m
+  ↳ bin/rails:9
+  [1m[35m (147.3ms)[0m  [1m[35mDROP DATABASE IF EXISTS "SharePasCher_test"[0m
+  ↳ bin/rails:9
+  [1m[35m (885.6ms)[0m  [1m[35mCREATE DATABASE "SharePasCher_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (591.5ms)[0m  [1m[35mCREATE DATABASE "SharePasCher_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (33.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (10.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7857703137504431400)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateUsers (20210317123552)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (16.8ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "first_name" character varying, "last_name" character varying, "birth_day" timestamp, "age" integer, "gender" character varying, "is_host" boolean, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20210317123552_create_users.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (5.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210317123552"]]
+  ↳ bin/rails:9
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateEvents (20210317123718)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (15.3ms)[0m  [1m[35mCREATE TABLE "events" ("id" bigserial primary key, "title" character varying, "description" text, "date" timestamp, "guests_number" integer, "city_id" bigint, "user_id" bigint, "host_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_d56a268962"
+FOREIGN KEY ("host_id")
+  REFERENCES "users" ("id")
+)[0m
+  ↳ db/migrate/20210317123718_create_events.rb:3
+  [1m[35m (4.2ms)[0m  [1m[35mCREATE  INDEX  "index_events_on_city_id" ON "events"  ("city_id")[0m
+  ↳ db/migrate/20210317123718_create_events.rb:3
+  [1m[35m (3.0ms)[0m  [1m[35mCREATE  INDEX  "index_events_on_user_id" ON "events"  ("user_id")[0m
+  ↳ db/migrate/20210317123718_create_events.rb:3
+  [1m[35m (6.1ms)[0m  [1m[35mCREATE  INDEX  "index_events_on_host_id" ON "events"  ("host_id")[0m
+  ↳ db/migrate/20210317123718_create_events.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210317123718"]]
+  ↳ bin/rails:9
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateTags (20210317123746)
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (11.1ms)[0m  [1m[35mCREATE TABLE "tags" ("id" bigserial primary key, "tag_name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20210317123746_create_tags.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210317123746"]]
+  ↳ bin/rails:9
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateCities (20210317123852)
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (10.5ms)[0m  [1m[35mCREATE TABLE "cities" ("id" bigserial primary key, "city_name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20210317123852_create_cities.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (2.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210317123852"]]
+  ↳ bin/rails:9
+  [1m[35m (2.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateAppointments (20210317123902)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (6.1ms)[0m  [1m[35mCREATE TABLE "appointments" ("id" bigserial primary key, "user_id" bigint, "event_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20210317123902_create_appointments.rb:3
+  [1m[35m (6.2ms)[0m  [1m[35mCREATE  INDEX  "index_appointments_on_user_id" ON "appointments"  ("user_id")[0m
+  ↳ db/migrate/20210317123902_create_appointments.rb:3
+  [1m[35m (6.4ms)[0m  [1m[35mCREATE  INDEX  "index_appointments_on_event_id" ON "appointments"  ("event_id")[0m
+  ↳ db/migrate/20210317123902_create_appointments.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210317123902"]]
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateFilters (20210317123911)
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (6.2ms)[0m  [1m[35mCREATE TABLE "filters" ("id" bigserial primary key, "event_id" bigint, "tag_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20210317123911_create_filters.rb:3
+  [1m[35m (4.0ms)[0m  [1m[35mCREATE  INDEX  "index_filters_on_event_id" ON "filters"  ("event_id")[0m
+  ↳ db/migrate/20210317123911_create_filters.rb:3
+  [1m[35m (5.6ms)[0m  [1m[35mCREATE  INDEX  "index_filters_on_tag_id" ON "filters"  ("tag_id")[0m
+  ↳ db/migrate/20210317123911_create_filters.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210317123911"]]
+  ↳ bin/rails:9
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to AddDeviseToUsers (20210318160657)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "users" ADD "email" character varying DEFAULT '' NOT NULL[0m
+  ↳ db/migrate/20210318160657_add_devise_to_users.rb:7
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "users" ADD "encrypted_password" character varying DEFAULT '' NOT NULL[0m
+  ↳ db/migrate/20210318160657_add_devise_to_users.rb:8
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "users" ADD "reset_password_token" character varying[0m
+  ↳ db/migrate/20210318160657_add_devise_to_users.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "users" ADD "reset_password_sent_at" timestamp[0m
+  ↳ db/migrate/20210318160657_add_devise_to_users.rb:12
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "users" ADD "remember_created_at" timestamp[0m
+  ↳ db/migrate/20210318160657_add_devise_to_users.rb:15
+  [1m[35m (33.7ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  ↳ db/migrate/20210318160657_add_devise_to_users.rb:40
+  [1m[35m (6.6ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")[0m
+  ↳ db/migrate/20210318160657_add_devise_to_users.rb:41
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210318160657"]]
+  ↳ bin/rails:9
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (1.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-03-19 10:46:35.514681"], ["updated_at", "2021-03-19 10:46:35.514681"]]
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(7857703137504431400)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/" for ::1 at 2021-03-19 11:46:57 +0100
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/manuq/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+Processing by StaticController#index as HTML
+  Rendering static/index.html.erb within layouts/application
+  Rendered static/index.html.erb within layouts/application (277.0ms)
+Completed 200 OK in 367ms (Views: 357.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/application.css" for ::1 at 2021-03-19 11:46:57 +0100
+>>>>>>> develop
   
 ActionController::RoutingError (No route matches [GET] "/application.css"):
   
@@ -26686,7 +27112,11 @@ puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
 puma (3.12.6) lib/puma/server.rb:476:in `process_client'
 puma (3.12.6) lib/puma/server.rb:334:in `block in run'
 puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+<<<<<<< HEAD
 Started GET "/keur.jpg" for ::1 at 2021-03-19 12:27:36 +0100
+=======
+Started GET "/keur.jpg" for ::1 at 2021-03-19 11:46:57 +0100
+>>>>>>> develop
   
 ActionController::RoutingError (No route matches [GET] "/keur.jpg"):
   
@@ -26717,6 +27147,7 @@ puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
 puma (3.12.6) lib/puma/server.rb:476:in `process_client'
 puma (3.12.6) lib/puma/server.rb:334:in `block in run'
 puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+<<<<<<< HEAD
 Started GET "/events" for ::1 at 2021-03-19 12:48:29 +0100
 Processing by EventsController#index as HTML
   Rendering events/index.html.erb within layouts/application
@@ -26757,6 +27188,22 @@ Completed 200 OK in 182ms (Views: 156.1ms | ActiveRecord: 15.5ms)
 Started GET "/application.css" for ::1 at 2021-03-19 12:48:29 +0100
   
 ActionController::RoutingError (No route matches [GET] "/application.css"):
+=======
+Started GET "/users/sign_up" for ::1 at 2021-03-19 11:47:08 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ /home/manuq/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (0.6ms)
+  Rendered devise/shared/_links.html.erb (1.2ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (285.7ms)
+Completed 200 OK in 367ms (Views: 328.3ms | ActiveRecord: 13.2ms)
+
+
+Started GET "/users/application.css" for ::1 at 2021-03-19 11:47:08 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/application.css"):
+>>>>>>> develop
   
 actionpack (5.2.4.5) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
@@ -26785,9 +27232,15 @@ puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
 puma (3.12.6) lib/puma/server.rb:476:in `process_client'
 puma (3.12.6) lib/puma/server.rb:334:in `block in run'
 puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+<<<<<<< HEAD
 Started GET "/keur.jpg" for ::1 at 2021-03-19 12:48:29 +0100
   
 ActionController::RoutingError (No route matches [GET] "/keur.jpg"):
+=======
+Started GET "/users/keur.jpg" for ::1 at 2021-03-19 11:47:08 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/keur.jpg"):
+>>>>>>> develop
   
 actionpack (5.2.4.5) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
@@ -26816,6 +27269,7 @@ puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
 puma (3.12.6) lib/puma/server.rb:476:in `process_client'
 puma (3.12.6) lib/puma/server.rb:334:in `block in run'
 puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+<<<<<<< HEAD
 Started GET "/events/4" for ::1 at 2021-03-19 12:48:31 +0100
 Processing by EventsController#show as HTML
   Parameters: {"id"=>"4"}
@@ -26879,6 +27333,103 @@ app/controllers/events_controller.rb:7:in `show'
 Started POST "/appointment/3" for ::1 at 2021-03-19 12:56:21 +0100
   
 ActionController::RoutingError (No route matches [POST] "/appointment/3"):
+=======
+Started POST "/users" for ::1 at 2021-03-19 11:47:29 +0100
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7j6AHX1gzo3FeVjvdMOB89t1IbATv+i47duN193aM6AM2MINU/3BiDwx7dnnEeRszveXs0w++gY1Prp1nAR4zg==", "user"=>{"email"=>"michel@oui.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "first_name"=>"Michel"}, "commit"=>"Sign up"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/manuq/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Exists (1.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "michel@oui.com"], ["LIMIT", 1]]
+  ↳ /home/manuq/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Create (2.8ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "created_at", "updated_at", "email", "encrypted_password") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "Michel"], ["created_at", "2021-03-19 10:47:30.277261"], ["updated_at", "2021-03-19 10:47:30.277261"], ["email", "michel@oui.com"], ["encrypted_password", "$2a$12$ePrVteGUzRgk9vrudhGqzedYizPGOYd7h6XiCnFZIyoqGQWA3AfPm"]]
+  ↳ /home/manuq/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+  Rendering user_mailer/welcome.html.erb within layouts/mailer
+  Rendered user_mailer/welcome.html.erb within layouts/mailer (0.4ms)
+  Rendering user_mailer/welcome.text.erb within layouts/mailer
+  Rendered user_mailer/welcome.text.erb within layouts/mailer (0.7ms)
+UserMailer#welcome: processed outbound mail in 83.9ms
+Sent mail to michel@oui.com (288.8ms)
+Date: Fri, 19 Mar 2021 11:47:30 +0100
+From: sellig@gmail.com
+To: michel@oui.com
+Message-ID: <60548142a91ea_2f24128745de@Omen-Manu.mail>
+Subject: Coucou
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_60548142a7301_2f241287445f";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_60548142a7301_2f241287445f
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: base64
+
+U2FsdXQgTWljaGVsIGV0IGJpZW52ZW51ZSBzdXIgU2hhcmUgUGFzIENoZXIg
+IQ0KPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09
+PT09PT09PT09PT09PT09PQ0KIA0KVHUgdCdlcyBpbnNjcml0IGVuIHV0aWxp
+c2FudCBsJ2UtbWFpbCBzdWl2YW50IDogbWljaGVsQG91aS5jb20uDQogDQpQ
+b3VyIGFjY8OpZGVyIMOgIHRvbiBlc3BhY2UgY2xpZW50LCBjb25uZWN0ZS10
+b2kgdmlhIDogc2hhcmVwYXNjaGVyLmhlcm9rdWFwcC5jb20uDQogDQrDgCB0
+csOocyB2aXRlICENCg==
+
+----==_mimepart_60548142a7301_2f241287445f
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>=0D
+<html>=0D
+  <head>=0D
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf=
+-8" />=0D
+    <style>=0D
+      /* Email styles need to be inline */=0D
+    </style>=0D
+  </head>=0D
+=0D
+  <body>=0D
+    <!DOCTYPE html>=0D
+<html>=0D
+  <head>=0D
+    <meta content=3D'text/html; charset=3DUTF-8' http-equiv=3D'Content-Ty=
+pe' />=0D
+  </head>=0D
+  <body>=0D
+    <h1>Salut Michel et bienvenue sur Share Pas Cher !</h1>=0D
+    <p>=0D
+      Tu t'es inscrit en utilisant l'e-mail suivant : michel@oui.com.=0D
+    </p>=0D
+    <p>=0D
+      Pour acc=C3=A9der =C3=A0 ton espace client, connecte-toi via : shar=
+epascher.herokuapp.com.=0D
+    </p>=0D
+    <p> =C3=80 tr=C3=A8s vite !</p>=0D
+  </body>=0D
+</html>=0D
+  </body>=0D
+</html>=0D
+
+----==_mimepart_60548142a7301_2f241287445f--
+
+  [1m[35m (7.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/manuq/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 1009ms (ActiveRecord: 12.3ms)
+
+
+Started GET "/" for ::1 at 2021-03-19 11:47:31 +0100
+Processing by StaticController#index as HTML
+  Rendering static/index.html.erb within layouts/application
+  Rendered static/index.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 86ms (Views: 78.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/application.css" for ::1 at 2021-03-19 11:47:31 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/application.css"):
+>>>>>>> develop
   
 actionpack (5.2.4.5) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
@@ -26907,6 +27458,7 @@ puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
 puma (3.12.6) lib/puma/server.rb:476:in `process_client'
 puma (3.12.6) lib/puma/server.rb:334:in `block in run'
 puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+<<<<<<< HEAD
 Started GET "/events/3" for ::1 at 2021-03-19 12:58:51 +0100
 Processing by EventsController#show as HTML
   Parameters: {"id"=>"3"}
@@ -26946,6 +27498,11 @@ app/controllers/events_controller.rb:7:in `show'
 Started POST "/appointment/new" for ::1 at 2021-03-19 12:58:53 +0100
   
 ActionController::RoutingError (No route matches [POST] "/appointment/new"):
+=======
+Started GET "/keur.jpg" for ::1 at 2021-03-19 11:47:31 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/keur.jpg"):
+>>>>>>> develop
   
 actionpack (5.2.4.5) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
@@ -26974,9 +27531,15 @@ puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
 puma (3.12.6) lib/puma/server.rb:476:in `process_client'
 puma (3.12.6) lib/puma/server.rb:334:in `block in run'
 puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+<<<<<<< HEAD
 Started POST "/appointment/new" for ::1 at 2021-03-19 12:59:02 +0100
   
 ActionController::RoutingError (No route matches [POST] "/appointment/new"):
+=======
+Started GET "/users/sign_out" for ::1 at 2021-03-19 11:48:21 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/sign_out"):
+>>>>>>> develop
   
 actionpack (5.2.4.5) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
@@ -27005,6 +27568,7 @@ puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
 puma (3.12.6) lib/puma/server.rb:476:in `process_client'
 puma (3.12.6) lib/puma/server.rb:334:in `block in run'
 puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+<<<<<<< HEAD
 Started GET "/events/application.css" for ::1 at 2021-03-19 12:59:05 +0100
 Processing by EventsController#show as CSS
   Parameters: {"id"=>"application"}
@@ -27110,6 +27674,13 @@ activesupport (5.2.4.5) lib/active_support/callbacks.rb:98:in `run_callbacks'
 actionpack (5.2.4.5) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
 actionpack (5.2.4.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
 actionpack (5.2.4.5) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+=======
+Started GET "/application.css" for ::1 at 2021-03-19 11:48:25 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/application.css"):
+  
+actionpack (5.2.4.5) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+>>>>>>> develop
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
 web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
@@ -27136,6 +27707,7 @@ puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
 puma (3.12.6) lib/puma/server.rb:476:in `process_client'
 puma (3.12.6) lib/puma/server.rb:334:in `block in run'
 puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+<<<<<<< HEAD
 Started GET "/appointment/new" for ::1 at 2021-03-19 13:04:58 +0100
 Processing by AppointmentController#new as HTML
   Rendering appointment/new.html.erb within layouts/application
@@ -27200,6 +27772,155 @@ activesupport (5.2.4.5) lib/active_support/callbacks.rb:98:in `run_callbacks'
 actionpack (5.2.4.5) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
 actionpack (5.2.4.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
 actionpack (5.2.4.5) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+=======
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (146.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "SharePasCher_development"[0m
+  ↳ bin/rails:9
+  [1m[35m (138.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS "SharePasCher_test"[0m
+  ↳ bin/rails:9
+  [1m[35m (668.6ms)[0m  [1m[35mCREATE DATABASE "SharePasCher_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (606.1ms)[0m  [1m[35mCREATE DATABASE "SharePasCher_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (14.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (12.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7857703137504431400)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateUsers (20210317123552)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (10.0ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "first_name" character varying, "last_name" character varying, "birth_day" timestamp, "age" integer, "gender" character varying, "is_host" boolean, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20210317123552_create_users.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210317123552"]]
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateEvents (20210317123718)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (15.9ms)[0m  [1m[35mCREATE TABLE "events" ("id" bigserial primary key, "title" character varying, "description" text, "date" timestamp, "guests_number" integer, "city_id" bigint, "user_id" bigint, "host_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_d56a268962"
+FOREIGN KEY ("host_id")
+  REFERENCES "users" ("id")
+)[0m
+  ↳ db/migrate/20210317123718_create_events.rb:3
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE  INDEX  "index_events_on_city_id" ON "events"  ("city_id")[0m
+  ↳ db/migrate/20210317123718_create_events.rb:3
+  [1m[35m (4.2ms)[0m  [1m[35mCREATE  INDEX  "index_events_on_user_id" ON "events"  ("user_id")[0m
+  ↳ db/migrate/20210317123718_create_events.rb:3
+  [1m[35m (3.4ms)[0m  [1m[35mCREATE  INDEX  "index_events_on_host_id" ON "events"  ("host_id")[0m
+  ↳ db/migrate/20210317123718_create_events.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210317123718"]]
+  ↳ bin/rails:9
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateTags (20210317123746)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (12.1ms)[0m  [1m[35mCREATE TABLE "tags" ("id" bigserial primary key, "tag_name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20210317123746_create_tags.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210317123746"]]
+  ↳ bin/rails:9
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateCities (20210317123852)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (9.2ms)[0m  [1m[35mCREATE TABLE "cities" ("id" bigserial primary key, "city_name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20210317123852_create_cities.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210317123852"]]
+  ↳ bin/rails:9
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateAppointments (20210317123902)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (5.4ms)[0m  [1m[35mCREATE TABLE "appointments" ("id" bigserial primary key, "user_id" bigint, "event_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20210317123902_create_appointments.rb:3
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE  INDEX  "index_appointments_on_user_id" ON "appointments"  ("user_id")[0m
+  ↳ db/migrate/20210317123902_create_appointments.rb:3
+  [1m[35m (3.2ms)[0m  [1m[35mCREATE  INDEX  "index_appointments_on_event_id" ON "appointments"  ("event_id")[0m
+  ↳ db/migrate/20210317123902_create_appointments.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210317123902"]]
+  ↳ bin/rails:9
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateFilters (20210317123911)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (7.6ms)[0m  [1m[35mCREATE TABLE "filters" ("id" bigserial primary key, "event_id" bigint, "tag_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20210317123911_create_filters.rb:3
+  [1m[35m (3.0ms)[0m  [1m[35mCREATE  INDEX  "index_filters_on_event_id" ON "filters"  ("event_id")[0m
+  ↳ db/migrate/20210317123911_create_filters.rb:3
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE  INDEX  "index_filters_on_tag_id" ON "filters"  ("tag_id")[0m
+  ↳ db/migrate/20210317123911_create_filters.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210317123911"]]
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to AddDeviseToUsers (20210318160657)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "users" ADD "email" character varying DEFAULT '' NOT NULL[0m
+  ↳ db/migrate/20210318160657_add_devise_to_users.rb:7
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "users" ADD "encrypted_password" character varying DEFAULT '' NOT NULL[0m
+  ↳ db/migrate/20210318160657_add_devise_to_users.rb:8
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "users" ADD "reset_password_token" character varying[0m
+  ↳ db/migrate/20210318160657_add_devise_to_users.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "users" ADD "reset_password_sent_at" timestamp[0m
+  ↳ db/migrate/20210318160657_add_devise_to_users.rb:12
+  [1m[35m (0.1ms)[0m  [1m[35mALTER TABLE "users" ADD "remember_created_at" timestamp[0m
+  ↳ db/migrate/20210318160657_add_devise_to_users.rb:15
+  [1m[35m (3.5ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  ↳ db/migrate/20210318160657_add_devise_to_users.rb:40
+  [1m[35m (4.6ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")[0m
+  ↳ db/migrate/20210318160657_add_devise_to_users.rb:41
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210318160657"]]
+  ↳ bin/rails:9
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (0.8ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-03-19 11:04:37.574738"], ["updated_at", "2021-03-19 11:04:37.574738"]]
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(7857703137504431400)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/" for ::1 at 2021-03-19 12:04:48 +0100
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/manuq/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+Processing by StaticController#index as HTML
+  Rendering static/index.html.erb within layouts/application
+  Rendered static/index.html.erb within layouts/application (364.6ms)
+Completed 200 OK in 502ms (Views: 496.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/application.css" for ::1 at 2021-03-19 12:04:49 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/application.css"):
+  
+actionpack (5.2.4.5) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+>>>>>>> develop
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
 web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
@@ -27226,6 +27947,7 @@ puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
 puma (3.12.6) lib/puma/server.rb:476:in `process_client'
 puma (3.12.6) lib/puma/server.rb:334:in `block in run'
 puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+<<<<<<< HEAD
 Processing by AppointmentController#show as JPEG
   Parameters: {"id"=>"keur"}
 Completed 406 Not Acceptable in 391ms (ActiveRecord: 0.0ms)
@@ -27281,6 +28003,13 @@ activesupport (5.2.4.5) lib/active_support/callbacks.rb:98:in `run_callbacks'
 actionpack (5.2.4.5) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
 actionpack (5.2.4.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
 actionpack (5.2.4.5) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+=======
+Started GET "/keur.jpg" for ::1 at 2021-03-19 12:04:49 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/keur.jpg"):
+  
+actionpack (5.2.4.5) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+>>>>>>> develop
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
 web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
@@ -27307,6 +28036,7 @@ puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
 puma (3.12.6) lib/puma/server.rb:476:in `process_client'
 puma (3.12.6) lib/puma/server.rb:334:in `block in run'
 puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+<<<<<<< HEAD
 Started GET "/events/application.css" for ::1 at 2021-03-19 13:17:01 +0100
 Processing by EventsController#show as CSS
   Parameters: {"id"=>"application"}
@@ -27457,6 +28187,23 @@ activesupport (5.2.4.5) lib/active_support/callbacks.rb:98:in `run_callbacks'
 actionpack (5.2.4.5) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
 actionpack (5.2.4.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
 actionpack (5.2.4.5) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+=======
+Started GET "/users/sign_up" for ::1 at 2021-03-19 12:04:57 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  [1m[36mUser Load (4.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/manuq/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (0.7ms)
+  Rendered devise/shared/_links.html.erb (0.8ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (332.9ms)
+Completed 200 OK in 446ms (Views: 385.9ms | ActiveRecord: 21.9ms)
+
+
+Started GET "/users/application.css" for ::1 at 2021-03-19 12:04:58 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/application.css"):
+  
+actionpack (5.2.4.5) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
 web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
@@ -27483,6 +28230,163 @@ puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
 puma (3.12.6) lib/puma/server.rb:476:in `process_client'
 puma (3.12.6) lib/puma/server.rb:334:in `block in run'
 puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/users/keur.jpg" for ::1 at 2021-03-19 12:04:58 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/keur.jpg"):
+  
+actionpack (5.2.4.5) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.5) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.5) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.5) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.5) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.5) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.5) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/users" for ::1 at 2021-03-19 12:05:54 +0100
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LyzHEeKFn1J3zvY4Buzyn7uYSKT88rlOWjaOLeQnrVDNyoUBzBiQV46GQw6VPpcArhr+p6Nzq/CC07mPpfnmPg==", "user"=>{"email"=>"michel@oui.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "first_name"=>"Michel", "last_name"=>"Oui", "age"=>"38", "gender"=>"Male", "is_host"=>"false"}, "commit"=>"Sign up"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/manuq/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Exists (1.9ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "michel@oui.com"], ["LIMIT", 1]]
+  ↳ /home/manuq/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Create (1.6ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "age", "gender", "is_host", "created_at", "updated_at", "email", "encrypted_password") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["first_name", "Michel"], ["last_name", "Oui"], ["age", 38], ["gender", "Male"], ["is_host", false], ["created_at", "2021-03-19 11:05:54.667312"], ["updated_at", "2021-03-19 11:05:54.667312"], ["email", "michel@oui.com"], ["encrypted_password", "$2a$12$y7PCvejmlPCdPbuM3.yt8Opjx488im1SfL05UjJz.hgYWX/ytya9i"]]
+  ↳ /home/manuq/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+  Rendering user_mailer/welcome.html.erb within layouts/mailer
+  Rendered user_mailer/welcome.html.erb within layouts/mailer (0.4ms)
+  Rendering user_mailer/welcome.text.erb within layouts/mailer
+  Rendered user_mailer/welcome.text.erb within layouts/mailer (0.3ms)
+UserMailer#welcome: processed outbound mail in 136.2ms
+Sent mail to michel@oui.com (300.1ms)
+Date: Fri, 19 Mar 2021 12:05:55 +0100
+From: sellig@gmail.com
+To: michel@oui.com
+Message-ID: <605485935604_42c41c8794f3@Omen-Manu.mail>
+Subject: Coucou
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_605485934170_42c41c8793cc";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_605485934170_42c41c8793cc
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: base64
+
+U2FsdXQgTWljaGVsIGV0IGJpZW52ZW51ZSBzdXIgU2hhcmUgUGFzIENoZXIg
+IQ0KPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09
+PT09PT09PT09PT09PT09PQ0KIA0KVHUgdCdlcyBpbnNjcml0IGVuIHV0aWxp
+c2FudCBsJ2UtbWFpbCBzdWl2YW50IDogbWljaGVsQG91aS5jb20uDQogDQpQ
+b3VyIGFjY8OpZGVyIMOgIHRvbiBlc3BhY2UgY2xpZW50LCBjb25uZWN0ZS10
+b2kgdmlhIDogc2hhcmVwYXNjaGVyLmhlcm9rdWFwcC5jb20uDQogDQrDgCB0
+csOocyB2aXRlICENCg==
+
+----==_mimepart_605485934170_42c41c8793cc
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>=0D
+<html>=0D
+  <head>=0D
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf=
+-8" />=0D
+    <style>=0D
+      /* Email styles need to be inline */=0D
+    </style>=0D
+  </head>=0D
+=0D
+  <body>=0D
+    <!DOCTYPE html>=0D
+<html>=0D
+  <head>=0D
+    <meta content=3D'text/html; charset=3DUTF-8' http-equiv=3D'Content-Ty=
+pe' />=0D
+  </head>=0D
+  <body>=0D
+    <h1>Salut Michel et bienvenue sur Share Pas Cher !</h1>=0D
+    <p>=0D
+      Tu t'es inscrit en utilisant l'e-mail suivant : michel@oui.com.=0D
+    </p>=0D
+    <p>=0D
+      Pour acc=C3=A9der =C3=A0 ton espace client, connecte-toi via : shar=
+epascher.herokuapp.com.=0D
+    </p>=0D
+    <p> =C3=80 tr=C3=A8s vite !</p>=0D
+  </body>=0D
+</html>=0D
+  </body>=0D
+</html>=0D
+
+----==_mimepart_605485934170_42c41c8793cc--
+
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/manuq/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 965ms (ActiveRecord: 5.5ms)
+
+
+Started GET "/" for ::1 at 2021-03-19 12:05:55 +0100
+Processing by StaticController#index as HTML
+  Rendering static/index.html.erb within layouts/application
+  Rendered static/index.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 111ms (Views: 106.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/application.css" for ::1 at 2021-03-19 12:05:55 +0100
+Started GET "/keur.jpg" for ::1 at 2021-03-19 12:05:55 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/application.css"):
+  
+actionpack (5.2.4.5) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+>>>>>>> develop
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.5) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.5) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.5) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.5) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.5) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.5) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+<<<<<<< HEAD
 Completed 406 Not Acceptable in 95ms (ActiveRecord: 0.0ms)
 
 
@@ -27536,6 +28440,12 @@ activesupport (5.2.4.5) lib/active_support/callbacks.rb:98:in `run_callbacks'
 actionpack (5.2.4.5) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
 actionpack (5.2.4.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
 actionpack (5.2.4.5) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+=======
+  
+ActionController::RoutingError (No route matches [GET] "/keur.jpg"):
+  
+actionpack (5.2.4.5) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+>>>>>>> develop
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
 web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
@@ -27562,3 +28472,37 @@ puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
 puma (3.12.6) lib/puma/server.rb:476:in `process_client'
 puma (3.12.6) lib/puma/server.rb:334:in `block in run'
 puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+<<<<<<< HEAD
+=======
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCity Load (0.6ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCity Create (1.2ms)[0m  [1m[32mINSERT INTO "cities" ("city_name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["city_name", "Mexico"], ["created_at", "2021-03-19 11:08:27.338554"], ["updated_at", "2021-03-19 11:08:27.338554"]]
+  [1m[35m (8.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCity Load (0.3ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mEvent Create (12.4ms)[0m  [1m[32mINSERT INTO "events" ("title", "description", "date", "guests_number", "city_id", "host_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "dlkleklefkle"], ["description", "ojfieojuihrogssieosjkefg"], ["date", "2021-03-20 00:00:00"], ["guests_number", 5], ["city_id", 1], ["host_id", 1], ["created_at", "2021-03-19 11:08:29.390030"], ["updated_at", "2021-03-19 11:08:29.390030"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mEvent Load (1.0ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."host_id" = $1 LIMIT $2[0m  [["host_id", 1], ["LIMIT", 11]]
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (132.9ms)[0m  [1m[35mDROP DATABASE IF EXISTS "SharePasCher_development"[0m
+  ↳ bin/rails:9
+  [1m[35m (125.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS "SharePasCher_test"[0m
+  ↳ bin/rails:9
+>>>>>>> develop
