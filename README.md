@@ -1,25 +1,55 @@
-# README
+## 🔆 Hi everyone !
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Welcome in our app GATINOS - The E.Shop of cats' pictures.
 
-Things you may want to cover:
+Here some informations you may want to know :
 
-* Ruby version
+* Ruby version : `2.7.1`
+* Rails version : `5.2.3`
+* We use Javascript
+* HTML and CSS only for the front end part.
 
-* System dependencies
+## What is it about ?
 
-* Configuration
+It's a web site where you can create/participate to a diner organised from our web site in the city you are living/traveling.
 
-* Database creation
 
-* Database initialization
+## Here are the features :
+As a host, you can :
+- create an account 
+- log in your account
+- log out
+- create an event
+- choose whoever you want or not to particpate to your event
 
-* How to run the test suite
+As a traveler, you can :
+- create an account 
+- log in your account
+- log out
+- participate to an event
 
-* Services (job queues, cache servers, search engines, etc.)
+## How to run the app
+Please you will find the following commands to run the app :
 
-* Deployment instructions
+Click on this link to find our deployment on heroku : https://sharepascher.herokuapp.com
 
-* ...
-gustave chenda manu et jeanne
+Or, if you want to run this on http://localhost:3000 :
+
+Don't download zip the project, you won't have the git repository.
+you have to git clone the url adress just given in the green button "Code".
+- open your terminal and write : git clone https...url of our git repository without anything else
+- write `cd Boutique_Gatinos` to go on the repository
+- write `bundle install`
+- write `rails db:create` to create the database
+- write `rails db:migrate` to run the routes & migrations
+- write `rails db:seeds` to make effective our fake database (fake with the gem 'faker')
+- run `rails server` and go to the local host ! 
+
+# Who are we ?
+- Gustave -> https://github.com/VilgotPloix
+- Chenda -> https://github.com/chendanet
+- Emmanuel -> https://github.com/EmmanuelQuere
+- Antoine -> https://github.com/MajesticForReal
+- and me !
+
+Love u all ! and love grumpies cats.
