@@ -27,10 +27,10 @@
     <% if user_signed_in? %>
     <div id="navbarBasicExample" class="navbar-menu">
       <div class="navbar-start">
+        <a class="navbar-item" <%= link_to "Liste des events", events_path %></a>
       <a class="navbar-item" <%= link_to "Se déconnecter", destroy_user_session_path, method: :delete %></a>
       <% if current_user.is_host?%>
         <a class="navbar-item" <%= link_to "Liste de tes events", created_index_events_path %></a>
-        <a class="navbar-item" <%= link_to "Liste des events", events_path %></a>
         <a class="navbar-item" <%= link_to "Crée un nouvel event ", new_event_path %></a>
       <%else%>
         <a class="navbar-item" <%= link_to "Devenir hôte", new_event_path %></a>
