@@ -142,17 +142,25 @@
     <% if user_signed_in? %>
     <div id="btnDroiteTrue">
       <p class="font">/</p>
-      <p class="font">Mon compte</p>
+      <div>
+      <a href="#" class="font drpdwn">Mon Compte</a>
+        <ul id="list">
+          <li><a href="#" class="font">Mes Informations</a></li>
+          <li><a href="#" class="font">Mes amis</a></li>
+          <li><a href="#" class="font">Mes messages</a></li>
+          <li><a href="#" class="font">Paramètres</a></li>
+        </ul>
+      </div>
       <p class="font">/</p>
-      <p class="font">Me déconnecter</p>
+      <%= link_to "Me déconnecter", destroy_user_session_path, method: :delete, class:"font" %>
       <p class="font">/</p>
     </div>
     <%else%>
     <div id="btnDroiteFalse">
       <p class="font">/</p>
-      <p class="font">S'inscrire</p>
+      <%= link_to "S'inscrire", new_user_registration_path, class:"font" %>
       <p class="font">/</p>
-      <p class="font">Se connecter</p>
+      <%= link_to 'Se connecter', new_user_session_path, class:"font" %>
       <p class="font">/</p>
     </div>
     <%end%>

@@ -431,3 +431,36 @@ span.inter
 	color: black;
 }
 
+.drpdwn
+{
+	position: relative;
+}
+
+#list
+{
+	border: 1px solid black;
+	background-color: white;
+	position: absolute;
+	width: 170px;
+	height: 140px;
+	left: 30px;
+	transform: translateY(8px);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	opacity: 0;
+	pointer-events: none;
+	transition: all 0.4s ease;
+}
+
+.drpdwn:focus + #list
+{
+	opacity: 1;
+	pointer-events: all;
+}
+
+.drpdwn:focus
+{
+	color: black;
+}
