@@ -1,15 +1,15 @@
-*
+/**
 {
 	margin:0px;
 	padding: 0px;
 
 }
 
+
 footer{
 position:absolute;
 bottom:0px;
 width:100%;
-margin-bottom: 0;
 background-color: black;
 padding-top:50px;
 height:50px;
@@ -19,6 +19,22 @@ body
 {
 	height: 100%;
 	position: relative;
+}*/
+
+html, body {
+	height: 100%;
+	margin: 0; padding: 0;
+}
+body {
+	display : table;
+	width: 100%;
+}
+footer {
+	position: absolute;
+	bottom:-1200px;
+	width:100%;
+	display : table-row;
+	height: 100px; /* à titre d'exemple */
 }
 
 .test
