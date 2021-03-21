@@ -90,9 +90,89 @@
 </nav>
 
 
+
+
+
+
+<div id="navbar">
+   <% if user_signed_in? %>
+  <div id="btnGaucheTrue">
+    <div id="logo">
+        <p>/</p>
+        <%= link_to "SPC", root_path, class:"spc" %>
+        <p>/</p>
+      </div>
+        <%= link_to 'Voir les évènements', events_path, class:"font" %>
+        <p class="font">/</p>
+         <%= link_to 'Créer un évènement', new_event_path, class:"font" %>
+        <p class="font">/</p>
+
+        <% if current_user.is_host? %>
+    <div id="btnGaucheHost">
+    <div id="logo">
+        <p>/</p>
+        <%= link_to "SPC", root_path, class:"spc" %>
+        <p>/</p>
+      </div>
+        <%= link_to 'Voir les évènements', events_path, class:"font" %>
+        <p class="font">/</p>
+        <%= link_to 'voir mes évènements', created_index_events_path, class:"font" %>
+         <%= link_to 'Créer un évènement', new_event_path, class:"font" %>
+        <p class="font">/</p>
+    </div>
+    <% end %>
+    </div>
+    <%else %>
+    <div id="btnGaucheFalse">
+      <div id="logo">
+        <p>/</p>
+        <p id="spc">SPC</p>
+        <p>/</p>
+      </div>
+      <p class="font">Voir les expériences</p>
+      <p class="font">/</p>
+
+     </div>
+    <% end %>
+
+    
+  
+
+  
+    <% if user_signed_in? %>
+    <div id="btnDroiteTrue">
+      <p class="font">/</p>
+      <p class="font">Mon compte</p>
+      <p class="font">/</p>
+      <p class="font">Me déconnecter</p>
+      <p class="font">/</p>
+    </div>
+    <%else%>
+    <div id="btnDroiteFalse">
+      <p class="font">/</p>
+      <p class="font">S'inscrire</p>
+      <p class="font">/</p>
+      <p class="font">Se connecter</p>
+      <p class="font">/</p>
+    </div>
+    <%end%>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
 <footer class="footer">
 
-<div class="content has-text-centered">
+<div class="content has-text-centered footerdemerde">
 
 <p>
 
