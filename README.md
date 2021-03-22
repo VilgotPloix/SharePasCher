@@ -51,6 +51,6 @@ you have to git clone the url adress just given in the green button "Code".
 - Chenda -> https://github.com/chendanet
 - Emmanuel -> https://github.com/EmmanuelQuere
 - Antoine -> https://github.com/MajesticForReal
-- and me !
+- Jeanne -> https://github.com/Sellig20
 
 Love u all ! and love grumpies cats.
