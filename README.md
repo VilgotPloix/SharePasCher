@@ -53,4 +53,3 @@ you have to git clone the url adress just given in the green button "Code".
 - Antoine -> https://github.com/MajesticForReal
 - Jeanne -> https://github.com/Sellig20
 
-Love u all ! and love grumpies cats.
