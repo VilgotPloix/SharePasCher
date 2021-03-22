@@ -488,13 +488,13 @@ span.inter
 
 .imgLeft
 {
-	border-radius: 0px 0px 20px 0px;
+	border-radius: 50px;
 
 }
 
 .imgRight
 {
-	border-radius: 20px 0px 0px 0px;
+	border-radius: 50px;
 	transform: translateY(5.5px;);
 }
 
@@ -520,6 +520,6 @@ span.inter
 	width: 400px;
 	font-size: 25px;
 	font-family: 'Open Sans Condensed', sans-serif;
-	margin: 70px;
+	margin: 200px;
 	letter-spacing: 2px; 
 }
