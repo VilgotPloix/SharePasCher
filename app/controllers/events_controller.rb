@@ -15,8 +15,8 @@ class EventsController < ApplicationController
   end
 
   def create
-    @event = Event.new(title: params[:title], description: params[:description], date: params[:date], city_id: params[:city_id], guests_number: params[:guests_number], host_id: params[:host_id], current_guests: 0)
-    @event.save
+    @event = Event.create(title: params[:title], description: params[:description], date: params[:date], city_id: params[:city_id], guests_number: params[:guests_number], host_id: params[:host_id], current_guests: 0)
+    # @event.save
     if @event.host.is_host == false
       User.find(@event.host.id).update(is_host: true)
     end
