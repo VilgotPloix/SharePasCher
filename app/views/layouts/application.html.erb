@@ -8,86 +8,19 @@
           <meta name="viewport" content="width=device-width, initial-scale=1">
               <%= stylesheet_link_tag    'application', media: 'all' %>
               <%= javascript_include_tag 'application' %>
+
           <title>Share Pas Cher</title>
   </head>
 
 <body>
 
-<nav class="navbar" role="navigation" aria-label="main navigation">
-  <div class="navbar-brand">
-    
-      <a class="navbar-item" <%= link_to "SPC", root_path %></a>
 
-      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      </a>  
-  </div>
-    <% if user_signed_in? %>
-    <div id="navbarBasicExample" class="navbar-menu">
-      <div class="navbar-start">
-        <a class="navbar-item" <%= link_to "Liste des events", events_path %></a>
-      <a class="navbar-item" <%= link_to "Se déconnecter", destroy_user_session_path, method: :delete %></a>
-      <% if current_user.is_host?%>
-        <a class="navbar-item" <%= link_to "Liste de tes events", created_index_events_path %></a>
-        <a class="navbar-item" <%= link_to "Crée un nouvel event ", new_event_path %></a>
-      <%else%>
-        <a class="navbar-item" <%= link_to "Devenir hôte", new_event_path %></a>
-      <%end%>
-    <% else %>
+    <% flash.each do |bulmaname, pop| %>
+      <div class='notification is-<%= bulmaname %>'>
+        <%= pop %>
+      </div>
+    <% end %>
 
-        <a class="navbar-item">
-        Voir les experiences
-        </a>
-
-<div class="navbar-item has-dropdown is-hoverable">
-    <a class="navbar-link">Mon profil</a>
-
-    <div class="navbar-dropdown">
-
-    <a class="navbar-item">
-    Ma session
-    </a>
-
-    <a class="navbar-item">
-    Mes SPC friends
-    </a>
-
-    <a class="navbar-item">
-    Messagerie
-    </a>
-
-    <hr class="navbar-divider">
-
-    <a class="navbar-item">
-    Parametres
-    </a>
-  </div>
-</div>
-</div>
-
-<div class="navbar-end">
-
-<div class="navbar-item">
-
-<div class="buttons">
-
-<a class="navbar-item" <%= link_to "S'inscrire", new_user_registration_path %></a>
-
-<a class="button is-info" <%= link_to "Se connecter", new_user_session_path %></a>
-
-</div>
-
-</div>
-
-</div>
-
-<% end %>
-
-</div>
-
-</nav>
 
 
 
@@ -181,6 +114,8 @@
 <footer class="footer">
 
 <div class="content has-text-centered deleteMargin">
+
+
 
 <p>
 
