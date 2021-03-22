@@ -1,6 +1,5 @@
-<!-- modifier cette méthode, le guest number correspond au nombre max de personnes -->
-<% nb_place = (6 - @event.guests_number) %> 
-<!-- celle ci ^^^^^^^^^^^^ -->
+<% nb_place = (@event.guests_number - @event.current_guests) %> 
+
 
 <div class="showEvents">
 	<div id="card"> 
@@ -8,14 +7,18 @@
 		<p id="subtitle"><%= @event.description %></p>
 		<p id="subtitle"> C'est le <%= @event.date %></p>
 		<p id="subtitle">Et c'est à <%= @event.city.city_name %> !</p>
-	<% if nb_place > 0 %>
+	<% if nb_place > 0 && is_event_host(@event) == false %>
 		<p id="subtitle">Il reste <%= nb_place %> place(s) disponible(s) !</p>
-		<%= button_to "Je veux venir !", '/appointment' , method: :post, params: {event_id: @event.id}, class:"jeveux" %>
-	<% else %>
+		<% if is_already_subscribed(current_user, @event) == false %>
+			<%= button_to "Je veux venir !", '/appointment' , method: :post, params: {event_id: @event.id}, class:"jeveux" %>
+		<% end %>
+	<% elsif nb_place = 0 && is_event_host(@event) == false %>
 		<p id="subtitle">Ce repas est complet !</p>
+	<% else %>
+		<p id="subtitle">Il reste <%= nb_place %> place(s) disponible(s) pour ton event !</p>
 	<% end %>
 	</div>
-	<% if current_user.id == @event.host.id %>
+	<% if is_event_host(@event) == true %>
 		<div>
 			<h1>Voici les gens qui veulent rejoindre ton Event !</h1>
 			<% @event.users.each do |user| %>
@@ -28,8 +31,8 @@
 
 						<%= button_to "Accepter l'invité", appointment_path(user.id), params:{event_id: @event.id, user_id: user.id}, method: :put %>
 					<%end%>
-					<%= button_to "Refuser l'invité", appointment_path(user.id), params:{event_id: @event.id, user_id: user.id}, method: :delete %>
 				<%end%>
+				<%= button_to "Refuser l'invité", appointment_path(user.id), params:{event_id: @event.id, user_id: user.id}, method: :delete %>
 			<%end%>	
 		</div>
 	<%end%>	

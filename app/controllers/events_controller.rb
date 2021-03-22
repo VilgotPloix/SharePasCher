@@ -1,4 +1,7 @@
 class EventsController < ApplicationController
+  before_action :authenticate_user!
+
+
   def index
     @event = Event.all
   end
@@ -21,7 +24,7 @@ class EventsController < ApplicationController
       User.find(@event.host.id).update(is_host: true)
     end
 
-    redirect_to root_path
+    redirect_to events_path
   end
 
   def new
