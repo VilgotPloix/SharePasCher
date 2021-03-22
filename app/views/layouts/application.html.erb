@@ -8,6 +8,7 @@
           <meta name="viewport" content="width=device-width, initial-scale=1">
               <%= stylesheet_link_tag    'application', media: 'all' %>
               <%= javascript_include_tag 'application' %>
+              
           <title>Share Pas Cher</title>
   </head>
 
@@ -28,7 +29,7 @@
     <div id="navbarBasicExample" class="navbar-menu">
       <div class="navbar-start">
         <a class="navbar-item" <%= link_to "Liste des events", events_path %></a>
-      <a class="navbar-item" <%= link_to "Se déconnecter", destroy_user_session_path, method: :delete %></a>
+      <a class="navbar-item" <%= link_to "Se déconnecter", destroy_user_session_path, method: :delete, data: { confirm: 'Vous aller être déconnecté' } %></a>
       <% if current_user.is_host?%>
         <a class="navbar-item" <%= link_to "Liste de tes events", created_index_events_path %></a>
         <a class="navbar-item" <%= link_to "Crée un nouvel event ", new_event_path %></a>
