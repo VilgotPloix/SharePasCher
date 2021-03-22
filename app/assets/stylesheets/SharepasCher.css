@@ -1,19 +1,28 @@
+ /*                               font-family: 'Cormorant Unicase', serif;                      */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Unicase:wght@300&display=swap');
+
+/*                                font-family: 'Open Sans Condensed', sans-serif;               */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap');
+
+
 *
 {
 	margin:0px;
 	padding: 0px;
-
 }
+
 
 footer{
 position:absolute;
 bottom:0px;
 width:100%;
-margin-bottom: 0;
 background-color: black;
 padding-top:50px;
+background-color: blue;
 height:50px;
 }
+
+
 
 body
 {
@@ -21,11 +30,33 @@ body
 	position: relative;
 }
 
+html, body {
+	height: 100%;
+	margin: 0; padding: 0;
+}
+body {
+	display : table;
+	width: 100%;
+}
+footer {
+	position: absolute;
+	bottom:-1200px;
+	width:100%;
+	display : table-row;
+	height: 100px; /* à titre d'exemple */
+}
+
 .test
 {
 	border: 1px solid black;
 	height: 1500px;
 	width: 100%;
+}
+
+.calage
+{
+
+	margin-bottom: 0px!important;
 }
 
 footer a
@@ -119,6 +150,7 @@ span.inter
 	width: 100%;
 	height: 200px;
 	display: flex;
+	background-color: white;
 	flex-direction: column;
 	justify-content: space-around;
 }
@@ -198,7 +230,9 @@ span.inter
 .events
 {
 	min-width: 250px;
+	max-width: 250px;
 	min-height: 300px;
+	max-height: 300px;
 	border: 1px solid black;
 	text-align: center;
 	padding: 10px;
@@ -299,4 +333,196 @@ span.inter
 	color: black;
 	font-weight: 600;
 
+}
+
+
+#navbar
+{
+	width: 100%;
+	height: 50px;
+	border: 1px solid black;
+	display: flex;
+	justify-content: space-between;
+}
+
+#btnGaucheTrue
+{
+	width: 657px;
+	height: 50px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: relative;
+	left: 50px;
+}
+
+#btnGaucheFalse
+{
+	width: 365px;
+	height: 50px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: relative;
+	left: 50px;
+}
+
+#btnGaucheHost
+{
+	width: 943px;
+	height: 50px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: relative;
+	left: 50px;
+}
+
+
+#btnDroiteTrue
+{
+	width: 452px;
+	height: 50px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: relative;
+	right: 50px;
+}
+
+#btnDroiteFalse
+{
+	width: 392px;
+	height: 50px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: relative;
+	right: 50px;
+}
+
+
+#logo
+{
+	width: 80px;
+	height: 35px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	/*border: 1px solid black;*/
+}
+
+#logo p
+{
+	font-family: 'Cormorant Unicase', serif;
+	font-size: 30px;
+	color: #FF8527;
+}
+
+.spc
+{
+	font-family: 'Open Sans Condensed', sans-serif;
+	letter-spacing: 2px;
+	font-size: 30px;
+	color: #FF8527;
+}
+
+.font
+{
+	font-family: 'Open Sans Condensed', sans-serif;
+	letter-spacing: 2px;
+	font-size: 20px;
+	color: #707070;
+}
+
+.font:hover
+{
+	color: black;
+}
+
+.drpdwn
+{
+	position: relative;
+}
+
+#list
+{
+	border: 1px solid black;
+	background-color: white;
+	position: absolute;
+	width: 170px;
+	height: 140px;
+	left: 30px;
+	transform: translateY(-9px);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	opacity: 0;
+	pointer-events: none;
+	transition: all 0.4s ease;
+}
+
+.drpdwn:focus + #list
+{
+	opacity: 1;
+	pointer-events: all;
+	transform: translateY(9px);
+}
+
+.drpdwn:focus
+{
+	color: black;
+}
+
+.right
+{
+	position: absolute;
+	right: 0px;
+	width: 50%;
+}
+
+.left
+{
+	/*position: absolute;*/
+
+	width: 50%;
+}
+
+.imgLeft
+{
+	border-radius: 50px;
+
+}
+
+.imgRight
+{
+	border-radius: 50px;
+	transform: translateY(5.5px;);
+}
+
+.pleinUn
+{
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.pleinDeux
+{
+	width: 100%;
+	height: 630px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.coté
+{
+	width: 400px;
+	font-size: 30px;
+	font-family: 'Open Sans Condensed', sans-serif;
+	margin: 200px;
+	letter-spacing: 2px; 
 }

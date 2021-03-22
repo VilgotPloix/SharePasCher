@@ -25,6 +25,7 @@ class AppointmentController < ApplicationController
     Event.find(@event_id).update(current_guests: (@event.current_guests + 1))
     clear_appointments(@user, @event)
     redirect_to event_path(@event_id)
+    AppointmentMailer.accepted_mail(@appointment).deliver_now
   end
 
   def destroy
