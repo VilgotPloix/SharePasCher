@@ -27,7 +27,7 @@
         <div id="navbarBasicExample" class="navbar-menu">
           <div class="navbar-start">
             <a class="navbar-item" <%= link_to "Liste des events", events_path %></a>
-          <a class="navbar-item" <%= link_to "Se déconnecter", destroy_user_session_path, method: :delete, data: { confirm: 'Vous aller être déconnecté' } %></a>
+          <a class="navbar-item" <%= link_to "Se déconnecter", destroy_user_session_path, method: :delete %></a>
           <% if current_user.is_host?%>
             <a class="navbar-item" <%= link_to "Liste de tes events", created_index_events_path %></a>
             <a class="navbar-item" <%= link_to "Crée un nouvel event ", new_event_path %></a>
@@ -60,9 +60,9 @@
         <% end %>
   </div>
 </nav>
-    <% flash.each do |name, mess| %>
-      <div class='notification is-<%= name %>'>
-        <%= mess %>
+    <% flash.each do |bulmaname, pop| %>
+      <div class='notification is-<%= bulmaname %>'>
+        <%= pop %>
       </div>
     <% end %>
 
