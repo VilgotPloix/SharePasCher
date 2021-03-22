@@ -1,13 +1,14 @@
-/*                               font-family: 'Cormorant Unicase', serif;                      */
+ /*                               font-family: 'Cormorant Unicase', serif;                      */
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Unicase:wght@300&display=swap');
 
+/*                                font-family: 'Open Sans Condensed', sans-serif;               */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap');
 
 
 *
 {
 	margin:0px;
 	padding: 0px;
-
 }
 
 
@@ -146,6 +147,7 @@ span.inter
 	width: 100%;
 	height: 200px;
 	display: flex;
+	background-color: white;
 	flex-direction: column;
 	justify-content: space-around;
 }
@@ -226,6 +228,8 @@ span.inter
 {
 	min-width: 250px;
 	min-height: 300px;
+	max-height: 300px;
+	max-width: 250px;
 	border: 1px solid black;
 	text-align: center;
 	padding: 10px;
@@ -414,14 +418,16 @@ span.inter
 
 .spc
 {
-	font-family: 'Cormorant Unicase', serif;
+	font-family: 'Open Sans Condensed', sans-serif;
+	letter-spacing: 2px;
 	font-size: 30px;
 	color: #FF8527;
 }
 
 .font
 {
-	font-family: 'Cormorant Unicase', serif;
+	font-family: 'Open Sans Condensed', sans-serif;
+	letter-spacing: 2px;
 	font-size: 20px;
 	color: #707070;
 }
@@ -444,7 +450,7 @@ span.inter
 	width: 170px;
 	height: 140px;
 	left: 30px;
-	transform: translateY(8px);
+	transform: translateY(-9px);
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -458,9 +464,62 @@ span.inter
 {
 	opacity: 1;
 	pointer-events: all;
+	transform: translateY(9px);
 }
 
 .drpdwn:focus
 {
 	color: black;
+}
+
+.right
+{
+	position: absolute;
+	right: 0px;
+	width: 50%;
+}
+
+.left
+{
+	/*position: absolute;*/
+
+	width: 50%;
+}
+
+.imgLeft
+{
+	border-radius: 0px 0px 20px 0px;
+
+}
+
+.imgRight
+{
+	border-radius: 20px 0px 0px 0px;
+	transform: translateY(5.5px;);
+}
+
+.pleinUn
+{
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.pleinDeux
+{
+	width: 100%;
+	height: 630px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.coté
+{
+	width: 400px;
+	font-size: 25px;
+	font-family: 'Open Sans Condensed', sans-serif;
+	margin: 70px;
+	letter-spacing: 2px; 
 }
