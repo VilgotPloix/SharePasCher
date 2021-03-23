@@ -3,7 +3,7 @@
     <p class="titre h has-text-white">Share Pas Cher</p>
     <p class="titre subtitle has-text-white">Le nouveau standard de la convivialité !</p>
     <div class="boutons">
-    	<%= button_to "Inscris-toi!", new_user_registration_path, method: :get, class:"butt one" %>
+    	<%= button_to "/   S'inscrire   /", new_user_registration_path, method: :get, class:"butt one font" %>
     </div>
   </div>
 </section>
@@ -13,11 +13,30 @@
 	<%= image_tag 'fleche.svg', class:"fleche" %>
 </div>
 
+<div class="presentation">
+	<div class="centrer">
+		<p class="derniers">Un petit apercu de ce que tu y trouveras ?</p>
+	</div>
+	<div class="lasts">
+		<% @events.each do |event| %>
+			<div id="cards">
+				<!-- <div id="top"> -->
+					<p id="eventTitle"><%= event.title %></p>
+				<!-- </div> -->
+					<p id="eventDesc"><%= event.description %></p>
+				<!-- <div id="bottom"> -->
+					<p id="eventVille">C'est à <%= event.city.city_name %></p>
+				<!-- </div> -->
+			</div>
+		<%end%>
+	</div>
+</div>
+
 <div class="pleinUn">
 <div class="left">
 	<%=image_tag 'prepGrand.jpg', class:"imgLeft" %>
 </div>
-<div><p class="coté">Marre de cette période où nous ne voyons que des bouts de visages masqué ?
+<div class="descLanding"><p class="coté">Marre de cette période où nous ne voyons que des bouts de visages masqués ?
 Avec SPC, trouvez des personnes avec qui partager un bon repas 
 Ici, pas d'algorithme, que de la bonne humeur !</p></div>
 </div>
@@ -26,20 +45,14 @@ Ici, pas d'algorithme, que de la bonne humeur !</p></div>
 <div class="right">
 	<%= image_tag 'tomatesGrand.jpg', class:"imgRight" %>
 </div>
-<div><p class="coté">Avec internet, rien de plus simple de se renseigner sur d'autres cultures,
+<div class="descLanding"><p class="coté h1">Avec internet, rien de plus simple de se renseigner sur d'autres cultures,
 mais connaissez vous vraiment le goût des plats traditionnels ?
 Pas forcément besoin d'aller en Inde pour goûter à un vrai Dhal !</p></div>
 </div>
 
-<div class="lasts">
-	<p class="derniers">Voici les cinq derniers évènements !</p>
-	<% @events.each do |event| %>
-		<div class="events">
-			<p id="eventTitle"><%= event.title %></p>
-			<p id="eventDesc"><%= event.description %></p>
-			<p id="eventVille">C'est à <%= event.city.city_name %></p>
-		</div>
-	<%end%>
+<div id="basDePage">
+	<%= button_to "/   S'inscrire   /", new_user_registration_path, method: :get, class:"butt one font" %>
+	<p class="h1">Rejoins donc la comunauté de Share Pas Cher, pas de frais cachés, que du bonheur !</p>
 </div>
 
 

@@ -40,26 +40,13 @@
          <%= link_to 'Créer Un Évènement', new_event_path, class:"font" %>
         <p class="font">/</p>
 
-        <% if current_user.is_host? %>
-    <div id="btnGaucheHost">
-    <div id="logo">
-        <p>/</p>
-        <%= link_to "SPC", root_path, class:"spc" %>
-        <p>/</p>
-      </div>
-        <%= link_to 'Voir Les Évènements', events_path, class:"font" %>
-        <p class="font">/</p>
-        <%= link_to 'voir Les Évènements', created_index_events_path, class:"font" %>
-         <%= link_to 'Créer Un Évènement', new_event_path, class:"font" %>
-        <p class="font">/</p>
-    </div>
-    <% end %>
+       
     </div>
     <%else %>
     <div id="btnGaucheFalse">
       <div id="logo">
         <p>/</p>
-        <p id="spc">SPC</p>
+        <%= link_to "SPC", root_path, class:"spc" %>
         <p>/</p>
       </div>
       <p class="font">Voir Les Expériences</p>
@@ -79,6 +66,7 @@
       <a href="#" class="font drpdwn">Mon Compte</a>
         <ul id="list">
           <li><a href="#" class="font">Mes Informations</a></li>
+          <li><%= link_to "Mes Évènements",  created_index_events_path, class:"font"%></li>
           <li><a href="#" class="font">Mes Amis</a></li>
           <li><a href="#" class="font">Mes Messages</a></li>
           <li><a href="#" class="font">Paramètres</a></li>
