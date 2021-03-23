@@ -1,5 +1,6 @@
 class EventsController < ApplicationController
   before_action :authenticate_user!
+  before_action :check_profile_completion, only: [:new]
 
 
   def index
@@ -43,6 +44,12 @@ class EventsController < ApplicationController
   private
     def event_params
       params.require(:event).permit(:title, :description, :city, :date, :guest_number)
+    end
+
+    def check_profile_completion
+      if current_user.is_profile_fully_completed == false
+        redirect_to edit_user_registration_path, warning: "Veuillez compléter votre profil avant de pouvoir accéder à ce contenu"
+      end
     end
 
 

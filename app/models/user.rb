@@ -12,4 +12,10 @@ class User < ApplicationRecord
   end
   has_many :created_events, foreign_key: "host_id", class_name: "Event"
 
+  def is_profile_fully_completed
+    if (self.first_name.blank? || self.last_name.blank? || self.birth_day.blank?) == true then return false
+    else return true
+    end
+  end
+
 end

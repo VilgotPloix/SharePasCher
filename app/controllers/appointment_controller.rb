@@ -1,5 +1,6 @@
 class AppointmentController < ApplicationController
   before_action :authenticate_user!
+  before_action :check_profile_completion, only: [:create]
   
   def index
   end
@@ -51,6 +52,12 @@ class AppointmentController < ApplicationController
       if (appointment.event.date == actual_event.date) && (!appointment.is_accepted?)
         appointment.destroy
       end
+    end
+  end
+
+  def check_profile_completion
+    if current_user.is_profile_fully_completed == false
+      redirect_to edit_user_registration_path, warning: "Veuillez compléter votre profil avant de pouvoir accéder à ce contenu"
     end
   end
 end
