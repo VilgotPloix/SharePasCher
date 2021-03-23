@@ -494,20 +494,25 @@ span.inter
 	width: 170px;
 	height: 155px;
 	left: 30px;
-	transform: translateY(-9px);
+	/*transform: translateY(-9px);*/
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	opacity: 0;
-	pointer-events: none;
+	/*pointer-events: none;*/
 	transition: all 0.4s ease;
+}
+
+.nonclickable
+{
+	cursor: default;
 }
 
 .drpdwn:focus + #list
 {
 	opacity: 1;
-	pointer-events: all;
+	/*pointer-events: auto;*/
 	transform: translateY(9.5px);
 }
 
@@ -634,4 +639,6 @@ span.inter
 	position: relative;
 	top: 50px;
 	flex-direction: column;
+
 }
+

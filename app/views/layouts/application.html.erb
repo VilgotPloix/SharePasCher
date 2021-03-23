@@ -62,15 +62,23 @@
     <% if user_signed_in? %>
     <div id="btnDroiteTrue">
       <p class="font">/</p>
-      <div>
-      <a href="#" class="font drpdwn">Mon Compte</a>
-        <ul id="list">
-          <li><a href="#" class="font">Mes Informations</a></li>
-          <li><%= link_to "Mes Évènements",  created_index_events_path, class:"font"%></li>
-          <li><a href="#" class="font">Mes Amis</a></li>
-          <li><a href="#" class="font">Mes Messages</a></li>
-          <li><a href="#" class="font">Paramètres</a></li>
-        </ul>
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link  font">
+          Mon Compte
+        </a>
+
+        <div class="navbar-dropdown">
+          <a class="navbar-item font" href="/users/edit">
+            Mes Information
+          </a>
+          <a class="navbar-item font">
+            Mes Évènements
+          </a>
+          <a class="navbar-item font">
+            Paramètres
+          </a>
+          
+        </div>
       </div>
       <p class="font">/</p>
       <%= link_to "Me Déconnecter", destroy_user_session_path, method: :delete, class:"font" %>
