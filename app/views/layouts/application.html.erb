@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+  <head>
+        <%= csrf_meta_tags %>
+        <%= csp_meta_tag %>
+          <link rel="stylesheet" href="SharepasCher.css">
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+          <meta name="viewport" content="width=device-width, initial-scale=1">
+              <%= stylesheet_link_tag    'application', media: 'all' %>
+              <%= javascript_include_tag 'application' %>
+
+          <title>Share Pas Cher</title>
+  </head>
+
+<body>
+
+
+    <% flash.each do |bulmaname, pop| %>
+      <div class='notification is-<%= bulmaname %>'>
+        <%= pop %>
+      </div>
+    <% end %>
+
+
+
+
+
+
+
+<div id="navbar">
+   <% if user_signed_in? %>
+  <div id="btnGaucheTrue">
+    <div id="logo">
+        <p>/</p>
+        <%= link_to "SPC", root_path, class:"spc" %>
+        <p>/</p>
+      </div>
+        <%= link_to 'Voir Les Évènements', events_path, class:"font" %>
+        <p class="font">/</p>
+         <%= link_to 'Créer Un Évènement', new_event_path, class:"font" %>
+        <p class="font">/</p>
+
+        <% if current_user.is_host? %>
+    <div id="btnGaucheHost">
+    <div id="logo">
+        <p>/</p>
+        <%= link_to "SPC", root_path, class:"spc" %>
+        <p>/</p>
+      </div>
+        <%= link_to 'Voir Les Évènements', events_path, class:"font" %>
+        <p class="font">/</p>
+        <%= link_to 'voir Les Évènements', created_index_events_path, class:"font" %>
+         <%= link_to 'Créer Un Évènement', new_event_path, class:"font" %>
+        <p class="font">/</p>
+    </div>
+    <% end %>
+    </div>
+    <%else %>
+    <div id="btnGaucheFalse">
+      <div id="logo">
+        <p>/</p>
+        <p id="spc">SPC</p>
+        <p>/</p>
+      </div>
+      <p class="font">Voir Les Expériences</p>
+      <p class="font">/</p>
+
+     </div>
+    <% end %>
+
+    
+  
+
+  
+    <% if user_signed_in? %>
+    <div id="btnDroiteTrue">
+      <p class="font">/</p>
+      <div>
+      <a href="#" class="font drpdwn">Mon Compte</a>
+        <ul id="list">
+          <li><a href="#" class="font">Mes Informations</a></li>
+          <li><a href="#" class="font">Mes Amis</a></li>
+          <li><a href="#" class="font">Mes Messages</a></li>
+          <li><a href="#" class="font">Paramètres</a></li>
+        </ul>
+      </div>
+      <p class="font">/</p>
+      <%= link_to "Me Déconnecter", destroy_user_session_path, method: :delete, class:"font" %>
+      <p class="font">/</p>
+    </div>
+    <%else%>
+    <div id="btnDroiteFalse">
+      <p class="font">/</p>
+      <%= link_to "S'inscrire", new_user_registration_path, class:"font" %>
+      <p class="font">/</p>
+      <%= link_to 'Se Connecter', new_user_session_path, class:"font" %>
+      <p class="font">/</p>
+    </div>
+    <%end%>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<footer class="footer">
+
+<div class="content has-text-centered calage">
+
+
+
+<p>
+
+<a href="../Footer_reseaux.html" title="Rejoignez-nous sur les reseaux">Rejoignez-nous sur les réseaux sociaux</a>
+
+<a href="../Footer_confidentialite.html" title="Confidentialite">Confidentialite</a>
+
+<a href="../Footer_cookies.html" title="Cookies">Préférences COOKIES</a>
+
+<a href="../Footer_apropos.html" title="En savoir plus">A propos</a><br />
+
+<strong>SPC®</strong> <br />
+
+<span class="inter">By Share pas Cher® team international, 2021.</span></div><br />
+
+</p>
+
+</div>
+
+</footer>
+<%= yield %>
+
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+<section class="hero is-large">
+  <div class="hero-body">
+    <p class="titre h has-text-white">Share Pas Cher</p>
+    <p class="titre subtitle has-text-white">Le nouveau standard de la convivialité !</p>
+    <div class="boutons">
+    	<%= button_to "Inscris-toi!", new_user_registration_path, method: :get, class:"butt one" %>
+    </div>
+  </div>
+</section>
+
+<div class="nav">
+	<h1 class="h repas">UN BON REPAS A PARTAGER ?</h1>
+	<%= image_tag 'fleche.svg', class:"fleche" %>
+</div>
+
+<div class="pleinUn">
+<div class="left">
+	<%=image_tag 'prepGrand.jpg', class:"imgLeft" %>
+</div>
+<div><p class="coté">Marre de cette période où nous ne voyons que des bouts de visages masqué ?
+Avec SPC, trouvez des personnes avec qui partager un bon repas 
+Ici, pas d'algorithme, que de la bonne humeur !</p></div>
+</div>
+
+<div class="pleinDeux">
+<div class="right">
+	<%= image_tag 'tomatesGrand.jpg', class:"imgRight" %>
+</div>
+<div><p class="coté">Avec internet, rien de plus simple de se renseigner sur d'autres cultures,
+mais connaissez vous vraiment le goût des plats traditionnels ?
+Pas forcément besoin d'aller en Inde pour goûter à un vrai Dhal !</p></div>
+</div>
+
+<div class="lasts">
+	<p class="derniers">Voici les cinq derniers évènements !</p>
+	<% @events.each do |event| %>
+		<div class="events">
+			<p id="eventTitle"><%= event.title %></p>
+			<p id="eventDesc"><%= event.description %></p>
+			<p id="eventVille">C'est à <%= event.city.city_name %></p>
+		</div>
+	<%end%>
+</div>
+
+
+
