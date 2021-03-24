@@ -22,7 +22,7 @@ class EventsController < ApplicationController
     # @event.save
     if @event.host.is_host == false
       User.find(@event.host.id).update(is_host: true)
-      redirect_to created_index_events_path, warning: "TEST A LA CREA DUN EVENT"
+      redirect_to created_index_events_path, warning: "Vous avez crée un évènement"
     end
 
     redirect_to events_path
