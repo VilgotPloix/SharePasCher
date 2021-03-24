@@ -659,10 +659,12 @@ color:#5E6E54;
 
 .ImgEditProfile
 {
-    width: 400px;
+    width: 500px;
     transform: rotate(5deg);
     box-shadow: 10px 10px orange;
     border: 1px solid #000000;
+    position: relative;
+    bottom: 50px;
 }
 
 .ButtonEditProfile
