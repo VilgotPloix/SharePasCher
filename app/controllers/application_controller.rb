@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
 
   protected
 
-  add_flash_types :primary, :link, :info, :success, :warning, :danger
+ 
   
   def configure_permitted_parameters
     devise_parameter_sanitizer.permit(:sign_up, keys: [:first_name, :last_name, :birth_day, :age, :gender, :is_host])

@@ -1,5 +1,6 @@
-<div id="loginpage">
-    <p class="title">Se connecter</p>
+<div class="LogInBg">
+  <div id="loginpage">
+    <p class="title has-text-white">Se connecter</p>
     <br>
     <%= form_for resource, url: user_session_path, html: { class: "box formulaire" } do |f| %>
       <%= devise_error_messages! %>
@@ -29,6 +30,7 @@
       </div>
     <% end %>
       <%= render "devise/shared/links" %>
+  </div>
 </div>
 
 

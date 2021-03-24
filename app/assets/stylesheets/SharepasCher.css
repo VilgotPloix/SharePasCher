@@ -426,7 +426,7 @@ span.inter
 
 #btnDroiteTrue
 {
-    width: 452px;
+    width: 440px;
     height: 50px;
     display: flex;
     justify-content: space-between;
@@ -614,6 +614,7 @@ span.inter
     flex-direction: column;
     justify-content: center;
     align-items:center;
+
 }
 
 #signuppage
@@ -659,15 +660,20 @@ color:#5E6E54;
 
 .ImgEditProfile
 {
-    width: 400px;
+    width: 500px;
     transform: rotate(5deg);
     box-shadow: 10px 10px orange;
     border: 1px solid #000000;
+    position: relative;
+    bottom: 50px;
 }
 
-.souris
+.ButtonEditProfile
 {
     background-color: orange;
+    position: relative;
+    right: 50%;
+    transform: translateX(-20%);
 }
 
 .danger
@@ -681,3 +687,35 @@ color:#5E6E54;
     font-size: 18px;
 }
 
+.logouticon
+{
+   width: 20px;
+   transform: rotate(-90deg);
+}
+
+.bigger_box
+{
+    width: 600px;
+    max-height: 426px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.body_signup
+{
+    background-image:url("sign_up.jpg");
+    background-size: 100%;
+    opacity: 0.9;
+    background-repeat: no-repeat;
+}
+
+.LogInBg
+{
+background-image:url("log_in.jpg");
+background-size: 100%;
+opacity: 0.8;
+background-repeat: no-repeat;
+}
