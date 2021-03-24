@@ -31,9 +31,7 @@
    <% if user_signed_in? %>
   <div id="btnGaucheTrue">
     <div id="logo">
-        <p>/</p>
-        <%= link_to "SPC", root_path, class:"spc" %>
-        <p>/</p>
+        <p>/</p> <%= link_to "SPC", root_path, class:"spc" %> <p>/</p>
       </div>
         <%= link_to 'Voir Les Évènements', events_path, class:"font" %>
         <p class="font">/</p>
@@ -91,6 +89,9 @@
     </div>
     <%else%>
     <div id="btnDroiteFalse">
+     <div id="logo">
+        <p>/</p> <%= link_to "SPC", root_path, class:"spc" %> <p>/</p>
+      </div>
       <p class="font">/</p>
       <%= link_to "S'inscrire", new_user_registration_path, class:"font" %>
       <p class="font">/</p>
