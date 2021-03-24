@@ -3,7 +3,11 @@ class EventsController < ApplicationController
 
 
   def index
-    @event = Event.all
+    if params[:tag_id].blank?
+      @event = Event.all
+    else
+      @event = Tag.find(params[:tag_id]).events
+    end
   end
 
   def new
