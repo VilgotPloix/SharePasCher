@@ -1,4 +1,6 @@
 class AppointmentController < ApplicationController
+  before_action :authenticate_user!
+  
   def index
   end
 
@@ -21,6 +23,7 @@ class AppointmentController < ApplicationController
     @appointment = Appointment.where(user_id: @user, event_id: @event)
     @appointment.update(is_accepted: true)
     Event.find(@event_id).update(current_guests: (@event.current_guests + 1))
+    clear_appointments(@user, @event)
     redirect_to event_path(@event_id)
     AppointmentMailer.accepted_mail(@appointment).deliver_now
   end
@@ -29,7 +32,25 @@ class AppointmentController < ApplicationController
     @user = params[:user_id]
     @event = params[:event_id]
     @appointment = Appointment.where(user_id: @user, event_id: @event)
-    @appointment.destroy_all
+
+    if @appointment.first.is_accepted?
+      @appointment.destroy_all
+      Event.find(params[:event_id]).update(current_guests: (Event.find(@event).current_guests - 1))
+    else      
+      @appointment.destroy_all
+    end
+
     redirect_to event_path(@event)
+  end
+
+  private 
+
+  def clear_appointments(user, actual_event)
+    @appointments= User.find(user).appointments
+    @appointments.each do |appointment|
+      if (appointment.event.date == actual_event.date) && (!appointment.is_accepted?)
+        appointment.destroy
+      end
+    end
   end
 end

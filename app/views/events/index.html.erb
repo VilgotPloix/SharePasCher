@@ -3,7 +3,7 @@
 	<p>ce serait bête de ne pas en profiter, je dis ca je dis rien !</p>
 	<div class="flexEvents">
 	<% @event.each do |event| %>
-		<% nb_place = (6 - event.guests_number) %>
+		<% nb_place = (event.guests_number - event.current_guests) %>
 		<div class="events">
 			<div id="box">
 					<p class="title"><%= event.title %></p>

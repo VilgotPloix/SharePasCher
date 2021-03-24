@@ -1,4 +1,7 @@
 class EventsController < ApplicationController
+  before_action :authenticate_user!
+
+
   def index
     @event = Event.all
   end
@@ -19,10 +22,10 @@ class EventsController < ApplicationController
     # @event.save
     if @event.host.is_host == false
       User.find(@event.host.id).update(is_host: true)
-      redirect_to created_index_events_path, warning: "TEST A LA CREA DUN EVENT"
+      redirect_to created_index_events_path, warning: "Vous avez crée un évènement"
     end
 
-    redirect_to root_path
+    redirect_to events_path
   end
 
   def new
