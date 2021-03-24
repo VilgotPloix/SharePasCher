@@ -614,6 +614,7 @@ span.inter
     flex-direction: column;
     justify-content: center;
     align-items:center;
+
 }
 
 #signuppage
@@ -699,4 +700,20 @@ color:#5E6E54;
     justify-content: space-around;
     flex-wrap: wrap;
     align-items: center;
+}
+
+.body_signup
+{
+    background-image:url("sign_up.jpg");
+    background-size: 100%;
+    opacity: 0.9;
+    background-repeat: no-repeat;
+}
+
+.LogInBg
+{
+background-image:url("log_in.jpg");
+background-size: 100%;
+opacity: 0.8;
+background-repeat: no-repeat;
 }
