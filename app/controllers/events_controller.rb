@@ -9,6 +9,11 @@ class EventsController < ApplicationController
     else
       @event = Tag.find(params[:tag_id]).events
     end
+
+    respond_to do |format|
+      format.html {}
+      format.js {}
+    end
   end
 
   def new
@@ -24,20 +29,17 @@ class EventsController < ApplicationController
 
   def create
     @event = Event.create(title: params[:title], description: params[:description], date: params[:date], city_id: params[:city_id], guests_number: params[:guests_number], host_id: params[:host_id], current_guests: 0)
-    @test= 0
-    puts @test
+    
     filter_creation(params, @event)
-    puts @test
+
     if @event.host.is_host == false
       User.find(@event.host.id).update(is_host: true)
-      redirect_to created_index_events_path, warning: "Vous avez crée un évènement"
     end
 
-    redirect_to events_path
+    redirect_to created_index_events_path, warning: "Vous avez crée un évènement"  
   end
 
   def new
-    
   end
 
   def destroy

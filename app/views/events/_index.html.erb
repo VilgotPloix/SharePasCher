@@ -1,0 +1,18 @@
+<% @event.each do |event| %>
+  <% nb_place = (event.guests_number - event.current_guests) %>
+  <div class="events">
+    <div id="box">
+        <p class="title"><%= event.title %></p>
+        <p>par <%= event.host.first_name %></p>
+        <p class="subtitle"><%= event.description%></p>
+      <% if nb_place > 0 %>
+        <p>nombre de places restantes : <%= nb_place %></p>
+        <p>c'est à <%= event.city.city_name %> !</p>
+      <% else %>
+        <p>ce repas est déjà complet !</p>
+      <%end%>
+    </div>
+    
+    <%= button_to "Dis m'en plus !", event_path(event.id), method: :get, class:"dismen" %>
+  </div>
+<%end%>
