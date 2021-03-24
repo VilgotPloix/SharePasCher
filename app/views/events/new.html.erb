@@ -29,6 +29,19 @@
 				<%= f.label :city_id, class:"label" %>
 				<%= f.select :city_id, [["Paris", 1],["Lyon", 2],["Marseille", 3],["Guingamp", 4], ["Lille", 5], ["Toulouse", 6]], class:"select", placeholder:"Ou tu habites ?" %>
 				</div>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				
+				<div class="field select formulaire">
+				<% Tag.all.each_with_index do |tag, index|%>
+					<% tag_call = "tag" + "#{index}"%>
+					<%= f.label tag.tag_name, class:"label" %>
+					<%= f.check_box :"#{tag_call}"%>
+				<%end%>
+				</div>
 
 				<div class="field formulaire">
 					<%= f.hidden_field :host_id, value: current_user.id %><br />
