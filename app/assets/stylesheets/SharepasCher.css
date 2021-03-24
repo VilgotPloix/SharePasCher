@@ -426,7 +426,7 @@ span.inter
 
 #btnDroiteTrue
 {
-    width: 452px;
+    width: 440px;
     height: 50px;
     display: flex;
     justify-content: space-between;
@@ -665,9 +665,12 @@ color:#5E6E54;
     border: 1px solid #000000;
 }
 
-.souris
+.ButtonEditProfile
 {
     background-color: orange;
+    position: relative;
+    right: 50%;
+    transform: translateX(-20%);
 }
 
 .danger
@@ -681,3 +684,19 @@ color:#5E6E54;
     font-size: 18px;
 }
 
+.logouticon
+{
+   width: 20px;
+   transform: rotate(-90deg);
+}
+
+.bigger_box
+{
+    width: 600px;
+    max-height: 426px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+}
