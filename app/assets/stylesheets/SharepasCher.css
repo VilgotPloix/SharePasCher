@@ -530,16 +530,16 @@ span.inter
 .coté
 {
 	width: 400px;
-	font-size: 30px;
+	font-size: 29px;
 	font-family: 'Open Sans Condensed', sans-serif;
-	letter-spacing: 2px; 
+	letter-spacing: 1.5px; 
 }
 
 .h1
 {
-	font-size: 30px;
+	font-size: 29px;
 	font-family: 'Open Sans Condensed', sans-serif;
-	letter-spacing: 2px; 
+	letter-spacing: 1.5px; 
 	position: relative;
 	top: 50px;
 }

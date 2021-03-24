@@ -69,7 +69,7 @@
 
         <div class="navbar-dropdown">
           <a class="navbar-item font" href="/users/edit">
-            Mes Information
+            Mes Informations
           </a>
           <%= link_to 'mes Évènements', created_index_events_path, class:"navbar-item font" %>
           <a class="navbar-item font">
@@ -81,7 +81,6 @@
       <p class="font">/</p>
       <%= link_to "Me Déconnecter", destroy_user_session_path, method: :delete, class:"font" %>
       <p class="font">/</p>
-       <%= link_to 'Mes informations', edit_user_registration_path, class:"font" %>
     </div>
     <%else%>
     <div id="btnDroiteFalse">
@@ -102,7 +101,7 @@
 
 
 
-<%= yield %>
+
 
 
 
@@ -131,7 +130,7 @@
 </div>
 
 </footer>
-
+<%= yield %>
 
 </body>
 
