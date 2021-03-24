@@ -4,7 +4,11 @@ class EventsController < ApplicationController
 
 
   def index
-    @event = Event.all
+    if params[:tag_id].blank?
+      @event = Event.all
+    else
+      @event = Tag.find(params[:tag_id]).events
+    end
   end
 
   def new
@@ -20,10 +24,13 @@ class EventsController < ApplicationController
 
   def create
     @event = Event.create(title: params[:title], description: params[:description], date: params[:date], city_id: params[:city_id], guests_number: params[:guests_number], host_id: params[:host_id], current_guests: 0)
-    # @event.save
+    @test= 0
+    puts @test
+    filter_creation(params, @event)
+    puts @test
     if @event.host.is_host == false
       User.find(@event.host.id).update(is_host: true)
-      redirect_to created_index_events_path, warning: "TEST A LA CREA DUN EVENT"
+      redirect_to created_index_events_path, warning: "Vous avez crée un évènement"
     end
 
     redirect_to events_path
@@ -49,6 +56,14 @@ class EventsController < ApplicationController
     def check_profile_completion
       if current_user.is_profile_fully_completed == false
         redirect_to edit_user_registration_path, warning: "Veuillez compléter votre profil avant de pouvoir accéder à ce contenu"
+      end
+    end
+    
+    def filter_creation(params, event)
+      for n in (0..Tag.all.count)
+        if params[:"tag#{n}"] == "1"
+          Filter.create(event_id: event.id, tag_id: (n+1))
+        end
       end
     end
 
