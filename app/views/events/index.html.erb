@@ -1,7 +1,18 @@
 <div class="indexEvents">
 	<p class="regarde"> regarde moi tous ces repas ! </p>
 	<p>ce serait bête de ne pas en profiter, je dis ca je dis rien !</p>
-	<div class="flexEvents">
+	<%= @test %>
+
+	<%= form_with url:'/events', method: :get, remote:true do |f| %>
+		<div class="field select  formulaire">
+			<%= f.select :tag_id, [[:include_blank => 'Filter'], ["Végétarien", 1],["Vegan", 2],["Halal", 3],["Casher", 4], ["Sans gluten", 5], ["sain", 6], ["gras", 7]], class:"select" %>
+		</div>
+		<div class="sub">
+			<%= f.submit "Chercher"%>
+		</div>
+	<%end%>
+
+	<div class="flexEvents" id="event_cards">
 	<% @event.each do |event| %>
 		<div class="card" id="cards">
 				<div class="card-image">

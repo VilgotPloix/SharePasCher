@@ -87,7 +87,7 @@ ActiveRecord::Schema.define(version: 2021_03_24_172545) do
   create_table "users", force: :cascade do |t|
     t.string "first_name"
     t.string "last_name"
-    t.datetime "birth_day"
+    t.date "birth_day"
     t.integer "age"
     t.string "gender"
     t.boolean "is_host"
