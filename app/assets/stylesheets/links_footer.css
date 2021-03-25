@@ -1,0 +1,131 @@
+.hero {
+  position: relative;
+  left: 200px;
+  /*bottom: 65px;*/
+  /*right: 20px;*/
+  color: #BC211F;
+  font-size: 60px;
+  font-family: 'Marker Felt, fantasy';
+
+}
+
+section .subtitle {
+  font-size: 20px;
+  color: #ED9106;
+  font-family: Arial Narrow, sans-serif;
+    text-shadow: 1px 1px 30px #C64A34;
+}
+
+.texte_des_cartes {
+  text-align: justify;
+}
+
+.reseaux {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 50px;
+  height: 50px;
+}
+
+.section_apropos {
+  position: relative;
+  left: 85px;
+}
+
+.section_reseaux {
+  position: relative;
+  left: 85px;
+}
+
+.section_confidentialite {
+  position: relative;
+  left: 85px;
+}
+
+.section_cookies {
+  position: relative;
+  left: 85px;
+}
+
+
+span {
+  color: #ED9106;
+}
+
+
+.menu_scroll {  
+  position: fixed;
+  top: -7px;
+}
+
+.titre_carte {
+  color:#BC211F;
+}
+
+.vertical {
+  display: flex;
+  background-color: 
+}
+
+body p {
+  color: grey;
+}
+
+.button {
+  width: 100px;
+}
+
+
+.animate__animated.animate__backInDown {
+  float: left;
+  display: inline-block;
+  margin: 0 0.10rem;
+  --animate-duration: 2s;
+  --animate-delay: 5s;
+}
+
+.animate__animated.animate__backInLeft {
+  float: left;
+  display: inline-block;
+  margin: 0 0.10rem;
+  --animate-duration: 2s;
+  --animate-delay: 10s;
+}
+
+.animate__animated.animate__backInUp {
+  float: left;
+  display: inline-block;
+  margin: 0 0.10rem;
+  --animate-duration: 2s;
+  --animate-delay: 2s;
+}
+
+.animate__animated.animate__shakeX {
+  float: left;
+  display: inline-block;
+  margin: 0 0.5rem;
+  --animate-duration: 2s;
+  --animate-delay: 2s;
+}
+
+.animate__animated.animate__rollOut {
+  --animate-duration: 5s;
+  --animate-delay: 5s;
+}
+
+.animate__animated.animate__fadeInBottomLeft {
+  float: left;
+  display: inline-block;
+  margin: 0 0.5rem;
+  --animate-duration: 2s;
+  --animate-delay: 2s;
+}
+
+.texte_logo {
+  text-decoration: none;
+  color: grey;
+}
+
+.couleur {
+  color: #ED9106;
+}
