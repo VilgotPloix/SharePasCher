@@ -12,12 +12,6 @@
           <%= favicon_link_tag %>
   </head>
   <body>
-      <% flash.each do |bulmaname, pop| %>
-        <div class='notification is-<%= bulmaname %>'>
-          <%= pop %>
-        </div>
-      <% end %>
-
   <div id="navbar">
     <% if user_signed_in? %>
     <div id="btnGaucheTrue">
@@ -74,6 +68,14 @@
       </div>
       <%end%>
     </div>
+  </div>
+  <% flash.each do |type, msg| %>
+    
+    <div class="notification is-<%=type%>">
+      <button class="delete"></button>
+      <%= msg %>
+    </div>
+  <% end %>
   </div>
 
     <footer class="footer">

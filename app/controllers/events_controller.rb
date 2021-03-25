@@ -36,7 +36,7 @@ class EventsController < ApplicationController
       User.find(@event.host.id).update(is_host: true)
     end
 
-    redirect_to created_index_events_path, warning: "Vous avez crée un évènement"  
+    redirect_to created_index_events_path flash[:success]="Vous avez crée un évènement"  
   end
 
   def new
