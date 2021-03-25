@@ -7,13 +7,18 @@
 body
 {
     width: 100%;
-    min-height: 100vh;
+    min-height: 100%;
     /*position: relative;*/
 }
 
 html, body {
-    min-height: 100vh;
+    /*min-height: 100vh;*/
     margin: 0; padding: 0;
+}
+
+main
+{
+    min-height: calc(100vh - 50px - 100px);
 }
 
 *
@@ -29,8 +34,8 @@ footer{
     padding-top:50px;
     background-color: black;
     background-color: blue;
-    position: absolute;
-    bottom: -1200px;
+    /*position: absolute;
+    bottom: 0;*/
 }
 
 .calage /*pour enlever le margin bottom du footer*/
@@ -304,6 +309,8 @@ span.inter
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
+    top: 100px;
 }
 
 .pleinDeux
@@ -313,6 +320,8 @@ span.inter
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
+    top: 100px;
 }
 
 .side
@@ -364,6 +373,7 @@ span.inter
     align-items: center;
     position: relative;
     top: 50px;
+    right: 200px;
     flex-direction: column;
     font-size: 30px;
     font-family: 'Open Sans Condensed', sans-serif;
@@ -379,11 +389,17 @@ span.inter
 .indexEvents
 {
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    overflow-y: auto;
+}
+
+.indexEvents::-webkit-scrollbar
+{
+    width: 0px;
 }
 
 .regarde
@@ -413,18 +429,6 @@ span.inter
     height: 500px;
     position: relative;
     top: 100px;
-}
-
-
-/*______________________SHOW EVENT_________________*/
-
-.showEvents
-{
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 
@@ -567,6 +571,16 @@ background-repeat: no-repeat;
 }
 
 /*______________SHOW EVENT PAGE __________________*/
+
+.showEvents
+{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 
 .eventShow
 {

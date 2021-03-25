@@ -7,8 +7,8 @@
 		<div class="field select  formulaire">
 			<%= f.select :tag_id, [[:include_blank => 'Filter'], ["Végétarien", 1],["Vegan", 2],["Halal", 3],["Casher", 4], ["Sans gluten", 5], ["sain", 6], ["gras", 7]], class:"select" %>
 		</div>
-		<div class="sub">
-			<%= f.submit "Chercher"%>
+		<div>
+			<%= f.submit "Chercher",  class:"sub"%>
 		</div>
 	<%end%>
 
