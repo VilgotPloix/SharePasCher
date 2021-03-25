@@ -5,27 +5,27 @@
 
 		<div>
 			<%= form_with url: '/events', method: :post, local: true do |f| %>
-				<div class="field formulaire">
+				<div class="field form">
 				<%= f.label :title, class:"label" %>
 				<%= f.text_field :title, class:"input", autocomplete:"title", placeholder:"Ajoute le titre de ton evenement !" %>
 				</div>
 
-				<div class="field formulaire">
+				<div class="field form">
 					<%= f.label :description, class:"label" %>
 					<%= f.text_area :description, class:"input", autocomplete:"description", placeholder:"Ajoute une petite description !" %>
 				</div>
 
-				<div class="field formulaire">
+				<div class="field form">
 					<%= f.label :date, class:"label" %>
 					<%= f.date_field :date, class:"input", autocomplete:"date", placeholder:"Quand est ce que ce sera ?" %>
 				</div>
 
-				<div class="field formulaire">
+				<div class="field form">
 					<%= f.label :guests_number, class:"label" %>
 					<%= f.number_field :guests_number, in: 1..6, step:1, class:"input", autocomplete:"guests_number", placeholder:"Combien d'invités peux-tu accueillir ?" %>
 				</div>
 
-				<div class="field select formulaire">
+				<div class="field select form">
 				<%= f.label :city_id, class:"label" %>
 				<%= f.select :city_id, [["Paris", 1],["Lyon", 2],["Marseille", 3],["Guingamp", 4], ["Lille", 5], ["Toulouse", 6]], class:"select", placeholder:"Ou tu habites ?" %>
 				</div>
@@ -35,7 +35,7 @@
 				<br>
 				<br>
 				
-				<div class="field select formulaire">
+				<div class="field select form">
 				<% Tag.all.each_with_index do |tag, index|%>
 					<% tag_call = "tag" + "#{index}"%>
 					<%= f.label tag.tag_name, class:"label" %>
@@ -43,13 +43,13 @@
 				<%end%>
 				</div>
 
-				<div class="field formulaire">
+				<div class="field form">
 					<%= f.hidden_field :host_id, value: current_user.id %><br />
 				</div>
 
 				<br>
-				<div class="sub">
-						<%= f.submit "Sign up" %>
+				<div>
+						<%= f.submit "Créer l'event", class:"sub" %>
 					</div>
 			<% end %>
 

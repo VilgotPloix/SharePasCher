@@ -1,58 +1,73 @@
-<section class="hero is-large">
+<section class="hero bgLandingPage is-large">
   <div class="hero-body">
-    <p class="titre h has-text-white">Share Pas Cher</p>
+    	<p class="titreLandingPage has-text-white">Share Pas Cher</p>
     <p class="titre subtitle has-text-white">Le nouveau standard de la convivialité !</p>
-    <div class="boutons">
-    	<%= button_to "/   S'inscrire   /", new_user_registration_path, method: :get, class:"butt one font" %>
+    <div class="centerBtnHero">
+    	<%= button_to "/   S'inscrire   /", new_user_registration_path, method: :get, class:" btnSinscrire one font" %>
     </div>
   </div>
 </section>
 
-<div class="nav">
+<div class="titreUnderHero">
 	<h1 class="h repas">UN BON REPAS A PARTAGER ?</h1>
 	<%= image_tag 'fleche.svg', class:"fleche" %>
 </div>
 
 <div class="presentation">
 	<div class="centrer">
-		<p class="derniers">Un petit apercu de ce que tu y trouveras ?</p>
+		<p class="previewCards">Un petit apercu de ce que tu y trouveras ?</p>
 	</div>
 	<div class="lasts">
 		<% @events.each do |event| %>
-			<div id="cards">
-				<!-- <div id="top"> -->
-					<p id="eventTitle"><%= event.title %></p>
-				<!-- </div> -->
-					<p id="eventDesc"><%= event.description %></p>
-				<!-- <div id="bottom"> -->
-					<p id="eventVille">C'est à <%= event.city.city_name %></p>
-				<!-- </div> -->
-			</div>
+			<div class="card" id="cards">
+				<div class="card-image">
+					<figure class="image is-4by3">
+						<%= image_tag "default_image.jpg" %>
+					</figure>
+				</div>
+				<div class="card-content">
+					<div class="media">
+						<div class="media-left">
+					</div>
+					<div class="media-content">
+						<p class="title is-4"><%= event.title %></p>
+						<p class="subtitle is-6">par <%= event.host.first_name %></p>
+					</div>
+				</div>
+
+				<div class="content">
+					<%= event.description %>
+					<br>
+				
+				</div>
+				</div>
+				</div>
 		<%end%>
 	</div>
 </div>
 
 <div class="pleinUn">
-<div class="left">
+<div class="emptyLeft">
 	<%=image_tag 'prepGrand.jpg', class:"imgLeft" %>
 </div>
-<div class="descLanding"><p class="coté">Marre de cette période où nous ne voyons que des bouts de visages masqués ?
+<div class="descLanding"><p class="side">Marre de cette période où nous ne voyons que des bouts de visages masqués ?
 Avec SPC, trouvez des personnes avec qui partager un bon repas.
 Ici, pas d'algorithme, que de la bonne humeur !</p></div>
 </div>
 
 <div class="pleinDeux">
-<div class="right">
+<div class="emptyRight">
 	<%= image_tag 'tomatesGrand.jpg', class:"imgRight" %>
 </div>
-<div class="descLanding"><p class="coté h1">Avec internet, rien de plus simple de se renseigner sur d'autres cultures,
+<div class="descLanding"><p class="side sideRight">Avec internet, rien de plus simple de se renseigner sur d'autres cultures,
 mais connaissez vous vraiment le goût des plats traditionnels ?
 Pas forcément besoin d'aller en Bretagne pour goûter à de vraies galettes saucisses et un bon Kouign-amann !</p></div>
 </div>
 
 <div id="basDePage">
-	<%= button_to "/   S'inscrire   /", new_user_registration_path, method: :get, class:"butt one font" %>
-	<p class="h1">Rejoins donc la communauté de Share Pas Cher, pas de frais cachés, que du bonheur !</p>
+	<%= button_to "/   S'inscrire   /", new_user_registration_path, method: :get, class:"btnSinscrire one font" %>
+	<p class="h1">Rejoins donc la comunauté de Share Pas Cher, pas de frais cachés, que du bonheur !</p>
+
 </div>
 
 
