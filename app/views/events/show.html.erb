@@ -1,25 +1,30 @@
 <% nb_place = (@event.guests_number - @event.current_guests) %> 
 
 
-<div class="showEvents">
-	<div id="card"> 
-		<p id="title"><%= @event.title %></p>
-		<p id="subtitle"><%= @event.description %></p>
-		<p id="subtitle"> C'est le <%= @event.date %></p>
-		<p id="subtitle">Et c'est à <%= @event.city.city_name %> !</p>
-	<% if nb_place > 0 && is_event_host(@event) == false %>
-		<p id="subtitle">Il reste <%= nb_place %> place(s) disponible(s) !</p>
-		<% if is_already_subscribed(current_user, @event) == false %>
-			<%= button_to "Je veux venir !", '/appointment' , method: :post, params: {event_id: @event.id}, class:"jeveux" %>
-		<% end %>
-	<% elsif nb_place = 0 && is_event_host(@event) == false %>
-		<p id="subtitle">Ce repas est complet !</p>
-	<% else %>
-		<p id="subtitle">Il reste <%= nb_place %> place(s) disponible(s) pour ton event !</p>
-	<% end %>
+<div class="eventShow">
+	<div id="imgShow">
+		<%= image_tag "default_image.jpg", id:"imgtest" %>
 	</div>
-	<% if is_event_host(@event) == true %>
+	<div id="descShow">
+		<% if is_event_host(@event) == false %>
+			<h1 id="titreShow"><%= @event.title %></h1>
+			<h2 id="subShow">Chez <%= @event.host.first_name %></h2>
+			<p id="textShow">"<%= @event.description %>"</p>
+			<p id="cityShow">C'est à <%= @event.city.city_name %></p>
+			<% if nb_place >= 0 %>
+				<p id="placeShow">Il reste <%= nb_place %> places</p>
+				<div id="btnShow">
+					<%= link_to "Je veux venir !", '/appointment' , method: :post, params: {event_id: @event.id}, class:"greenTrue" %>
+					<%= link_to 'Retour au menu', events_path, method: :get, class:"redTrue" %>
+				</div>
+			<% else %>
+				<p id="textShow">Il n'y a plus de place !</p>
+				<div><%= button_to 'Retour au menu', events_path, method: :get %></div>
+			<%end%> <!-- if nb_place -->
+		<%end%> <!-- is event host == false -->
+		<% if is_event_host(@event) == true %>
 		<div>
+			<h1><%= @event.title %></h1>
 			<h1>Voici les gens qui veulent rejoindre ton Event !</h1>
 			<% @event.users.each do |user| %>
 				<p><%= user.first_name%> <%=user.last_name%></p>
@@ -28,12 +33,19 @@
 					<p>Utilisateur déjà accepté ! </p>
 				<%else%>	
 					<% if (@event.current_guests < @event.guests_number)%>
-
 						<%= button_to "Accepter l'invité", appointment_path(user.id), params:{event_id: @event.id, user_id: user.id}, method: :put %>
 					<%end%>
 				<%end%>
 				<%= button_to "Refuser l'invité", appointment_path(user.id), params:{event_id: @event.id, user_id: user.id}, method: :delete %>
 			<%end%>	
 		</div>
-	<%end%>	
+	<%end%>
+	</div>
+</div>
+
+
+<%= button_to "Je veux venir !", '/appointment' , method: :post, params: {event_id: @event.id}, class:"jeveux" %>
+
+
+	
 </div>

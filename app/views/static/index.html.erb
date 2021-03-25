@@ -1,9 +1,9 @@
 <section class="hero is-large">
   <div class="hero-body">
-    <p class="titre h has-text-white">Share Pas Cher</p>
+    	<p class="titre h has-text-white">Share Pas Cher</p>
     <p class="titre subtitle has-text-white">Le nouveau standard de la convivialité !</p>
     <div class="boutons">
-    	<%= button_to "/   S'inscrire   /", new_user_registration_path, method: :get, class:"butt one font" %>
+    	<%= button_to "/   S'inscrire   /", new_user_registration_path, method: :get, class:" butt one font" %>
     </div>
   </div>
 </section>
@@ -19,15 +19,29 @@
 	</div>
 	<div class="lasts">
 		<% @events.each do |event| %>
-			<div id="cards">
-				<!-- <div id="top"> -->
-					<p id="eventTitle"><%= event.title %></p>
-				<!-- </div> -->
-					<p id="eventDesc"><%= event.description %></p>
-				<!-- <div id="bottom"> -->
-					<p id="eventVille">C'est à <%= event.city.city_name %></p>
-				<!-- </div> -->
-			</div>
+			<div class="card" id="cards">
+				<div class="card-image">
+					<figure class="image is-4by3">
+						<%= image_tag "default_image.jpg" %>
+					</figure>
+				</div>
+				<div class="card-content">
+					<div class="media">
+						<div class="media-left">
+					</div>
+					<div class="media-content">
+						<p class="title is-4"><%= event.title %></p>
+						<p class="subtitle is-6">par <%= event.host.first_name %></p>
+					</div>
+				</div>
+
+				<div class="content">
+					<%= event.description %>
+					<br>
+				
+				</div>
+				</div>
+				</div>
 		<%end%>
 	</div>
 </div>
