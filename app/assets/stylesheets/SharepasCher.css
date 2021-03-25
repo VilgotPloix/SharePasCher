@@ -13,38 +13,29 @@
 
 
 footer{
-position:absolute;
-bottom:0px;
-width:100%;
-background-color: black;
-padding-top:50px;
-background-color: blue;
-height:50px;
+    width:100%;
+    height: 100px;
+    padding-top:50px;
+    background-color: black;
+    background-color: blue;
+    position: absolute;
+    bottom: -1200px;
 }
 
 
 
 body
 {
-    height: 100%;
+    width: 100%;
+    min-height: 100vh;
     position: relative;
 }
 
 html, body {
-    height: 100%;
+    min-height: 100vh;
     margin: 0; padding: 0;
 }
-body {
-    display : table;
-    width: 100%;
-}
-footer {
-    position: absolute;
-    bottom:-1200px;
-    width:100%;
-    display : table-row;
-    height: 100px; /* à titre d'exemple */
-}
+
 
 .test
 {
@@ -497,6 +488,7 @@ span.inter
 .imgLeft
 {
 	border-radius: 0px 50px 50px 0px;
+    opacity: .8;
 
 }
 
@@ -504,6 +496,7 @@ span.inter
 {
 	border-radius: 50px 0px 0px 50px;
 	transform: translateY(10.5px);
+    opacity: .8;
 }
 
 .pleinUn
@@ -701,6 +694,8 @@ color:#5E6E54;
     justify-content: center;
     align-items: center;
     background-color: #e5e5e5;
+    position: relative;
+    bottom: 50px;
 }
 
 #descShow
@@ -711,6 +706,8 @@ color:#5E6E54;
     position: relative;
     right: 1px;
     border-radius: 0px 30px 30px 0px;
+    position: relative;
+    bottom: 50px;
 }
 
 #titreShow
@@ -731,9 +728,9 @@ color:#5E6E54;
     left: 60px;
 }
 
-#textShow
+.textShow
 {
-    width: 545px;
+    max-width: 545px;
     font-size: 30px;
     position: absolute;
     top: 150px;
@@ -798,4 +795,109 @@ color:#5E6E54;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+#cadreTravShow
+{
+    width: 503px;
+    height: 225px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    position: absolute;
+    bottom: 45px;
+    left: 60px;
+    /*border: 1px solid red;*/
+    display: flex;
+    align-items: flex-start;
+}
+
+#cadreTravShow::-webkit-scrollbar
+{
+    width: 0px;
+}
+
+.cardTravShow
+{
+    max-width: 500px;
+    min-width: 500px;
+    height: 50px;
+    border: 1px solid black;
+    position: absolute;
+    left: 0px;
+}
+
+#presTravShow
+{
+    font-size: 25px;
+    font-weight: 500;
+    position: absolute;
+    top: 310px;
+    left: 60px;
+}
+
+.nameCardShow
+{
+    font-size: 25px;
+    font-weight: 500;
+    position: relative;
+    top: 4px;
+    left: 15px;
+}
+
+.ageCardShow
+{
+    font-size: 25px;
+    font-style: italic;
+    font-weight: 300;
+    position: relative;
+    left: 50px;
+}
+
+.isAcceptedShow
+{
+    width: 100px;
+    height: 30px;
+    border: none;
+    background-color: #648B57;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 17px;
+    position: relative;
+    left: 270px;
+    bottom: 31px;
+}
+
+.deleteBtnShow
+{
+    border: none;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
+    background-color: #BC211F;
+    position: relative;
+    left:404px;
+    bottom: 57px; 
+}
+
+.acceptBtnShow
+{
+    border: none;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
+    background-color: #648B57;
+    position: relative;
+    left: 354px;
+    bottom: 27px;
 }
