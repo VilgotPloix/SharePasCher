@@ -9,7 +9,6 @@ class CreateEvents < ActiveRecord::Migration[5.2]
       t.belongs_to :city, index: true
       t.belongs_to :user, index: true
       t.references :host, index: true,foreign_key: { to_table: :users }
-      t.string :image_url, :default => 'default_image.jpg'
       t.timestamps
     end
   end

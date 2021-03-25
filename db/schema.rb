@@ -61,7 +61,6 @@ ActiveRecord::Schema.define(version: 2021_03_24_172545) do
     t.bigint "city_id"
     t.bigint "user_id"
     t.bigint "host_id"
-    t.string "image_url", default: "default_image.jpg"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["city_id"], name: "index_events_on_city_id"
