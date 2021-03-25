@@ -3,7 +3,8 @@ class CreateEvents < ActiveRecord::Migration[5.2]
     create_table :events do |t|
       t.string :title
       t.text :description
-      t.datetime :date
+      t.date :date
+      t.time :time
       t.integer :guests_number
       t.integer :current_guests
       t.belongs_to :city, index: true
