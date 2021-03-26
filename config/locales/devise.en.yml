@@ -33,7 +33,7 @@ en:
     passwords:
       no_token: ""
       send_instructions: "Tu vas recevoir un email."
-      send_paranoid_instructions: ""
+      send_paranoid_instructions: "Changement"
       updated: "Ton mot de passe a été modifié avec succès. Tu es maintenant connecté."
       updated_not_active: "Ton mot de passe a été modifié avec succès."
     registrations:
