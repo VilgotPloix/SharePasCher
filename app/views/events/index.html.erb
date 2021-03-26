@@ -4,7 +4,7 @@
 	<%= @test %>
 
 	<%= form_with url:'/events', method: :get, remote:true do |f| %>
-		<div class="field select  formulaire">
+		<div class="field select tag_field formulaire">
 			<%= f.select :tag_id, [[:include_blank => 'Filter'], ["Végétarien", 1],["Vegan", 2],["Halal", 3],["Casher", 4], ["Sans gluten", 5], ["sain", 6], ["gras", 7]], class:"select" %>
 		</div>
 		<div>

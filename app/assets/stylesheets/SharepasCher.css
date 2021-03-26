@@ -386,6 +386,13 @@ span.inter
 /*__________________INDEX EVENT____________________*/
 
 
+.tag_field
+{
+    position: relative;
+    top: 50px;
+    right: 10px;
+}
+
 .indexEvents
 {
     width: 100%;

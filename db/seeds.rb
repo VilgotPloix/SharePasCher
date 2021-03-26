@@ -14,9 +14,13 @@ City.create(city_name: "Guingamp")
 City.create(city_name: "Lille")
 City.create(city_name: "Toulouse")
 
-5.times do |tag|
-  Tag.create(tag_name: Faker::Restaurant.type)
-end
+Tag.create(tag_name: "Végétarien")
+Tag.create(tag_name: "Vegan")
+Tag.create(tag_name: "Halal")
+Tag.create(tag_name: "Casher")
+Tag.create(tag_name: "Sans gluten")
+Tag.create(tag_name: "Sain")
+Tag.create(tag_name: "Gras")
 
 20.times do |user|
   User.create(email: (Faker::Superhero.power + "@blabla.com"),password: Faker::Superhero.power, first_name: Faker::Superhero.prefix, last_name: Faker::Superhero.suffix, birth_day: Faker::Date.birthday(min_age:18, max_age:100), gender: "unknown", is_host: false)
