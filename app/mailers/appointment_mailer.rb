@@ -10,7 +10,7 @@ class AppointmentMailer < ApplicationMailer
 
 		@url = "https://sharepascher.herokuapp.com/"
 
-		mail(to: @host.email, subject: "Une personne souhaite venir à ton repas !")
+		mail(to: @host.email, subject: "Une personne souhaite venir à ton repas ! - confirmation -")
 
 	end
 
@@ -22,7 +22,7 @@ class AppointmentMailer < ApplicationMailer
 
 		@url = "https://sharepascher.herokuapp.com/"
 
-		mail(to: @invité.email, subject: "Une personne souhaite venir à ton repas !")
+		mail(to: @invité.email, subject: "Une personne souhaite venir à ton repas ! - acceptation -")
 
 	end
 

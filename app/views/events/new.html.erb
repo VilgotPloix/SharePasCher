@@ -30,12 +30,8 @@
 				<%= f.select :city_id, [["Paris", 1],["Lyon", 2],["Marseille", 3],["Guingamp", 4], ["Lille", 5], ["Toulouse", 6]], class:"select", placeholder:"Ou tu habites ?" %>
 				</div>
 				<br>
-				<br>
-				<br>
-				<br>
-				<br>
 				
-				<div class="field select form">
+				<div class="field tags form">
 				<% Tag.all.each_with_index do |tag, index|%>
 					<% tag_call = "tag" + "#{index}"%>
 					<%= f.label tag.tag_name, class:"label" %>
@@ -43,12 +39,14 @@
 				<%end%>
 				</div>
 
+				
+
 				<div class="field form">
 					<%= f.hidden_field :host_id, value: current_user.id %><br />
 				</div>
 
-				<br>
-				<div>
+				
+				<div class="btnCreateEvent">
 						<%= f.submit "Créer l'event", class:"sub" %>
 					</div>
 			<% end %>

@@ -3,7 +3,11 @@
 
 <div class="eventShow">
 	<div id="imgShow">
-		<%= image_tag "default_image.jpg", id:"imgtest" %>
+		<%if @event.photo.attached?%>
+			<%= image_tag @event.photo, alt: 'photo' %>
+		<%else%>
+			<a href="/events/<%= event.id %>"><%= image_tag "default_image.jpg" %></a>
+		<%end%>
 	</div>
 	<div id="descShow">
 		<% if is_event_host(@event) == false %>
@@ -60,7 +64,15 @@
 			<%end%>	<!-- @event.users.each do |user| -->
 		</div>
 			</div>
+			<div class="upload">
+					<%= form_tag event_photos_path(@event), multipart: true do %>
+  						<%= file_field_tag :photo %>
+ 						<%= submit_tag "mettre à jour" %>
+					<% end %>
+				</div>
 		</div>
+
+		
 	<%end%> <!-- if is_event_host(@event) == true -->
 	</div>
 </div>

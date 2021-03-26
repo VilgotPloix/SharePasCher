@@ -9,7 +9,7 @@ class Event < ApplicationRecord
   validates :title, presence: true, length: {minimum:2, maximum:50}
   validates :description, presence: true, length: {minimum:10, maximum:500}
   validates :guests_number, numericality: {less_than: 7, greater_than: 0 }
-  
+  has_one_attached :photo
 
 
   
