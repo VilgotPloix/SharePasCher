@@ -39,7 +39,6 @@ ActiveRecord::Schema.define(version: 2021_03_24_172545) do
   create_table "appointments", force: :cascade do |t|
     t.bigint "user_id"
     t.bigint "event_id"
-    t.boolean "is_accepted", default: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["event_id"], name: "index_appointments_on_event_id"
@@ -52,12 +51,19 @@ ActiveRecord::Schema.define(version: 2021_03_24_172545) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "comments", force: :cascade do |t|
+    t.string "content"
+    t.bigint "post_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["post_id"], name: "index_comments_on_post_id"
+  end
+
   create_table "events", force: :cascade do |t|
     t.string "title"
     t.text "description"
     t.datetime "date"
     t.integer "guests_number"
-    t.integer "current_guests"
     t.bigint "city_id"
     t.bigint "user_id"
     t.bigint "host_id"
@@ -77,6 +83,13 @@ ActiveRecord::Schema.define(version: 2021_03_24_172545) do
     t.index ["tag_id"], name: "index_filters_on_tag_id"
   end
 
+  create_table "posts", force: :cascade do |t|
+    t.string "name"
+    t.integer "comments_count"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "tags", force: :cascade do |t|
     t.string "tag_name"
     t.datetime "created_at", null: false
@@ -86,7 +99,7 @@ ActiveRecord::Schema.define(version: 2021_03_24_172545) do
   create_table "users", force: :cascade do |t|
     t.string "first_name"
     t.string "last_name"
-    t.date "birth_day"
+    t.datetime "birth_day"
     t.integer "age"
     t.string "gender"
     t.boolean "is_host"
@@ -102,5 +115,6 @@ ActiveRecord::Schema.define(version: 2021_03_24_172545) do
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "comments", "posts"
   add_foreign_key "events", "users", column: "host_id"
 end

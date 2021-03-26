@@ -5,6 +5,7 @@
         <%= csp_meta_tag %>
           <link rel="stylesheet" href="SharepasCher.css">
           <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
           <meta name="viewport" content="width=device-width, initial-scale=1">
               <%= stylesheet_link_tag    'application', media: 'all' %>
               <%= javascript_include_tag 'application' %>
@@ -16,7 +17,7 @@
     <% if user_signed_in? %>
     <div id="btnGaucheTrue">
       <div id="logo">
-          <p>/</p> <%= link_to "SPC", root_path, class:"spc" %> <p>/</p>
+          <a href="/"><%= image_tag 'SPC_logo.png', class:"logo_SPC"%></a>
         </div>
           <%= link_to 'Voir Les Évènements', events_path, class:"font" %>
           <p class="font">/</p>
@@ -27,7 +28,7 @@
       <div id="btnGaucheFalse">
         <div id="logo">
           <p>/</p>
-          <%= link_to "SPC", root_path, class:"spc" %>
+          <a href="/"><%= image_tag 'SPC_logo.png', class:"logo_SPC"%></a>
           <p>/</p>
         </div>
         <p class="font">Voir Les Expériences</p>
@@ -94,17 +95,15 @@
 
 <div class="content has-text-centered calage">
 
-
-
 <p>
 
-<a href="../Footer_reseaux.html" title="Rejoignez-nous sur les reseaux">Rejoignez-nous sur les réseaux sociaux</a>
+<a href="../Footer_apropos.html" title="En savoir plus">A propos</a><br />
+
+<a href="../Footer_reseaux.html" title="Rejoignez-nous sur les reseaux">Reseaux</a>
 
 <a href="../Footer_confidentialite.html" title="Confidentialite">Confidentialite</a>
 
-<a href="../Footer_cookies.html" title="Cookies">Préférences COOKIES</a>
-
-<a href="../Footer_apropos.html" title="En savoir plus">A propos</a><br />
+<a href="../Footer_cookies.html" title="Cookies">Cookies</a><br />
 
 <strong>SPC®</strong> <br />
 

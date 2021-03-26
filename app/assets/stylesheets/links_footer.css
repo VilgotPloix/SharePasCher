@@ -1,19 +1,49 @@
 .heroBanner {
   position: relative;
-  left: 200px;
-  /*bottom: 65px;*/
-  /*right: 20px;*/
   color: #BC211F;
   font-size: 60px;
   font-family: 'Marker Felt, fantasy';
+}
 
+section .hero-body {
+  position: relative;
+  left: 190px;
 }
 
 section .subtitle {
   font-size: 20px;
   color: #ED9106;
   font-family: Arial Narrow, sans-serif;
-    text-shadow: 1px 1px 30px #C64A34;
+  text-shadow: 1px 1px 20px #C64A34;
+}
+
+.card_image_1 {
+  position: relative;
+  bottom: 4px;
+}
+
+.card_image_2 {
+  position: relative;
+  bottom: 4px;
+}
+
+.card_image_3 {
+  position: relative;
+  top: 5px;
+}
+
+.card_image_4 {
+  position: relative;
+  top: 2.5px;
+}
+
+.flot_key {
+  float: right;
+}
+
+.content_image {
+  float: right;
+  width: 70px;
 }
 
 .texte_des_cartes {
@@ -47,11 +77,9 @@ section .subtitle {
   left: 85px;
 }
 
-
 span {
   color: #ED9106;
 }
-
 
 .menu_scroll {  
   position: fixed;
@@ -75,13 +103,13 @@ body p {
   width: 100px;
 }
 
-
 .animate__animated.animate__backInDown {
   float: left;
   display: inline-block;
   margin: 0 0.10rem;
   --animate-duration: 2s;
   --animate-delay: 5s;
+  width: 50px;
 }
 
 .animate__animated.animate__backInLeft {
@@ -90,6 +118,8 @@ body p {
   margin: 0 0.10rem;
   --animate-duration: 2s;
   --animate-delay: 10s;
+  width: 50px;
+
 }
 
 .animate__animated.animate__backInUp {
@@ -98,6 +128,11 @@ body p {
   margin: 0 0.10rem;
   --animate-duration: 2s;
   --animate-delay: 2s;
+  width: 50px;
+}
+
+.animate__animated.animate__rotateInDownLeft {
+  width: 50px;
 }
 
 .animate__animated.animate__shakeX {
@@ -106,11 +141,13 @@ body p {
   margin: 0 0.5rem;
   --animate-duration: 2s;
   --animate-delay: 2s;
+  width: 50px;
 }
 
 .animate__animated.animate__rollOut {
   --animate-duration: 5s;
   --animate-delay: 5s;
+  width: 50px;
 }
 
 .animate__animated.animate__fadeInBottomLeft {
