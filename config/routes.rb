@@ -8,6 +8,7 @@ Rails.application.routes.draw do
 	get '/Footer_cookies', to: 'static#Footer_cookies'
 
   resources :events do
+    resources :photos, only: [:create]
     collection do
       get 'created_index'
     end

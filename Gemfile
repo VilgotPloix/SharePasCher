@@ -17,7 +17,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
-  gem 'rspec-rails'
+  gem 'rspec-rails', '~> 5.0.0'
 end
 
 group :development do
@@ -41,3 +41,4 @@ gem 'table_print'
 gem 'faker'
 gem 'bcrypt'
 gem 'devise'
+gem "aws-sdk-s3", require: false

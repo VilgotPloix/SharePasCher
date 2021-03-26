@@ -29,7 +29,6 @@ class EventsController < ApplicationController
 
   def create
     @event = Event.create(title: params[:title], description: params[:description], date: params[:date], city_id: params[:city_id], guests_number: params[:guests_number], host_id: params[:host_id], current_guests: 0)
-    
     filter_creation(params, @event)
 
     if @event.host.is_host == false
