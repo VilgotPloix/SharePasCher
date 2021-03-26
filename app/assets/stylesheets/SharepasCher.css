@@ -187,6 +187,14 @@ span.inter
 {
     font-size: 2em;
     text-align: center;
+    position: relative;
+    bottom: 30px;
+}
+
+.up
+{
+    position: relative;
+    bottom: 38px;
 }
 
 .h
@@ -379,6 +387,12 @@ span.inter
     font-family: 'Open Sans Condensed', sans-serif;
     margin: 200px;
     letter-spacing: 2px; 
+}
+
+.down
+{
+    position: relative;
+    top: 50px;
 }
 
 
@@ -745,7 +759,6 @@ background-repeat: no-repeat;
     position: absolute;
     bottom: 120px;
     left: 60px;
-    border: 1px solid red;
     display: flex;
     align-items: flex-start;
 }
