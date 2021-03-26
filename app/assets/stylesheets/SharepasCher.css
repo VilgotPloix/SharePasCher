@@ -177,7 +177,7 @@ span.inter
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    height: 830px;
+    max-height: 80vh;
     background-repeat: no-repeat;
 }
 
@@ -455,7 +455,13 @@ span.inter
     background-color: #99d98c;
     color: black;
     font-weight: 600;
+}
 
+.btnCreateEvent
+{
+    position: relative;
+    bottom: 50px;
+    left: 150px;
 }
 
 
@@ -485,6 +491,13 @@ opacity: 0.8;
 background-repeat: no-repeat;
 }
 
+.btnSession
+{
+    position: relative;
+    bottom: 50px;
+    left: 40px;
+}
+
 /*_________________SIGN UP PAGE___________________*/
 
 #signuppage
@@ -503,6 +516,13 @@ background-repeat: no-repeat;
     background-size: 100%;
     opacity: 0.9;
     background-repeat: no-repeat;
+}
+
+.btnRegistration 
+{
+    position: relative;
+    bottom: 50px;
+    left: 40px;
 }
 
 /*_________________EDIT PROFIL PAGE_______________*/
@@ -716,7 +736,7 @@ background-repeat: no-repeat;
     overflow-y: auto;
     overflow-x: hidden;
     position: absolute;
-    bottom: 45px;
+    bottom: 120px;
     left: 60px;
     border: 1px solid red;
     display: flex;
@@ -743,7 +763,7 @@ background-repeat: no-repeat;
     font-size: 25px;
     font-weight: 500;
     position: absolute;
-    top: 310px;
+    top: 235px;
     left: 60px;
 }
 
@@ -815,6 +835,13 @@ background-repeat: no-repeat;
 }
 
 
+.upload
+{
+    position: absolute;
+    left: 60px;
+    bottom: 60px;
+}
+
 /*______________COMMUN____________________*/
 
 .form
@@ -823,4 +850,6 @@ background-repeat: no-repeat;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    max-width: 400px;
+    min-width: 400px;
 }

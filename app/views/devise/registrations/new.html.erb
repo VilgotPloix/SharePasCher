@@ -3,7 +3,7 @@
 
         <p class="title has-text-white">S'inscrire</p>
 
-    <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { class: "box bigger_box" }) do |f| %>
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { class: "box" }) do |f| %>
       <%= render "devise/shared/error_messages", resource: resource %>
 
       <div class="field">
@@ -29,8 +29,8 @@
       <div class="field">
         <%= f.hidden_field :is_host, value: false %>
       </div>
-      <div class="actions">
-        <%= f.submit "Créer votre compte", class:"butt one font" %>
+      <div class="actions btnRegistration">
+        <%= f.submit "Créer votre compte", class:"sub" %>
       </div>
 
 

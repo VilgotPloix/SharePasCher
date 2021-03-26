@@ -60,7 +60,13 @@
 			<%end%>	<!-- @event.users.each do |user| -->
 		</div>
 			</div>
+			<div class="upload">
+					<%= file_field_tag :photo %>
+  					<%= submit_tag "uploader la photo" %>
+				</div>
 		</div>
+
+		
 	<%end%> <!-- if is_event_host(@event) == true -->
 	</div>
 </div>
