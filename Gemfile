@@ -41,3 +41,4 @@ gem 'table_print'
 gem 'faker'
 gem 'bcrypt'
 gem 'devise'
+gem "aws-sdk-s3", require: false
