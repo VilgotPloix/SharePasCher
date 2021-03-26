@@ -11,7 +11,7 @@ class AppointmentController < ApplicationController
 
   def create
     Appointment.create(user_id: current_user.id, event_id: params[:event_id], is_accepted: false)
-    redirect_to events_path
+    redirect_to events_path flash[:info]="Vous avez été inscrits ! Vous recevrez un email si l'hôte vous accepte à son évènement !"
   end
 
   def show
@@ -57,7 +57,7 @@ class AppointmentController < ApplicationController
 
   def check_profile_completion
     if current_user.is_profile_fully_completed == false
-      redirect_to edit_user_registration_path, warning: "Veuillez compléter votre profil avant de pouvoir accéder à ce contenu"
+      redirect_to edit_user_registration_path flash[:warning]="Veuillez compléter votre profil avant de pouvoir accéder à ce contenu"
     end
   end
 end

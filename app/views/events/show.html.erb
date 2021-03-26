@@ -38,7 +38,7 @@
 			<div class="cardTravShow">
 				<p class="nameCardShow"> <%= user.first_name %> <!-- </p> -->
 			
-				<span class="ageCardShow"> <%=user.age%> ans </span>
+				<span class="ageCardShow"> <%=(Date.today.year - user.birth_day.year)%> ans </span>
 			
 				<% if user.appointments.where(event_id: @event.id).first.is_accepted? %>
 			
