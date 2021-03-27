@@ -28,14 +28,17 @@ class EventsController < ApplicationController
   end
 
   def create
-    @event = Event.create(title: params[:title], description: params[:description], date: params[:date], city_id: params[:city_id], guests_number: params[:guests_number], host_id: params[:host_id], current_guests: 0)
-    filter_creation(params, @event)
-
-    if @event.host.is_host == false
-      User.find(@event.host.id).update(is_host: true)
-    end
-
-    redirect_to created_index_events_path flash[:success]="Vous avez crée un évènement"  
+    @event = Event.new(title: params[:title], description: params[:description], date: params[:date], city_id: params[:city_id], guests_number: params[:guests_number], host_id: params[:host_id], current_guests: 0)
+    
+    if @event.save == true
+      filter_creation(params, @event)
+      if @event.host.is_host == false
+        User.find(@event.host.id).update(is_host: true)
+      end
+      redirect_to created_index_events_path flash[:success]="Vous avez crée un évènement"
+    else
+      redirect_to new_event_path flash[:warning]="Echec, veuillez réessayer"
+    end   
   end
 
   def new
@@ -56,7 +59,7 @@ class EventsController < ApplicationController
 
     def check_profile_completion
       if current_user.is_profile_fully_completed == false
-        redirect_to edit_user_registration_path, warning: "Veuillez compléter votre profil avant de pouvoir accéder à ce contenu"
+        redirect_to edit_user_registration_path flash[:warning]="Veuillez compléter votre profil avant de pouvoir accéder à ce contenu"
       end
     end
     
