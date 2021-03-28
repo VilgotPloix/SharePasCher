@@ -1,20 +1,22 @@
 <div class="PasswordNewPage">
   <div class="left"><%= image_tag "motdepasse.jpg", class:"ImgEditProfile" %></div>
-        <h2>Vous avez oublié votre mot de passe?</h2>
 
-        <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+        <div class="right">
+        <h2 class="title">Vous avez oublié votre mot de passe?</h2>
+
+        <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post, class:"box  passwordLost" }) do |f| %>
           <%= render "devise/shared/error_messages", resource: resource %>
 
           <div class="field">
             <%= f.label :email %><br />
-            <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+            <%= f.email_field :email, class:"input", autofocus: true, autocomplete: "email" %>
           </div>
 
-          <div class="actions">
-            <%= f.submit "Créer un nouveau mot de passe" %>
+          <div class="actions wide">
+            <%= f.submit "Créer un nouveau mot de passe", class:"sub wide" %>
           </div>
         <% end %>
-
+      </div>
         <%= render "devise/shared/links" %>
   </div>
 </div>

@@ -3,7 +3,7 @@
 
         <p class="title has-text-white">S'inscrire</p>
 
-    <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { class: "box" }) do |f| %>
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { class: "box passwordLost" }) do |f| %>
       <%= render "devise/shared/error_messages", resource: resource %>
 
       <div class="field">

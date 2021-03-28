@@ -866,6 +866,31 @@ background-repeat: no-repeat;
     bottom: 60px;
 }
 
+
+
+/*______________LOST PASSWORD PAGE________*/
+
+.PasswordNewPage
+{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+
+}
+
+.passwordLost
+{
+    border: 1px solid grey;
+    width: 250px;
+}
+
+.wide
+{
+    width: 200px;
+    position: relative;
+    bottom: 50px;
+}
+
 /*______________COMMUN____________________*/
 
 .form
