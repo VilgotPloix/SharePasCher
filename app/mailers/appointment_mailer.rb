@@ -16,9 +16,9 @@ class AppointmentMailer < ApplicationMailer
 
 	def accepted_mail(appointment)
 		
-		@invité = Appointment.user
+		@invité = appointment.user
 
-		@host = Appointment.event.host
+		@host = appointment.event.host
 
 		@url = "https://sharepascher.herokuapp.com/"
 
