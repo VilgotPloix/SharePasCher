@@ -58,7 +58,7 @@ class AppointmentController < ApplicationController
 
   def check_profile_completion
     if current_user.is_profile_fully_completed == false
-      redirect_to edit_user_registration_path flash[:warning]="Veuillez compléter votre profil avant de pouvoir accéder à ce contenu"
+      redirect_to edit_user_registration_path flash[:warning]="Veuillez compléter votre profil avant de pouvoir accéder à ce contenu."
     end
   end
 end
