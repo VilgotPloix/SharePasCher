@@ -39,9 +39,9 @@ class EventsController < ApplicationController
       if @event.host.is_host == false
         User.find(@event.host.id).update(is_host: true)
       end
-      redirect_to created_index_events_path flash[:success]="Vous avez crée un évènement"
+      redirect_to created_index_events_path flash[:success]="Tu as crée un évènement"
     else
-      redirect_to new_event_path flash[:warning]="Echec, veuillez réessayer"
+      redirect_to new_event_path flash[:warning]="Échec, réessaie"
     end   
   end
 
@@ -63,7 +63,7 @@ class EventsController < ApplicationController
 
     def check_profile_completion
       if current_user.is_profile_fully_completed == false
-        redirect_to edit_user_registration_path flash[:warning]="Veuillez compléter votre profil avant de pouvoir accéder à ce contenu"
+        redirect_to edit_user_registration_path flash[:warning]="Complète ton profil avant de pouvoir accéder à ce contenu"
       end
     end
     
