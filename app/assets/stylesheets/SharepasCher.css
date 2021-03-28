@@ -689,11 +689,15 @@ background-repeat: no-repeat;
 .textShow
 {
     max-width: 545px;
+    max-height: 230px;
+    overflow-y: auto;
     font-size: 30px;
     position: absolute;
     top: 150px;
     left: 60px;
     font-style: italic;
+    border: 1px solid red;
+
 }
 
 .smaller
