@@ -695,6 +695,12 @@ background-repeat: no-repeat;
     font-style: italic;
 }
 
+.smaller
+{
+    height: 90px;
+    overflow: auto;
+}
+
 #cityShow
 {
     width: 545px;
