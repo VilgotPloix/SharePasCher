@@ -4,10 +4,13 @@ class EventsController < ApplicationController
 
 
   def index
-    if params[:tag_id].blank?
+    if params[:tag_id].blank? 
       @event = Event.all
-    else
-      @event = Tag.find(params[:tag_id]).events
+    elsif params[:tag_id] == "0"
+      @event = Event.all
+      flash.now[:info]="Vous avez été inscrits ! Vous recevrez un email si l'hôte vous accepte à son évènement !"
+    elsif params[:tag_id] != "0" 
+      @event = Tag.find(params[:tag_id]).events  
     end
 
     respond_to do |format|
@@ -31,6 +34,7 @@ class EventsController < ApplicationController
     @event = Event.new(title: params[:title], description: params[:description], date: params[:date], city_id: params[:city_id], guests_number: params[:guests_number], host_id: params[:host_id], current_guests: 0)
     
     if @event.save == true
+      @event.save
       filter_creation(params, @event)
       if @event.host.is_host == false
         User.find(@event.host.id).update(is_host: true)
