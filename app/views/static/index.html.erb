@@ -3,7 +3,11 @@
     	<p class="titreLandingPage up has-text-white">Share Pas Cher</p>
     <p class="titre up subtitle has-text-white">Le nouveau standard de la convivialité !</p>
     <div class="centerBtnHero up">
-    	<%= button_to "/   S'inscrire   /", new_user_registration_path, method: :get, class:" btnSinscrire one font" %>
+    	<% if user_signed_in? %>
+    		<%= button_to "/ Voir les évènements /", events_path, method: :get, class:" btnSinscrire one font" %>
+    	<%else%>
+    		<%= button_to "/   S'inscrire   /", new_user_registration_path, method: :get, class:" btnSinscrire one font" %>
+    	<%end%>
     </div>
   </div>
 </section>

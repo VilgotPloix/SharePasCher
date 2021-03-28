@@ -1,4 +1,4 @@
- /*                               font-family: 'Cormorant Unicase', serif;                      */
+  /*                               font-family: 'Cormorant Unicase', serif;                      */
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Unicase:wght@300&display=swap');
 
 /*                                font-family: 'Open Sans Condensed', sans-serif;               */
@@ -199,6 +199,7 @@ span.inter
 {
     position: relative;
     bottom: 38px;
+    right: 180px;
 }
 
 .h
