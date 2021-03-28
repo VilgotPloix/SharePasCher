@@ -10,8 +10,10 @@ class AppointmentController < ApplicationController
   end
 
   def create
-    Appointment.create(user_id: current_user.id, event_id: params[:event_id], is_accepted: false)
-    redirect_to events_path flash[:info]="Vous avez été inscrits ! Vous recevrez un email si l'hôte vous accepte à son évènement !"
+    @event_id = params[:event_id]
+    puts "Bonjour" + @event_id
+    Appointment.create!(user_id: current_user.id, event_id: params[:event_id], is_accepted: false)
+    redirect_to events_path(:tag_id => 0) 
   end
 
   def show
