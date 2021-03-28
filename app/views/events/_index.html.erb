@@ -1,26 +1,30 @@
 <% @event.each do |event| %>
-  <% nb_place = (event.guests_number - event.current_guests) %>
   <div class="card" id="cards">
-        <div class="card-image">
-          <figure class="image is-4by3">
+      <div class="card-image">
+        <figure class="image is-4by3">
+          <%if event.photo.attached?%>
+            <a href="/events/<%= event.id %>"><%= image_tag event.photo, alt: 'photo' %></a>
+          <%else%>
             <a href="/events/<%= event.id %>"><%= image_tag "default_image.jpg" %></a>
-          </figure>
+          <%end%>
+        </figure>
+      </div>
+      <div class="card-content">
+        <div class="media">
+          <div class="media-left">
         </div>
-        <div class="card-content">
-          <div class="media">
-            <div class="media-left">
-          </div>
-          <div class="media-content">
-            <p class="title is-4"><%= event.title %></p>
-            <p class="subtitle is-6">par <%= event.host.first_name %></p>
-          </div>
+        <div class="media-content">
+          <p class="title is-4"><%= event.title %></p>
+          <p class="subtitle is-6">par <%= event.host.first_name %></p>
         </div>
+      </div>
 
-        <div class="content">
-          <%= event.description %>
-          <br>
-        
-        </div>
-        </div>
-        </div>
+      <div class="content">
+        <%= event.description %>
+        <br>
+      
+      </div>
+      </div>
+      </div>
+  
 <%end%>
