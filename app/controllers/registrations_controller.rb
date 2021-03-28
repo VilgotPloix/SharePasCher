@@ -6,6 +6,6 @@ class RegistrationsController < Devise::RegistrationsController
   end
 
   def after_update_path_for(users)
-    new_event_path
+    events_path
   end
 end
