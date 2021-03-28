@@ -18,7 +18,7 @@
 			<% if nb_place >= 0 %>
 				<p id="placeShow">Il reste <%= nb_place %> place.s</p>
 				<div id="btnShow">
-					<%= link_to "Je veux venir !", edit_appointment_path, method: :post, params: {event_id: @event.id}, class:"greenTrue" %>
+					<%= link_to "Je veux venir !",'/appointment', method: :post, params: {event_id: @event.id}, class:"greenTrue" %>
 					<%= link_to 'Retour au menu', events_path, method: :get, class:"redTrue" %>
 				</div>
 			<% else %>
