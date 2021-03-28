@@ -696,7 +696,6 @@ background-repeat: no-repeat;
     top: 150px;
     left: 60px;
     font-style: italic;
-    border: 1px solid red;
 
 }
 
@@ -788,7 +787,6 @@ background-repeat: no-repeat;
     max-width: 500px;
     min-width: 500px;
     height: 50px;
-    border: 1px solid black;
     position: absolute;
     left: 0px;
 }
