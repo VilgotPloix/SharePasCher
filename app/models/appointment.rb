@@ -11,4 +11,10 @@
   end
 
 
+  def accepted_send
+  	if self.is_accepted == true
+  		AppointmentMailer.accepted_mail(self).deliver_now
+  	end
+  end
+
 end
