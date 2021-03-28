@@ -3,7 +3,7 @@
   belongs_to :event
 
   after_create :confirmation_send
-
+  after_update :accepted_send
  
 
   def confirmation_send
