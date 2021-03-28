@@ -1,6 +1,6 @@
 class AppointmentMailer < ApplicationMailer
 
-	default from: "gustavevilgot@mail.com"
+	default from: "gustavevilgot@gmail.com"
 	
 	def confirmation_mail(appointment)
 		
