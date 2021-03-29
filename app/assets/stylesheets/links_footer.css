@@ -83,7 +83,7 @@ span {
 
 .menu_scroll {  
   position: fixed;
-  top: -7px;
+  top: 40px;
 }
 
 .titre_carte {
