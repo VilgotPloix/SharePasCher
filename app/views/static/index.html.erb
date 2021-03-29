@@ -26,7 +26,11 @@
 			<div class="card" id="cards">
 				<div class="card-image">
 					<figure class="image is-4by3">
-						<%= image_tag "default_image.jpg" %>
+						<%if event.photo.attached?%>
+							<a href="/events/<%=event.id%>"><%= image_tag event.photo, alt: 'photo' %></a>
+						<%else%>
+							<a href="/events/<%= event.id %>"><%= image_tag "default_image.jpg" %></a>
+						<%end%>
 					</figure>
 				</div>
 				<div class="card-content">
