@@ -39,7 +39,7 @@ class EventsController < ApplicationController
       if @event.host.is_host == false
         User.find(@event.host.id).update(is_host: true)
       end
-      redirect_to created_index_events_path flash[:success]="Tu as créé.e un évènement"
+      redirect_to created_index_events_path
     else
       redirect_to new_event_path flash[:warning]="Échec, réessaie"
     end   
