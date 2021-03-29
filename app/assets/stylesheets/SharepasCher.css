@@ -420,7 +420,7 @@ span.inter
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    overflow-y: auto;
+    /*overflow-y: auto;*/
 }
 
 .indexEvents::-webkit-scrollbar
@@ -439,13 +439,11 @@ span.inter
 .flexEvents
 {
     width: 90%;
-    height: 70vh;
     display: flex;
     justify-content: space-around;
     align-items: flex-start;
     flex-wrap: wrap;
-    position: relative;
-    top: 50px;
+    margin: 100px;
 }
 
 #cards
