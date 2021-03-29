@@ -4,6 +4,7 @@
     <br>
     <%= form_for resource, url: user_session_path, html: { class: "box formulaire" } do |f| %>
       <%= devise_error_messages! %>
+      
 
       <div class="form-group">
         <%= f.label :email, class:"label" %>
