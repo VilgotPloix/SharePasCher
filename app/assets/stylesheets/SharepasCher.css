@@ -420,7 +420,6 @@ span.inter
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /*overflow-y: auto;*/
 }
 
 .indexEvents::-webkit-scrollbar
@@ -456,6 +455,7 @@ span.inter
 }
 
 
+
 /*________________CREATE EVENT____________________*/
 
 #pageNewEvent
@@ -470,8 +470,6 @@ span.inter
 
 .sub
 {
-    position: relative;
-    top: 50px;
     width: 120px;
     height: 35px;
     border: none;
@@ -518,7 +516,6 @@ background-repeat: no-repeat;
 .btnSession
 {
     position: relative;
-    bottom: 50px;
     left: 40px;
 }
 
@@ -545,9 +542,10 @@ background-repeat: no-repeat;
 .btnRegistration 
 {
     position: relative;
-    bottom: 50px;
     left: 40px;
 }
+
+
 
 /*_________________EDIT PROFIL PAGE_______________*/
 
@@ -606,12 +604,22 @@ background-repeat: no-repeat;
 .bigger_box
 {
     width: 600px;
-    max-height: 426px;
+    max-height: 446px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     flex-wrap: wrap;
     align-items: center;
+}
+
+.bigger_space
+{
+    width: 205px;
+}
+
+.selectForm
+{
+    margin-top: 20px;
 }
 
 /*______________SHOW EVENT PAGE __________________*/
@@ -908,4 +916,9 @@ background-repeat: no-repeat;
     align-items: center;
     max-width: 400px;
     min-width: 400px;
+}
+
+.titreEvents
+{
+    text-transform: uppercase;
 }
