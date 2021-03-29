@@ -1,6 +1,6 @@
 <div class="indexEvents">
 	<p class="regarde"> Regarde moi tous ces repas ! </p>
-	<p>Ce serait bête de ne pas en profiter, je dis ca je dis rien !</p>
+	<p>Ce serait bête de ne pas en profiter, je dis ça je dis rien !</p>
 	<%= @test %>
 
 	<%= form_with url:'/events', method: :get, remote:true do |f| %>
@@ -12,7 +12,7 @@
 		</div>
 	<%end%>
 
-	<div class="flexEvents" id="event_cards">
+	<div class="flexEvents container" id="event_cards">
 	<% @event.each do |event| %>
 		<div class="card" id="cards">
 				<div class="card-image">
@@ -29,7 +29,7 @@
 						<div class="media-left">
 					</div>
 					<div class="media-content">
-						<p class="title is-4"><%= event.title %></p>
+						<p class="title is-4 titleEvents"><%= event.title %></p>
 						<p class="subtitle is-6">par <%= event.host.first_name %></p>
 					</div>
 				</div>

@@ -420,7 +420,6 @@ span.inter
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    overflow-y: auto;
 }
 
 .indexEvents::-webkit-scrollbar
@@ -439,13 +438,11 @@ span.inter
 .flexEvents
 {
     width: 90%;
-    height: 70vh;
     display: flex;
     justify-content: space-around;
     align-items: flex-start;
     flex-wrap: wrap;
-    position: relative;
-    top: 50px;
+    margin: 100px;
 }
 
 #cards
@@ -456,6 +453,7 @@ span.inter
     position: relative;
     top: 100px;
 }
+
 
 
 /*________________CREATE EVENT____________________*/
@@ -472,8 +470,6 @@ span.inter
 
 .sub
 {
-    position: relative;
-    top: 50px;
     width: 120px;
     height: 35px;
     border: none;
@@ -520,7 +516,6 @@ background-repeat: no-repeat;
 .btnSession
 {
     position: relative;
-    bottom: 50px;
     left: 40px;
 }
 
@@ -547,9 +542,10 @@ background-repeat: no-repeat;
 .btnRegistration 
 {
     position: relative;
-    bottom: 50px;
     left: 40px;
 }
+
+
 
 /*_________________EDIT PROFIL PAGE_______________*/
 
@@ -608,12 +604,22 @@ background-repeat: no-repeat;
 .bigger_box
 {
     width: 600px;
-    max-height: 426px;
+    max-height: 446px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     flex-wrap: wrap;
     align-items: center;
+}
+
+.bigger_space
+{
+    width: 205px;
+}
+
+.selectForm
+{
+    margin-top: 20px;
 }
 
 /*______________SHOW EVENT PAGE __________________*/
@@ -689,11 +695,14 @@ background-repeat: no-repeat;
 .textShow
 {
     max-width: 545px;
+    max-height: 230px;
+    overflow-y: auto;
     font-size: 30px;
     position: absolute;
     top: 150px;
     left: 60px;
     font-style: italic;
+
 }
 
 .smaller
@@ -784,7 +793,6 @@ background-repeat: no-repeat;
     max-width: 500px;
     min-width: 500px;
     height: 50px;
-    border: 1px solid black;
     position: absolute;
     left: 0px;
 }
@@ -908,4 +916,9 @@ background-repeat: no-repeat;
     align-items: center;
     max-width: 400px;
     min-width: 400px;
+}
+
+.titreEvents
+{
+    text-transform: uppercase;
 }

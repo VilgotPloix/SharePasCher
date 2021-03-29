@@ -1,6 +1,6 @@
 class AppointmentMailer < ApplicationMailer
 
-	default from: "gustavevilgot@mail.com"
+	default from: "gustavevilgot@gmail.com"
 	
 	def confirmation_mail(appointment)
 		
@@ -16,9 +16,9 @@ class AppointmentMailer < ApplicationMailer
 
 	def accepted_mail(appointment)
 		
-		@invité = Appointment.last.user
+		@invité = appointment.user
 
-		@host = Appointment.last.event.host
+		@host = appointment.event.host
 
 		@url = "https://sharepascher.herokuapp.com/"
 

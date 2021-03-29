@@ -34,7 +34,7 @@
 						<div class="media-left">
 					</div>
 					<div class="media-content">
-						<p class="title is-4"><%= event.title %></p>
+						<p class="title is-4 titleEvents"><%= event.title %></p>
 						<p class="subtitle is-6">par <%= event.host.first_name %></p>
 					</div>
 				</div>
@@ -69,7 +69,11 @@ Pas forcément besoin d'aller en Bretagne pour goûter à de vraies galettes sau
 </div>
 
 <div id="basDePage">
-	<%= button_to "/   S'inscrire   /", new_user_registration_path, method: :get, class:"btnSinscrire one font" %>
+	<% if user_signed_in? %>
+    	<%= button_to "/ Voir les évènements /", events_path, method: :get, class:" btnSinscrire one font" %>
+    <%else%>
+   		<%= button_to "/   S'inscrire   /", new_user_registration_path, method: :get, class:" btnSinscrire one font" %>
+   	<%end%>
 
 	<p class="h1 down">Rejoins donc la communauté de Share Pas Cher, pas de frais cachés, que du bonheur !</p>
 

@@ -28,7 +28,6 @@ class AppointmentController < ApplicationController
     Event.find(@event_id).update(current_guests: (@event.current_guests + 1))
     clear_appointments(@user, @event)
     redirect_to event_path(@event_id)
-    AppointmentMailer.accepted_mail(@appointment).deliver_now
   end
 
   def destroy
@@ -59,7 +58,7 @@ class AppointmentController < ApplicationController
 
   def check_profile_completion
     if current_user.is_profile_fully_completed == false
-      redirect_to edit_user_registration_path flash[:warning]="Veuillez compléter votre profil avant de pouvoir accéder à ce contenu"
+      redirect_to edit_user_registration_path flash[:warning]="Veuillez compléter votre profil avant de pouvoir accéder à ce contenu."
     end
   end
 end
