@@ -55,8 +55,7 @@ ActiveRecord::Schema.define(version: 2021_03_24_172545) do
   create_table "events", force: :cascade do |t|
     t.string "title"
     t.text "description"
-    t.date "date"
-    t.time "time"
+    t.datetime "date"
     t.integer "guests_number"
     t.integer "current_guests"
     t.bigint "city_id"

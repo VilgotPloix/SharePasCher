@@ -61,5 +61,25 @@ en:
       not_found: ""
       not_locked: ""
       not_saved:
-        one: ""
-        other: ""
+        one: "1 erreur a empêche %{resource} de vous enregistré"
+        other: "%{count} erreur(s) empêchent %{resource} d'être enregistré"
+
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            email: 
+              blank: ": Merci d'entrer ton Email !"
+              taken: ": Merci d'utiliser le bon Email ! "
+              invalid: ": Merci d'utiliser un Email correcte ! "
+            password:
+              blank: ": Merci d'entrer ton mot de passe ! "
+              confirmation: ": Le mot de passe ne correspond pas ! "
+            password_confirmation:
+              blank: "Merci d'entrer la confirmation du mot de passe"
+            first_name:
+              blank: "Merci de préciser ton Prénom"
+            last_name:
+              blank: "Merci de préciser ton Nom"
+        

@@ -6,7 +6,10 @@ class User < ApplicationRecord
   has_many :appointments
   has_many :events, through: :appointments
   has_many :created_events, foreign_key: "host_id", class_name: "Event"
+
   after_create :welcome_send
+
+  
 
   def welcome_send
   	UserMailer.welcome(self).deliver_now
